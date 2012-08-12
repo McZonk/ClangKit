@@ -574,7 +574,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ClangKit/ClangKit-Prefix.pch";
-				HEADER_SEARCH_PATHS = ClangKit/LLVM/Source/tools/clang/include;
+				HEADER_SEARCH_PATHS = ClangKit/LLVM/Source/llvm/tools/clang/include;
 				INFOPLIST_FILE = "ClangKit/ClangKit-Info.plist";
 				LIBRARY_SEARCH_PATHS = ClangKit/LLVM/Release/lib;
 				OTHER_LDFLAGS = "-lclang";
@@ -593,7 +593,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ClangKit/ClangKit-Prefix.pch";
-				HEADER_SEARCH_PATHS = ClangKit/LLVM/Source/tools/clang/include;
+				HEADER_SEARCH_PATHS = ClangKit/LLVM/Source/llvm/tools/clang/include;
 				INFOPLIST_FILE = "ClangKit/ClangKit-Info.plist";
 				LIBRARY_SEARCH_PATHS = ClangKit/LLVM/Release/lib;
 				OTHER_LDFLAGS = "-lclang";
