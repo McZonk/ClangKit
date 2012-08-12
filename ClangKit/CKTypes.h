@@ -13,6 +13,7 @@
 typedef void * CXDiagnostic;
 typedef void * CXIndex;
 typedef void * CXTranslationUnit;
+typedef void * CXFile;
 
 #endif
 

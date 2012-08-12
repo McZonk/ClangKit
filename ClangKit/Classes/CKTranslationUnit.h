@@ -33,6 +33,7 @@
 @property( atomic, readonly        ) CKIndex         * index;
 @property( atomic, readonly        ) NSArray         * diagnostics;
 @property( atomic, readonly        ) NSArray         * tokens;
+@property( atomic, readonly        ) CXFile            cxFile;
 
 + ( id )translationUnitWithPath: ( NSString * )path;
 + ( id )translationUnitWithPath: ( NSString * )path index: ( CKIndex * )index;

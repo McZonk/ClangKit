@@ -244,6 +244,14 @@
     }
 }
 
+- ( CXFile )cxFile
+{
+    @synchronized( self )
+    {
+        return clang_getFile( _cxTranslationUnit, _path.fileSystemRepresentation );
+    }
+}
+
 - ( NSString * )description
 {
     NSString * description;
