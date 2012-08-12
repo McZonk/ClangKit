@@ -6,13 +6,19 @@
 /* $Id$ */
 
 #import "CKDiagnostic+Private.h"
+#import "CKTranslationUnit.h"
 
 @implementation CKDiagnostic( Private )
 
-- ( id )initWithCXDiagnostic: ( CXDiagnostic )diagnostic
+- ( id )initWithCXDiagnostic: ( CXDiagnostic )diagnostic translationUnit: ( CKTranslationUnit * )translationUnit
 {
-    CXString string;
-    CXString spelling;
+    CXString         string;
+    CXString         spelling;
+    CXSourceLocation location;
+    CXSourceRange    range;
+    unsigned int     line;
+    unsigned int     column;
+    unsigned int     offset;
     
     if( ( self = [ self init ] ) )
     {
@@ -25,6 +31,15 @@
         
         clang_disposeString( string );
         clang_disposeString( spelling );
+        
+        location  = clang_getDiagnosticLocation( diagnostic );
+        range     = clang_getDiagnosticRange( diagnostic, 0 );
+                
+        clang_getExpansionLocation( location, translationUnit.cxFile, &line, &column, &offset );
+        
+        _line   = ( NSUInteger )line;
+        _column = ( NSUInteger )column;
+        _range  = NSMakeRange( ( NSUInteger )offset, range.end_int_data - range.begin_int_data );
     }
     
     return self;

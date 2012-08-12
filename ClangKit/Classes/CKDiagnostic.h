@@ -24,6 +24,9 @@ FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
     NSString           * _spelling;
     CKDiagnosticSeverity _severity;
     NSArray            * _fixIts;
+    NSUInteger           _line;
+    NSUInteger           _column;
+    NSRange              _range;
     
 @private
     
@@ -34,6 +37,9 @@ FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
 @property( atomic, readonly ) NSString           * string;
 @property( atomic, readonly ) NSString           * spelling;
 @property( atomic, readonly ) CKDiagnosticSeverity severity;
+@property( atomic, readonly ) NSUInteger           line;
+@property( atomic, readonly ) NSUInteger           column;
+@property( atomic, readonly ) NSRange              range;
 
 + ( NSArray * )diagnosticsForTranslationUnit: ( CKTranslationUnit * )translationUnit;
 + ( id )diagnosticWithTranslationUnit: ( CKTranslationUnit * )translationUnit index: ( NSUInteger )index;

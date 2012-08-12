@@ -21,6 +21,9 @@ CKDiagnosticSeverity CKDiagnosticSeverityFatal    = CXDiagnostic_Fatal;
 @synthesize string          = _string;
 @synthesize spelling        = _spelling;
 @synthesize severity        = _severity;
+@synthesize line            = _line;
+@synthesize column          = _column;
+@synthesize range           = _range;
 
 + ( NSArray * )diagnosticsForTranslationUnit: ( CKTranslationUnit * )translationUnit
 {
@@ -52,7 +55,7 @@ CKDiagnosticSeverity CKDiagnosticSeverityFatal    = CXDiagnostic_Fatal;
 
 - ( id )initWithTranslationUnit: ( CKTranslationUnit * )translationUnit index: ( NSUInteger )index
 {
-    if( ( self = [ self initWithCXDiagnostic: clang_getDiagnostic( translationUnit.cxTranslationUnit, ( unsigned int )index ) ] ) )
+    if( ( self = [ self initWithCXDiagnostic: clang_getDiagnostic( translationUnit.cxTranslationUnit, ( unsigned int )index ) translationUnit: translationUnit ] ) )
     {}
     
     return self;
@@ -100,7 +103,7 @@ CKDiagnosticSeverity CKDiagnosticSeverityFatal    = CXDiagnostic_Fatal;
     }
     
     description = [ super description ];
-    description = [ description stringByAppendingFormat: @": %@ - %@", severity, self.string ];
+    description = [ description stringByAppendingFormat: @": %@[%lu:%lu] - %@", severity, self.line, self.column, self.string ];
     
     return description;
 }
