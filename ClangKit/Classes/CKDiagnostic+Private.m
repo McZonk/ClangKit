@@ -7,6 +7,7 @@
 
 #import "CKDiagnostic+Private.h"
 #import "CKTranslationUnit.h"
+#import "CKFixIt.h"
 
 @implementation CKDiagnostic( Private )
 
@@ -40,6 +41,8 @@
         _line   = ( NSUInteger )line;
         _column = ( NSUInteger )column;
         _range  = NSMakeRange( ( NSUInteger )offset, range.end_int_data - range.begin_int_data );
+        
+        _fixIts = [ [ CKFixIt fixItsForDiagnostic: self ] retain ];
     }
     
     return self;

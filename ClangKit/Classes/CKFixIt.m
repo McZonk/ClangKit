@@ -20,7 +20,7 @@
     NSMutableArray * fixIts;
     CKFixIt        * fixIt;
     
-    n      = clang_getDiagnosticNumFixIts( diagnostic );
+    n      = clang_getDiagnosticNumFixIts( diagnostic.cxDiagnostic );
     fixIts = [ NSMutableArray arrayWithCapacity: n ];
     
     for( i = 0; i < n; i++ )
@@ -67,7 +67,7 @@
     NSString * description;
     
     description = [ super description ];
-    description = [ description stringByAppendingFormat: @"%@", self.string ];
+    description = [ description stringByAppendingFormat: @": %@", self.string ];
     
     return description;
 }

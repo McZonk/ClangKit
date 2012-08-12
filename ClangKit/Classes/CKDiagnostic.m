@@ -21,6 +21,7 @@ CKDiagnosticSeverity CKDiagnosticSeverityFatal    = CXDiagnostic_Fatal;
 @synthesize string          = _string;
 @synthesize spelling        = _spelling;
 @synthesize severity        = _severity;
+@synthesize fixIts          = _fixIts;
 @synthesize line            = _line;
 @synthesize column          = _column;
 @synthesize range           = _range;

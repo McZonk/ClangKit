@@ -37,6 +37,7 @@ FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
 @property( atomic, readonly ) NSString           * string;
 @property( atomic, readonly ) NSString           * spelling;
 @property( atomic, readonly ) CKDiagnosticSeverity severity;
+@property( atomic, readonly ) NSArray            * fixIts;
 @property( atomic, readonly ) NSUInteger           line;
 @property( atomic, readonly ) NSUInteger           column;
 @property( atomic, readonly ) NSRange              range;
