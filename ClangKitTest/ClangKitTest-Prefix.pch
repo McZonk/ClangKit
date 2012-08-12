@@ -1,0 +1,15 @@
+/*******************************************************************************
+ * Copyright (c) 2012, Jean-David Gadina <macmade@eosgarden.com>
+ * All rights reserved
+ ******************************************************************************/
+ 
+/* $Id$ */
+
+#ifdef __OBJC__
+    
+    #import <Foundation/Foundation.h>
+    #import "CKWarnings.h"
+    #import "CKMacros.h"
+    #import "ClangKit.h"
+    
+#endif
