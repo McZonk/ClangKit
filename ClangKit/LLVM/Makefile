@@ -66,17 +66,17 @@ clean:
 # LLVM checkout
 llvm_co:
 	@echo "    *** Checking out LLVM sources"
-	@if [ ! -d $(DIR_LLVM) ]; then $(SVN) $(ARGS_SVN_CO) $(REPOS_LLVM) $(DIR_LLVM); else; $(SVN) $(ARGS_SVN_UP) $(DIR_LLVM); fi
+	@if [ ! -d $(DIR_LLVM) ]; then $(SVN) $(ARGS_SVN_CO) $(REPOS_LLVM) $(DIR_LLVM); else $(SVN) $(ARGS_SVN_UP) $(DIR_LLVM); fi
 
 # Clang checkout
 clang_co:
 	@echo "    *** Checking out Clang sources"
-	@if [ ! -d $(DIR_CLANG) ]; then $(SVN) $(ARGS_SVN_CO) $(REPOS_CLANG) $(DIR_CLANG); else; $(SVN) $(ARGS_SVN_UP) $(DIR_CLANG); fi
+	@if [ ! -d $(DIR_CLANG) ]; then $(SVN) $(ARGS_SVN_CO) $(REPOS_CLANG) $(DIR_CLANG); else $(SVN) $(ARGS_SVN_UP) $(DIR_CLANG); fi
 
 # CRT checkout
 crt_co:
 	@echo "    *** Checking out CRT sources"
-	@if [ ! -d $(DIR_CRT) ]; then $(SVN) $(ARGS_SVN_CO) $(REPOS_CRT) $(DIR_CRT); else; $(SVN) $(ARGS_SVN_UP) $(DIR_CRT); fi
+	@if [ ! -d $(DIR_CRT) ]; then $(SVN) $(ARGS_SVN_CO) $(REPOS_CRT) $(DIR_CRT); else $(SVN) $(ARGS_SVN_UP) $(DIR_CRT); fi
 
 # LLVM build
 llvm_build:
