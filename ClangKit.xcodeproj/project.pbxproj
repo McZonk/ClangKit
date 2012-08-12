@@ -10,27 +10,29 @@
 		0518B9D315D7577D00349932 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0518B9D215D7577D00349932 /* Foundation.framework */; };
 		0518B9D615D7577D00349932 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0518B9D515D7577D00349932 /* main.m */; };
 		0518B9DF15D7589F00349932 /* ClangKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059872EE15D74D09006FF8D2 /* ClangKit.framework */; };
-		0518B9EC15D7F63A00349932 /* CKTranslationUnit+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0518B9EA15D7F63A00349932 /* CKTranslationUnit+Private.h */; };
+		0518B9EC15D7F63A00349932 /* CKTranslationUnit+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0518B9EA15D7F63A00349932 /* CKTranslationUnit+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0518B9ED15D7F63A00349932 /* CKTranslationUnit+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 0518B9EB15D7F63A00349932 /* CKTranslationUnit+Private.m */; };
 		0518BA9D15D8615100349932 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 0518BA9B15D8615100349932 /* LICENSE.md */; };
 		0518BA9E15D8615100349932 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0518BA9C15D8615100349932 /* README.md */; };
+		0518BAA115D869D700349932 /* ClangKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 059872FE15D74D09006FF8D2 /* ClangKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0518BAA215D869D700349932 /* CKTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598737B15D751B8006FF8D2 /* CKTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		059872F215D74D09006FF8D2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059872F115D74D09006FF8D2 /* Cocoa.framework */; };
 		059872FC15D74D09006FF8D2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 059872FA15D74D09006FF8D2 /* InfoPlist.strings */; };
-		0598734915D74F8B006FF8D2 /* CKMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598734715D74F8B006FF8D2 /* CKMacros.h */; };
-		0598734A15D74F8B006FF8D2 /* CKWarnings.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598734815D74F8B006FF8D2 /* CKWarnings.h */; };
-		0598736315D75153006FF8D2 /* CKDiagnostic.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598734B15D75153006FF8D2 /* CKDiagnostic.h */; };
+		0598734915D74F8B006FF8D2 /* CKMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598734715D74F8B006FF8D2 /* CKMacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0598734A15D74F8B006FF8D2 /* CKWarnings.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598734815D74F8B006FF8D2 /* CKWarnings.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0598736315D75153006FF8D2 /* CKDiagnostic.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598734B15D75153006FF8D2 /* CKDiagnostic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0598736415D75153006FF8D2 /* CKDiagnostic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598734C15D75153006FF8D2 /* CKDiagnostic.m */; };
-		0598736515D75153006FF8D2 /* CKDiagnostic+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598734D15D75153006FF8D2 /* CKDiagnostic+Private.h */; };
+		0598736515D75153006FF8D2 /* CKDiagnostic+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598734D15D75153006FF8D2 /* CKDiagnostic+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0598736615D75153006FF8D2 /* CKDiagnostic+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598734E15D75153006FF8D2 /* CKDiagnostic+Private.m */; };
-		0598736715D75153006FF8D2 /* CKFixIt.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598734F15D75153006FF8D2 /* CKFixIt.h */; };
+		0598736715D75153006FF8D2 /* CKFixIt.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598734F15D75153006FF8D2 /* CKFixIt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0598736815D75153006FF8D2 /* CKFixIt.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598735015D75153006FF8D2 /* CKFixIt.m */; };
-		0598736B15D75153006FF8D2 /* CKIndex.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598735315D75153006FF8D2 /* CKIndex.h */; };
+		0598736B15D75153006FF8D2 /* CKIndex.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598735315D75153006FF8D2 /* CKIndex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0598736C15D75153006FF8D2 /* CKIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598735415D75153006FF8D2 /* CKIndex.m */; };
-		0598737315D75153006FF8D2 /* CKToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598735B15D75153006FF8D2 /* CKToken.h */; };
+		0598737315D75153006FF8D2 /* CKToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598735B15D75153006FF8D2 /* CKToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0598737415D75153006FF8D2 /* CKToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598735C15D75153006FF8D2 /* CKToken.m */; };
-		0598737515D75153006FF8D2 /* CKToken+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598735D15D75153006FF8D2 /* CKToken+Private.h */; };
+		0598737515D75153006FF8D2 /* CKToken+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598735D15D75153006FF8D2 /* CKToken+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0598737615D75153006FF8D2 /* CKToken+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598735E15D75153006FF8D2 /* CKToken+Private.m */; };
-		0598737715D75153006FF8D2 /* CKTranslationUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598735F15D75153006FF8D2 /* CKTranslationUnit.h */; };
+		0598737715D75153006FF8D2 /* CKTranslationUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598735F15D75153006FF8D2 /* CKTranslationUnit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0598737815D75153006FF8D2 /* CKTranslationUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598736015D75153006FF8D2 /* CKTranslationUnit.m */; };
 /* End PBXBuildFile section */
 
@@ -235,6 +237,8 @@
 				0598737515D75153006FF8D2 /* CKToken+Private.h in Headers */,
 				0598737715D75153006FF8D2 /* CKTranslationUnit.h in Headers */,
 				0518B9EC15D7F63A00349932 /* CKTranslationUnit+Private.h in Headers */,
+				0518BAA115D869D700349932 /* ClangKit.h in Headers */,
+				0518BAA215D869D700349932 /* CKTypes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
