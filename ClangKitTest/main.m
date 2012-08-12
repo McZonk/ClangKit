@@ -11,20 +11,6 @@ int main( void )
     
     @autoreleasepool
     {
-        tu = [ CKTranslationUnit    translationUnitWithPath:    @"/Users/macmade/Desktop/Codeine/ClangKit/ClangKitTest/test.c"
-                                    args:                       [ NSArray arrayWithObject: @"-Weverything" ]
-             ];
-        
-        NSLog( @"%@", tu.diagnostics );
-        NSLog( @"%@", tu.tokens );
-        
-        tu = [ CKTranslationUnit    translationUnitWithPath:    @"/Users/macmade/Desktop/Codeine/ClangKit/ClangKitTest/test.mm"
-                                    args:                       [ NSArray arrayWithObject: @"-Weverything" ]
-             ];
-        
-        NSLog( @"%@", tu.diagnostics );
-        NSLog( @"%@", tu.tokens );
-        
         tu = [ CKTranslationUnit    translationUnitWithText:    @"int main( void ) { return 0; }"
                                     language:                   CKLanguageC
                                     args:                       [ NSArray arrayWithObject: @"-Weverything" ]

@@ -63,8 +63,6 @@
 		0518B9D215D7577D00349932 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0518B9D515D7577D00349932 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0518B9D815D7577D00349932 /* ClangKitTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClangKitTest-Prefix.pch"; sourceTree = "<group>"; };
-		0518B9E215D75AA700349932 /* test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test.c; sourceTree = "<group>"; };
-		0518B9E815D7EE4600349932 /* test.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = test.mm; sourceTree = "<group>"; };
 		0518B9EA15D7F63A00349932 /* CKTranslationUnit+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CKTranslationUnit+Private.h"; sourceTree = "<group>"; };
 		0518B9EB15D7F63A00349932 /* CKTranslationUnit+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CKTranslationUnit+Private.m"; sourceTree = "<group>"; };
 		059872EE15D74D09006FF8D2 /* ClangKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClangKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,8 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				0518B9D515D7577D00349932 /* main.m */,
-				0518B9E815D7EE4600349932 /* test.mm */,
-				0518B9E215D75AA700349932 /* test.c */,
 				0518B9D715D7577D00349932 /* Supporting Files */,
 			);
 			path = ClangKitTest;
