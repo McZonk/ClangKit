@@ -113,7 +113,7 @@ CKTokenKind CKTokenKindComment      = CXToken_Comment;
 
 - ( void )dealloc
 {
-    RELEASE_IVAR( _spelling );
+    [ _spelling release ];
     
     [ super dealloc ];
 }

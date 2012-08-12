@@ -81,7 +81,7 @@
 
 - ( void )dealloc
 {
-    RELEASE_IVAR( _string );
+    [ _string release ];
     
     [ super dealloc ];
 }

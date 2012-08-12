@@ -175,22 +175,22 @@
     
     if( _unsavedFile != NULL )
     {
-        [ FILE_MANAGER removeItemAtPath: _path error: NULL ];
+        [ [ NSFileManager defaultManager ] removeItemAtPath: _path error: NULL ];
         
         free( _unsavedFile );
     }
     
-    RELEASE_IVAR( _path );
-    RELEASE_IVAR( _text );
-    RELEASE_IVAR( _index );
-    RELEASE_IVAR( _diagnostics );
+    [ _path         release ];
+    [ _text         release ];
+    [ _index        release ];
+    [ _diagnostics  release ];
     
     [ super dealloc ];
 }
 
 - ( void )reparse
 {
-    RELEASE_IVAR( _diagnostics );
+    [ _diagnostics release ];
     
     if( _tokens.count > 0 )
     {
@@ -199,7 +199,7 @@
         _tokensPointer = NULL;
     }
     
-    RELEASE_IVAR( _tokens );
+    [ _tokens release ];
     
     clang_reparseTranslationUnit
     (
@@ -255,7 +255,7 @@
         
         if( _unsavedFile != NULL )
         {
-            RELEASE_IVAR( _text );
+            [ _text release ];
             
             _text = [ text copy ];
             

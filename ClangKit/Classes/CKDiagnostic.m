@@ -90,9 +90,9 @@ CKDiagnosticSeverity CKDiagnosticSeverityFatal    = CXDiagnostic_Fatal;
 {
     clang_disposeDiagnostic( _cxDiagnostic );
     
-    RELEASE_IVAR( _fixIts );
-    RELEASE_IVAR( _string );
-    RELEASE_IVAR( _spelling );
+    [ _fixIts   release ];
+    [ _string   release ];
+    [ _spelling release ];
     
     [ super dealloc ];
 }

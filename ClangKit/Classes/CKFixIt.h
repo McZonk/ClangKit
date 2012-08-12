@@ -40,7 +40,7 @@
     
 @private
     
-    RESERVED_IVARS( CKFixIt, 5 );
+    id __CKFixIt_Reserved[ 5 ] __attribute__( ( unused ) );
 }
 
 @property( atomic, readonly ) NSString * string;

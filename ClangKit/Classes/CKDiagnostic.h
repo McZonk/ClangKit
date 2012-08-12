@@ -54,7 +54,7 @@ FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
     
 @private
     
-    RESERVED_IVARS( CKDiagnostic, 5 );
+    id __CKDiagnostic_Reserved[ 5 ] __attribute__( ( unused ) );
 }
 
 @property( atomic, readonly ) CXDiagnostic         cxDiagnostic;
