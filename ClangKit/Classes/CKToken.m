@@ -125,7 +125,7 @@ CKTokenKind CKTokenKindComment      = CXToken_Comment;
     }
     
     description = [ super description ];
-    description = [ description stringByAppendingFormat: @": %@ - %@ - [%lu:%lu]", kind, self.spelling, self.line, self.column ];
+    description = [ description stringByAppendingFormat: @": %@[%lu:%lu] %@", kind, self.line, self.column, self.spelling ];
     
     return description;
 }
