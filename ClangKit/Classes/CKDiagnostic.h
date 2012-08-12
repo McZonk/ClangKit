@@ -5,7 +5,6 @@
  
 /* $Id$ */
 
-@class CKSourceLocation;
 @class CKTranslationUnit;
 
 typedef NSInteger CKDiagnosticSeverity;
@@ -24,7 +23,6 @@ FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
     NSString           * _string;
     NSString           * _spelling;
     CKDiagnosticSeverity _severity;
-    CKSourceLocation   * _location;
     NSArray            * _fixIts;
     
 @private
@@ -36,7 +34,6 @@ FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
 @property( atomic, readonly ) NSString           * string;
 @property( atomic, readonly ) NSString           * spelling;
 @property( atomic, readonly ) CKDiagnosticSeverity severity;
-@property( atomic, readonly ) CKSourceLocation   * location;
 
 + ( NSArray * )diagnosticsForTranslationUnit: ( CKTranslationUnit * )translationUnit;
 + ( id )diagnosticWithTranslationUnit: ( CKTranslationUnit * )translationUnit index: ( NSUInteger )index;

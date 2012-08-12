@@ -9,6 +9,5 @@
 #import "CKDiagnostic.h"
 #import "CKFixIt.h"
 #import "CKIndex.h"
-#import "CKSourceLocation.h"
 #import "CKToken.h"
 #import "CKTranslationUnit.h"

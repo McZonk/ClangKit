@@ -24,10 +24,6 @@
 		0598736815D75153006FF8D2 /* CKFixIt.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598735015D75153006FF8D2 /* CKFixIt.m */; };
 		0598736B15D75153006FF8D2 /* CKIndex.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598735315D75153006FF8D2 /* CKIndex.h */; };
 		0598736C15D75153006FF8D2 /* CKIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598735415D75153006FF8D2 /* CKIndex.m */; };
-		0598736F15D75153006FF8D2 /* CKSourceLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598735715D75153006FF8D2 /* CKSourceLocation.h */; };
-		0598737015D75153006FF8D2 /* CKSourceLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598735815D75153006FF8D2 /* CKSourceLocation.m */; };
-		0598737115D75153006FF8D2 /* CKSourceLocation+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598735915D75153006FF8D2 /* CKSourceLocation+Private.h */; };
-		0598737215D75153006FF8D2 /* CKSourceLocation+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598735A15D75153006FF8D2 /* CKSourceLocation+Private.m */; };
 		0598737315D75153006FF8D2 /* CKToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598735B15D75153006FF8D2 /* CKToken.h */; };
 		0598737415D75153006FF8D2 /* CKToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598735C15D75153006FF8D2 /* CKToken.m */; };
 		0598737515D75153006FF8D2 /* CKToken+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598735D15D75153006FF8D2 /* CKToken+Private.h */; };
@@ -84,10 +80,6 @@
 		0598735015D75153006FF8D2 /* CKFixIt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKFixIt.m; sourceTree = "<group>"; };
 		0598735315D75153006FF8D2 /* CKIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKIndex.h; sourceTree = "<group>"; };
 		0598735415D75153006FF8D2 /* CKIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKIndex.m; sourceTree = "<group>"; };
-		0598735715D75153006FF8D2 /* CKSourceLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSourceLocation.h; sourceTree = "<group>"; };
-		0598735815D75153006FF8D2 /* CKSourceLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSourceLocation.m; sourceTree = "<group>"; };
-		0598735915D75153006FF8D2 /* CKSourceLocation+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CKSourceLocation+Private.h"; sourceTree = "<group>"; };
-		0598735A15D75153006FF8D2 /* CKSourceLocation+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CKSourceLocation+Private.m"; sourceTree = "<group>"; };
 		0598735B15D75153006FF8D2 /* CKToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKToken.h; sourceTree = "<group>"; };
 		0598735C15D75153006FF8D2 /* CKToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKToken.m; sourceTree = "<group>"; };
 		0598735D15D75153006FF8D2 /* CKToken+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CKToken+Private.h"; sourceTree = "<group>"; };
@@ -208,10 +200,6 @@
 				0598735015D75153006FF8D2 /* CKFixIt.m */,
 				0598735315D75153006FF8D2 /* CKIndex.h */,
 				0598735415D75153006FF8D2 /* CKIndex.m */,
-				0598735715D75153006FF8D2 /* CKSourceLocation.h */,
-				0598735815D75153006FF8D2 /* CKSourceLocation.m */,
-				0598735915D75153006FF8D2 /* CKSourceLocation+Private.h */,
-				0598735A15D75153006FF8D2 /* CKSourceLocation+Private.m */,
 				0598735B15D75153006FF8D2 /* CKToken.h */,
 				0598735C15D75153006FF8D2 /* CKToken.m */,
 				0598735D15D75153006FF8D2 /* CKToken+Private.h */,
@@ -237,8 +225,6 @@
 				0598736515D75153006FF8D2 /* CKDiagnostic+Private.h in Headers */,
 				0598736715D75153006FF8D2 /* CKFixIt.h in Headers */,
 				0598736B15D75153006FF8D2 /* CKIndex.h in Headers */,
-				0598736F15D75153006FF8D2 /* CKSourceLocation.h in Headers */,
-				0598737115D75153006FF8D2 /* CKSourceLocation+Private.h in Headers */,
 				0598737315D75153006FF8D2 /* CKToken.h in Headers */,
 				0598737515D75153006FF8D2 /* CKToken+Private.h in Headers */,
 				0598737715D75153006FF8D2 /* CKTranslationUnit.h in Headers */,
@@ -341,8 +327,6 @@
 				0598736615D75153006FF8D2 /* CKDiagnostic+Private.m in Sources */,
 				0598736815D75153006FF8D2 /* CKFixIt.m in Sources */,
 				0598736C15D75153006FF8D2 /* CKIndex.m in Sources */,
-				0598737015D75153006FF8D2 /* CKSourceLocation.m in Sources */,
-				0598737215D75153006FF8D2 /* CKSourceLocation+Private.m in Sources */,
 				0598737415D75153006FF8D2 /* CKToken.m in Sources */,
 				0598737615D75153006FF8D2 /* CKToken+Private.m in Sources */,
 				0598737815D75153006FF8D2 /* CKTranslationUnit.m in Sources */,

@@ -7,7 +7,6 @@
 
 #import "CKDiagnostic.h"
 #import "CKDiagnostic+Private.h"
-#import "CKSourceLocation.h"
 #import "CKTranslationUnit.h"
 
 CKDiagnosticSeverity CKDiagnosticSeverityIgnored  = CXDiagnostic_Ignored;
@@ -19,7 +18,6 @@ CKDiagnosticSeverity CKDiagnosticSeverityFatal    = CXDiagnostic_Fatal;
 @implementation CKDiagnostic
 
 @synthesize cxDiagnostic    = _cxDiagnostic;
-@synthesize location        = _location;
 @synthesize string          = _string;
 @synthesize spelling        = _spelling;
 @synthesize severity        = _severity;
@@ -64,7 +62,6 @@ CKDiagnosticSeverity CKDiagnosticSeverityFatal    = CXDiagnostic_Fatal;
 {
     clang_disposeDiagnostic( _cxDiagnostic );
     
-    RELEASE_IVAR( _location );
     RELEASE_IVAR( _fixIts );
     RELEASE_IVAR( _string );
     RELEASE_IVAR( _spelling );

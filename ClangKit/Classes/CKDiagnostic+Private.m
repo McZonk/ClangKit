@@ -6,7 +6,6 @@
 /* $Id$ */
 
 #import "CKDiagnostic+Private.h"
-#import "CKSourceLocation.h"
 
 @implementation CKDiagnostic( Private )
 
@@ -23,7 +22,6 @@
         _string       = [ [NSString alloc ] initWithCString: clang_getCString( string ) encoding: NSUTF8StringEncoding ];
         _spelling     = [ [NSString alloc ] initWithCString: clang_getCString( spelling ) encoding: NSUTF8StringEncoding ];
         _severity     = ( CKDiagnosticSeverity )clang_getDiagnosticSeverity( _cxDiagnostic );
-        _location     = [ [ CKSourceLocation alloc ] initWithDiagnostic: self ];
         
         clang_disposeString( string );
         clang_disposeString( spelling );
