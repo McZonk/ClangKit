@@ -39,7 +39,7 @@ REPOS_CRT           = http://llvm.org/svn/llvm-project/compiler-rt/trunk
 #-------------------------------------------------------------------------------
 
 DIR_BUILD           = ./Build/
-DIR_LLVM            = ./Source/
+DIR_LLVM            = ./Source/llvm/
 DIR_CLANG           = $(DIR_LLVM)tools/clang/
 DIR_CRT             = $(DIR_LLVM)projects/compiler-rt/
 
