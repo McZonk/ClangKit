@@ -9,6 +9,6 @@
 
 @interface CKToken( Private )
 
-- ( id )initWithCXToken: ( CXToken )token CXTranslationUnit: ( CXTranslationUnit )translationUnit;
+- ( id )initWithCXToken: ( CXToken )token translationUnit: ( CKTranslationUnit * )translationUnit;
 
 @end

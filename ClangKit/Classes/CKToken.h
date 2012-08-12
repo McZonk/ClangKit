@@ -21,6 +21,9 @@ FOUNDATION_EXPORT CKTokenKind CKTokenKindComment;
     
     NSString    * _spelling;
     CKTokenKind   _kind;
+    NSUInteger    _line;
+    NSUInteger    _column;
+    NSRange       _range;
     
 @private
     
@@ -29,6 +32,9 @@ FOUNDATION_EXPORT CKTokenKind CKTokenKindComment;
 
 @property( atomic, readonly ) NSString    * spelling;
 @property( atomic, readonly ) CKTokenKind   kind;
+@property( atomic, readonly ) NSUInteger    line;
+@property( atomic, readonly ) NSUInteger    column;
+@property( atomic, readonly ) NSRange       range;
 
 + ( NSArray * )tokensForTranslationUnit: ( CKTranslationUnit * )translationUnit tokens: ( void ** )tokensPointer;
 

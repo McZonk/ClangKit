@@ -19,6 +19,9 @@ CKTokenKind CKTokenKindComment      = CXToken_Comment;
 
 @synthesize spelling = _spelling;
 @synthesize kind     = _kind;
+@synthesize line     = _line;
+@synthesize column   = _column;
+@synthesize range    = _range;
 
 + ( NSArray * )tokensForTranslationUnit: ( CKTranslationUnit * )translationUnit tokens: ( void ** )tokensPointer
 {
@@ -61,11 +64,13 @@ CKTokenKind CKTokenKindComment      = CXToken_Comment;
         return nil;
     }
     
+    clang_annotateTokens( translationUnit.cxTranslationUnit, cxTokens, numTokens, NULL );
+    
     tokens = [ NSMutableArray arrayWithCapacity: ( NSUInteger )numTokens ];
     
     for( i = 0; i < numTokens; i++ )
     {
-        token = [ [ CKToken alloc ] initWithCXToken: cxTokens[ i ] CXTranslationUnit: translationUnit.cxTranslationUnit ];
+        token = [ [ CKToken alloc ] initWithCXToken: cxTokens[ i ] translationUnit: translationUnit ];
         
         if( token != nil )
         {
@@ -120,7 +125,7 @@ CKTokenKind CKTokenKindComment      = CXToken_Comment;
     }
     
     description = [ super description ];
-    description = [ description stringByAppendingFormat: @": %@ - %@", kind, self.spelling ];
+    description = [ description stringByAppendingFormat: @": %@ - %@ - [%lu:%lu]", kind, self.spelling, self.line, self.column ];
     
     return description;
 }
