@@ -36,6 +36,7 @@
     void       * _ptrData1;
     void       * _ptrData2;
     unsigned int _intData;
+    NSString   * _fileName;
     
 @private
     
@@ -45,6 +46,7 @@
 @property( atomic, readonly ) void       * ptrData1;
 @property( atomic, readonly ) void       * ptrData2;
 @property( atomic, readonly ) unsigned int intData;
+@property( atomic, readonly ) NSString   * fileName;
 
 + ( id )sourceLocationWithPointerData1: ( void * )ptrData1 pointerData2: ( void * )ptrData2 intData: ( unsigned int )intData;
 - ( id )initWithPointerData1: ( void * )ptrData1 pointerData2: ( void * )ptrData2 intData: ( unsigned int )intData;

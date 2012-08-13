@@ -29,49 +29,10 @@
  
 /* $Id$ */
 
-int main( void )
-{
-    CKTranslationUnit * tu;
-    CKDiagnostic      * d;
-    
-    @autoreleasepool
-    {
-        tu = [ CKTranslationUnit    translationUnitWithText:    @"int main( void ) { return 0; }"
-                                    language:                   CKLanguageObjC
-                                    args:                       [ NSArray arrayWithObject: @"-Weverything" ]
-             ];
-        
-        for( d in tu.diagnostics )
-        {
-            NSLog( @"Diagnostic: %@", d );
-            NSLog( @"FixIts: %@", d.fixIts );
-        }
-        
-        NSLog( @"%@", tu.tokens );
-        
-        tu.text =   @"#import <Foundation/Foundation.h>\n"
-                    @"\n"
-                    @"@interface Foo: NSObject\n"
-                    @"{}\n"
-                    @"@end\n"
-                    @"\n"
-                    @"int main( void )\n"
-                    @"{\n"
-                    @"    NSString * x;\n"
-                    @"    Foo      * f;\n"
-                    @"    \n"
-                    @"return 1;\n"
-                    @"}\n";
-        
-        for( d in tu.diagnostics )
-        {
-            NSLog( @"Diagnostic: %@", d );
-            NSLog( @"FixIts: %@", d.fixIts );
-        }
-        
-        NSLog( @"%@", tu.tokens );
-    }
-    
-    return 0;
-}
+#import "CKCursor.h"
 
+@interface CKCursor( Private )
+
+- ( id )initWithCXCursor: ( CXCursor )cursor;
+
+@end

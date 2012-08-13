@@ -29,49 +29,40 @@
  
 /* $Id$ */
 
-int main( void )
+#import "CKCursor+Private.h"
+#import "CKSourceLocation.h"
+
+@implementation CKCursor( Private )
+
+- ( id )initWithCXCursor: ( CXCursor )cursor
 {
-    CKTranslationUnit * tu;
-    CKDiagnostic      * d;
+    CXString            displayName;
+    CXString            kindSpelling;
+    CXCursor            definition;
+    CXSourceLocation    location;
     
-    @autoreleasepool
+    if( ( self = [ self init ] ) )
     {
-        tu = [ CKTranslationUnit    translationUnitWithText:    @"int main( void ) { return 0; }"
-                                    language:                   CKLanguageObjC
-                                    args:                       [ NSArray arrayWithObject: @"-Weverything" ]
-             ];
+        _kind         = ( CKCursorKind )clang_getCursorKind( cursor );
+        displayName   = clang_getCursorDisplayName( cursor );
+        kindSpelling  = clang_getCursorKindSpelling( ( enum CXCursorKind )_kind );
+        _displayName  = [ [ NSString alloc ] initWithCString: clang_getCString( displayName) encoding: NSUTF8StringEncoding ];
+        _kindSpelling = [ [ NSString alloc ] initWithCString: clang_getCString( kindSpelling) encoding: NSUTF8StringEncoding ];
+        location      = clang_getCursorLocation( cursor );
+        _location     = [ [ CKSourceLocation alloc ] initWithPointerData1: location.ptr_data[ 0 ] pointerData2: location.ptr_data[ 1 ] intData: location.int_data ];
         
-        for( d in tu.diagnostics )
+        if( clang_isCursorDefinition( cursor ) == 0 )
         {
-            NSLog( @"Diagnostic: %@", d );
-            NSLog( @"FixIts: %@", d.fixIts );
+            definition = clang_getCursorDefinition( cursor );
+            
+            if( clang_Cursor_isNull( definition ) == 0 )
+            {
+                _definition = [ [ [ self class ] alloc ] initWithCXCursor: definition ];
+            }
         }
-        
-        NSLog( @"%@", tu.tokens );
-        
-        tu.text =   @"#import <Foundation/Foundation.h>\n"
-                    @"\n"
-                    @"@interface Foo: NSObject\n"
-                    @"{}\n"
-                    @"@end\n"
-                    @"\n"
-                    @"int main( void )\n"
-                    @"{\n"
-                    @"    NSString * x;\n"
-                    @"    Foo      * f;\n"
-                    @"    \n"
-                    @"return 1;\n"
-                    @"}\n";
-        
-        for( d in tu.diagnostics )
-        {
-            NSLog( @"Diagnostic: %@", d );
-            NSLog( @"FixIts: %@", d.fixIts );
-        }
-        
-        NSLog( @"%@", tu.tokens );
     }
     
-    return 0;
+    return self;
 }
 
+@end

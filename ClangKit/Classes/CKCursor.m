@@ -30,6 +30,7 @@
 /* $Id$ */
 
 #import "CKCursor.h"
+#import "CKCursor+Private.h"
 #import "CKSourceLocation.h"
 #import "CKTranslationUnit.h"
 
@@ -199,6 +200,8 @@ CKCursorKind CKCursorKindLastPreprocessing                  = CXCursor_LastPrepr
 @synthesize kind         = _kind;
 @synthesize displayName  = _displayName;
 @synthesize kindSpelling = _kindSpelling;
+@synthesize definition   = _definition;
+@synthesize location     = _location;
 
 + ( id )cursorWithLocation: ( CKSourceLocation * )location translationUnit: ( CKTranslationUnit * )translationUnit
 {
@@ -209,29 +212,21 @@ CKCursorKind CKCursorKindLastPreprocessing                  = CXCursor_LastPrepr
 {
     CXSourceLocation sourceLocation;
     CXCursor         cursor;
-    CXString         displayName;
-    CXString         kindSpelling;
     
-    if( ( self = [ self init ] ) )
-    {
-        sourceLocation.ptr_data[ 0 ] = location.ptrData1;
-        sourceLocation.ptr_data[ 1 ] = location.ptrData2;
-        sourceLocation.int_data      = location.intData;
-        
-        cursor        = clang_getCursor( translationUnit.cxTranslationUnit, sourceLocation );
-        _kind         = ( CKCursorKind )clang_getCursorKind( cursor );
-        displayName   = clang_getCursorDisplayName( cursor );
-        kindSpelling  = clang_getCursorKindSpelling( ( enum CXCursorKind )_kind );
-        _displayName  = [ [ NSString alloc ] initWithCString: clang_getCString( displayName) encoding: NSUTF8StringEncoding ];
-        _kindSpelling = [ [ NSString alloc ] initWithCString: clang_getCString( kindSpelling) encoding: NSUTF8StringEncoding ];
-    }
+    sourceLocation.ptr_data[ 0 ] = location.ptrData1;
+    sourceLocation.ptr_data[ 1 ] = location.ptrData2;
+    sourceLocation.int_data      = location.intData;
     
-    return self;
+    cursor = clang_getCursor( translationUnit.cxTranslationUnit, sourceLocation );
+    
+    return [ self initWithCXCursor: cursor ];
 }
 
 - ( void )dealloc
 {
-    [ _displayName release ];
+    [ _displayName  release ];
+    [ _definition   release ];
+    [ _location     release ];
     
     [ super dealloc ];
 }
@@ -241,7 +236,7 @@ CKCursorKind CKCursorKindLastPreprocessing                  = CXCursor_LastPrepr
     NSString * description;
     
     description = [ super description ];
-    description = [ description stringByAppendingFormat: @": %@ - %@", self.kindSpelling, self.displayName ];
+    description = [ description stringByAppendingFormat: @": %@ - %@ - %@", self.kindSpelling, self.displayName, self.location.fileName ];
     
     return description;
 }

@@ -199,18 +199,22 @@ FOUNDATION_EXPORT CKCursorKind CKCursorKindLastPreprocessing;
 {
 @protected
     
-    CKCursorKind _kind;
-    NSString   * _displayName;
-    NSString   * _kindSpelling;
+    CKCursorKind       _kind;
+    NSString         * _displayName;
+    NSString         * _kindSpelling;
+    CKCursor         * _definition;
+    CKSourceLocation * _location;
     
 @private
     
     id __CKCursor_Reserved[ 5 ] __attribute__( ( unused ) );
 }
 
-@property( atomic, readonly ) CKCursorKind kind;
-@property( atomic, readonly ) NSString   * displayName;
-@property( atomic, readonly ) NSString   * kindSpelling;
+@property( atomic, readonly ) CKCursorKind        kind;
+@property( atomic, readonly ) NSString          * displayName;
+@property( atomic, readonly ) NSString          * kindSpelling;
+@property( atomic, readonly ) CKCursor          * definition;
+@property( atomic, readonly ) CKSourceLocation  * location;
 
 + ( id )cursorWithLocation: ( CKSourceLocation * )location translationUnit: ( CKTranslationUnit * )translationUnit;
 - ( id )initWithLocation: ( CKSourceLocation * )location translationUnit: ( CKTranslationUnit * )translationUnit;

@@ -34,10 +34,12 @@
 		0598737615D75153006FF8D2 /* CKToken+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598735E15D75153006FF8D2 /* CKToken+Private.m */; };
 		0598737715D75153006FF8D2 /* CKTranslationUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598735F15D75153006FF8D2 /* CKTranslationUnit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0598737815D75153006FF8D2 /* CKTranslationUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598736015D75153006FF8D2 /* CKTranslationUnit.m */; };
-		05A73DB015D9553D00AB75F4 /* CKCursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A73DAE15D9553D00AB75F4 /* CKCursor.h */; };
+		05A73DB015D9553D00AB75F4 /* CKCursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A73DAE15D9553D00AB75F4 /* CKCursor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05A73DB115D9553D00AB75F4 /* CKCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A73DAF15D9553D00AB75F4 /* CKCursor.m */; };
-		05A73DBD15D95DA600AB75F4 /* CKSourceLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A73DBB15D95DA600AB75F4 /* CKSourceLocation.h */; };
+		05A73DBD15D95DA600AB75F4 /* CKSourceLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A73DBB15D95DA600AB75F4 /* CKSourceLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05A73DBE15D95DA600AB75F4 /* CKSourceLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A73DBC15D95DA600AB75F4 /* CKSourceLocation.m */; };
+		05A73DC115D9645E00AB75F4 /* CKCursor+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A73DBF15D9645E00AB75F4 /* CKCursor+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		05A73DC215D9645E00AB75F4 /* CKCursor+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A73DC015D9645E00AB75F4 /* CKCursor+Private.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		05A73DAF15D9553D00AB75F4 /* CKCursor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCursor.m; sourceTree = "<group>"; };
 		05A73DBB15D95DA600AB75F4 /* CKSourceLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSourceLocation.h; sourceTree = "<group>"; };
 		05A73DBC15D95DA600AB75F4 /* CKSourceLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSourceLocation.m; sourceTree = "<group>"; };
+		05A73DBF15D9645E00AB75F4 /* CKCursor+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CKCursor+Private.h"; sourceTree = "<group>"; };
+		05A73DC015D9645E00AB75F4 /* CKCursor+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CKCursor+Private.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +230,8 @@
 				0518B9EB15D7F63A00349932 /* CKTranslationUnit+Private.m */,
 				05A73DAE15D9553D00AB75F4 /* CKCursor.h */,
 				05A73DAF15D9553D00AB75F4 /* CKCursor.m */,
+				05A73DBF15D9645E00AB75F4 /* CKCursor+Private.h */,
+				05A73DC015D9645E00AB75F4 /* CKCursor+Private.m */,
 				05A73DBB15D95DA600AB75F4 /* CKSourceLocation.h */,
 				05A73DBC15D95DA600AB75F4 /* CKSourceLocation.m */,
 			);
@@ -253,6 +259,7 @@
 				0518BAA215D869D700349932 /* CKTypes.h in Headers */,
 				05A73DB015D9553D00AB75F4 /* CKCursor.h in Headers */,
 				05A73DBD15D95DA600AB75F4 /* CKSourceLocation.h in Headers */,
+				05A73DC115D9645E00AB75F4 /* CKCursor+Private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +366,7 @@
 				0518B9ED15D7F63A00349932 /* CKTranslationUnit+Private.m in Sources */,
 				05A73DB115D9553D00AB75F4 /* CKCursor.m in Sources */,
 				05A73DBE15D95DA600AB75F4 /* CKSourceLocation.m in Sources */,
+				05A73DC215D9645E00AB75F4 /* CKCursor+Private.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
