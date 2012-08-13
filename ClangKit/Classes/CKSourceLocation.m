@@ -29,37 +29,26 @@
  
 /* $Id$ */
 
-#import "CKToken+Private.h"
-#import "CKTranslationUnit.h"
-#import "CKCursor.h"
 #import "CKSourceLocation.h"
 
-@implementation CKToken( Private )
+@implementation CKSourceLocation
 
-- ( id )initWithCXToken: ( CXToken )token translationUnit: ( CKTranslationUnit * )translationUnit
+@synthesize ptrData1 = _ptrData1;
+@synthesize ptrData2 = _ptrData2;
+@synthesize intData  = _intData;
+
++ ( id )sourceLocationWithPointerData1: ( void * )ptrData1 pointerData2: ( void * )ptrData2 intData: ( unsigned int )intData
 {
-    CXString         spelling;
-    CXSourceRange    range;
-    CXSourceLocation location;
-    unsigned int     line;
-    unsigned int     column;
-    unsigned int     offset;
-    
+    return [ [ [ self alloc ] initWithPointerData1: ptrData1 pointerData2: ptrData2 intData: intData ] autorelease ];
+}
+
+- ( id )initWithPointerData1: ( void * )ptrData1 pointerData2: ( void * )ptrData2 intData: ( unsigned int )intData
+{
     if( ( self = [ self init ] ) )
     {
-        spelling  = clang_getTokenSpelling( translationUnit.cxTranslationUnit, token );
-        _spelling = [ [ NSString alloc ] initWithCString: clang_getCString( spelling ) encoding: NSUTF8StringEncoding ];
-        _kind     = ( CKTokenKind )clang_getTokenKind( token );
-        location  = clang_getTokenLocation( translationUnit.cxTranslationUnit, token );
-        range     = clang_getTokenExtent( translationUnit.cxTranslationUnit, token );
-        
-        clang_getExpansionLocation( location, translationUnit.cxFile, &line, &column, &offset );
-        
-        _line           = ( NSUInteger )line;
-        _column         = ( NSUInteger )column;
-        _range          = NSMakeRange( ( NSUInteger )offset, range.end_int_data - range.begin_int_data );
-        _sourceLocation = [ [ CKSourceLocation alloc ] initWithPointerData1: location.ptr_data[ 0 ] pointerData2: location.ptr_data[ 1 ] intData: location.int_data ];
-        _cursor         = [ [ CKCursor alloc ] initWithLocation: _sourceLocation translationUnit: translationUnit ];
+        _ptrData1 = ptrData1;
+        _ptrData2 = ptrData2;
+        _intData  = intData;
     }
     
     return self;

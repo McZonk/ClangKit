@@ -32,6 +32,7 @@
 #import "CKToken.h"
 #import "CKToken+Private.h"
 #import "CKTranslationUnit.h"
+#import "CKCursor.h"
 
 CKTokenKind CKTokenKindPunctuation  = CXToken_Punctuation;
 CKTokenKind CKTokenKindKeyword      = CXToken_Keyword;
@@ -41,15 +42,16 @@ CKTokenKind CKTokenKindComment      = CXToken_Comment;
 
 @implementation CKToken
 
-@synthesize spelling = _spelling;
-@synthesize kind     = _kind;
-@synthesize line     = _line;
-@synthesize column   = _column;
-@synthesize range    = _range;
+@synthesize spelling        = _spelling;
+@synthesize kind            = _kind;
+@synthesize line            = _line;
+@synthesize column          = _column;
+@synthesize range           = _range;
+@synthesize cursor          = _cursor;
+@synthesize sourceLocation  = _sourceLocation;
 
 + ( NSArray * )tokensForTranslationUnit: ( CKTranslationUnit * )translationUnit tokens: ( void ** )tokensPointer
 {
-    NSError        * error;
     CXToken        * cxTokens;
     NSMutableArray * tokens;
     CXFile           file;
@@ -61,12 +63,6 @@ CKTokenKind CKTokenKindComment      = CXToken_Comment;
     CKToken        * token;
     
     ( void )translationUnit;
-    
-    error = nil;
-    if( error != nil )
-    {
-        return nil;
-    }
     
     file            = clang_getFile( translationUnit.cxTranslationUnit, translationUnit.path.fileSystemRepresentation );
     startLocation   = clang_getLocationForOffset( translationUnit.cxTranslationUnit, file, 0 );
@@ -113,7 +109,9 @@ CKTokenKind CKTokenKindComment      = CXToken_Comment;
 
 - ( void )dealloc
 {
-    [ _spelling release ];
+    [ _spelling         release ];
+    [ _cursor           release ];
+    [ _sourceLocation   release ];
     
     [ super dealloc ];
 }
@@ -149,7 +147,7 @@ CKTokenKind CKTokenKindComment      = CXToken_Comment;
     }
     
     description = [ super description ];
-    description = [ description stringByAppendingFormat: @": %@[%lu:%lu] %@", kind, self.line, self.column, self.spelling ];
+    description = [ description stringByAppendingFormat: @": %@[%lu:%lu] %@ (%@)", kind, self.line, self.column, self.spelling, self.cursor.kindSpelling ];
     
     return description;
 }

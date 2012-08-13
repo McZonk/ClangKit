@@ -51,13 +51,13 @@
     id __CKTranslationUnit_Reserved[ 5 ] __attribute__( ( unused ) );
 }
 
-@property( atomic, readonly        ) NSString        * path;
-@property( atomic, readwrite, copy ) NSString        * text;
-@property( atomic, readonly        ) CXTranslationUnit cxTranslationUnit;
-@property( atomic, readonly        ) CKIndex         * index;
-@property( atomic, readonly        ) NSArray         * diagnostics;
-@property( atomic, readonly        ) NSArray         * tokens;
-@property( atomic, readonly        ) CXFile            cxFile;
+@property( atomic, readonly          ) NSString        * path;
+@property( atomic, readwrite, retain ) NSString        * text;
+@property( atomic, readonly          ) CXTranslationUnit cxTranslationUnit;
+@property( atomic, readonly          ) CKIndex         * index;
+@property( atomic, readonly          ) NSArray         * diagnostics;
+@property( atomic, readonly          ) NSArray         * tokens;
+@property( atomic, readonly          ) CXFile            cxFile;
 
 + ( id )translationUnitWithPath: ( NSString * )path;
 + ( id )translationUnitWithPath: ( NSString * )path index: ( CKIndex * )index;

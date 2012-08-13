@@ -190,8 +190,6 @@
 
 - ( void )reparse
 {
-    [ _diagnostics release ];
-    
     if( _tokens.count > 0 )
     {
         clang_disposeTokens( _cxTranslationUnit, _tokensPointer, ( unsigned int )_tokens.count );
@@ -199,14 +197,18 @@
         _tokensPointer = NULL;
     }
     
-    [ _tokens release ];
+    [ _tokens       release ];
+    [ _diagnostics  release ];
+    
+    _tokens      = nil;
+    _diagnostics = nil;
     
     clang_reparseTranslationUnit
     (
         _cxTranslationUnit,
         ( _unsavedFile == NULL ) ? 0 : 1,
         _unsavedFile,
-        clang_defaultEditingTranslationUnitOptions()
+        clang_defaultReparseOptions( _cxTranslationUnit )
     );
 }
 
@@ -255,9 +257,12 @@
         
         if( _unsavedFile != NULL )
         {
-            [ _text release ];
-            
-            _text = [ text copy ];
+            if( _text != text )
+            {
+                [ _text release ];
+                
+                _text = [ text retain ];
+            }
             
             ( ( struct CXUnsavedFile * )_unsavedFile )->Filename = _path.fileSystemRepresentation;
             ( ( struct CXUnsavedFile * )_unsavedFile )->Contents = _text.UTF8String;

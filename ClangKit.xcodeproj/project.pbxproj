@@ -34,6 +34,10 @@
 		0598737615D75153006FF8D2 /* CKToken+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598735E15D75153006FF8D2 /* CKToken+Private.m */; };
 		0598737715D75153006FF8D2 /* CKTranslationUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598735F15D75153006FF8D2 /* CKTranslationUnit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0598737815D75153006FF8D2 /* CKTranslationUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598736015D75153006FF8D2 /* CKTranslationUnit.m */; };
+		05A73DB015D9553D00AB75F4 /* CKCursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A73DAE15D9553D00AB75F4 /* CKCursor.h */; };
+		05A73DB115D9553D00AB75F4 /* CKCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A73DAF15D9553D00AB75F4 /* CKCursor.m */; };
+		05A73DBD15D95DA600AB75F4 /* CKSourceLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A73DBB15D95DA600AB75F4 /* CKSourceLocation.h */; };
+		05A73DBE15D95DA600AB75F4 /* CKSourceLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A73DBC15D95DA600AB75F4 /* CKSourceLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +97,10 @@
 		0598735F15D75153006FF8D2 /* CKTranslationUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKTranslationUnit.h; sourceTree = "<group>"; };
 		0598736015D75153006FF8D2 /* CKTranslationUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKTranslationUnit.m; sourceTree = "<group>"; };
 		0598737B15D751B8006FF8D2 /* CKTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKTypes.h; sourceTree = "<group>"; };
+		05A73DAE15D9553D00AB75F4 /* CKCursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCursor.h; sourceTree = "<group>"; };
+		05A73DAF15D9553D00AB75F4 /* CKCursor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCursor.m; sourceTree = "<group>"; };
+		05A73DBB15D95DA600AB75F4 /* CKSourceLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSourceLocation.h; sourceTree = "<group>"; };
+		05A73DBC15D95DA600AB75F4 /* CKSourceLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSourceLocation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +224,10 @@
 				0598736015D75153006FF8D2 /* CKTranslationUnit.m */,
 				0518B9EA15D7F63A00349932 /* CKTranslationUnit+Private.h */,
 				0518B9EB15D7F63A00349932 /* CKTranslationUnit+Private.m */,
+				05A73DAE15D9553D00AB75F4 /* CKCursor.h */,
+				05A73DAF15D9553D00AB75F4 /* CKCursor.m */,
+				05A73DBB15D95DA600AB75F4 /* CKSourceLocation.h */,
+				05A73DBC15D95DA600AB75F4 /* CKSourceLocation.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -239,6 +251,8 @@
 				0518B9EC15D7F63A00349932 /* CKTranslationUnit+Private.h in Headers */,
 				0518BAA115D869D700349932 /* ClangKit.h in Headers */,
 				0518BAA215D869D700349932 /* CKTypes.h in Headers */,
+				05A73DB015D9553D00AB75F4 /* CKCursor.h in Headers */,
+				05A73DBD15D95DA600AB75F4 /* CKSourceLocation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +357,8 @@
 				0598737615D75153006FF8D2 /* CKToken+Private.m in Sources */,
 				0598737815D75153006FF8D2 /* CKTranslationUnit.m in Sources */,
 				0518B9ED15D7F63A00349932 /* CKTranslationUnit+Private.m in Sources */,
+				05A73DB115D9553D00AB75F4 /* CKCursor.m in Sources */,
+				05A73DBE15D95DA600AB75F4 /* CKSourceLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +449,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -472,6 +489,7 @@
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LLVM_LTO = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -518,6 +536,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
@@ -552,6 +571,7 @@
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LLVM_LTO = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};

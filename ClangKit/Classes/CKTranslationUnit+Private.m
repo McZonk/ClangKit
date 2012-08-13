@@ -57,7 +57,7 @@
         }
         else
         {
-            _text        = [ text copy ];
+            _text        = [ text retain ];
             _unsavedFile = calloc( sizeof( struct CXUnsavedFile ), 1 );
             
             if( _unsavedFile == NULL )

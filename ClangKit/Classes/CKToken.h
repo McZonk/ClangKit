@@ -29,8 +29,6 @@
  
 /* $Id$ */
 
-@class CKTranslationUnit;
-
 typedef NSInteger CKTokenKind;
 
 FOUNDATION_EXPORT CKTokenKind CKTokenKindPunctuation;
@@ -39,26 +37,34 @@ FOUNDATION_EXPORT CKTokenKind CKTokenKindIdentifier;
 FOUNDATION_EXPORT CKTokenKind CKTokenKindLiteral;
 FOUNDATION_EXPORT CKTokenKind CKTokenKindComment;
 
+@class CKTranslationUnit;
+@class CKCursor;
+@class CKSourceLocation;
+
 @interface CKToken: NSObject
 {
 @protected
     
-    NSString    * _spelling;
-    CKTokenKind   _kind;
-    NSUInteger    _line;
-    NSUInteger    _column;
-    NSRange       _range;
+    NSString         * _spelling;
+    CKTokenKind        _kind;
+    NSUInteger         _line;
+    NSUInteger         _column;
+    NSRange            _range;
+    CKCursor         * _cursor;
+    CKSourceLocation * _sourceLocation;
     
 @private
     
     id __CKToken_Reserved[ 5 ] __attribute__( ( unused ) );
 }
 
-@property( atomic, readonly ) NSString    * spelling;
-@property( atomic, readonly ) CKTokenKind   kind;
-@property( atomic, readonly ) NSUInteger    line;
-@property( atomic, readonly ) NSUInteger    column;
-@property( atomic, readonly ) NSRange       range;
+@property( atomic, readonly ) NSString         * spelling;
+@property( atomic, readonly ) CKTokenKind        kind;
+@property( atomic, readonly ) NSUInteger         line;
+@property( atomic, readonly ) NSUInteger         column;
+@property( atomic, readonly ) NSRange            range;
+@property( atomic, readonly ) CKCursor         * cursor;
+@property( atomic, readonly ) CKSourceLocation * sourceLocation;
 
 + ( NSArray * )tokensForTranslationUnit: ( CKTranslationUnit * )translationUnit tokens: ( void ** )tokensPointer;
 
