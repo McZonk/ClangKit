@@ -29,6 +29,13 @@
  
 /* $Id$ */
 
+/*!
+ * @header          ClangKitTest-Prefix.pch
+ * @author          Jean-David Gadina <macmade@digidna.net>
+ * @copyright       (c) 2011-2012, DigiDNA
+ * @abstract        Test project's precompiled header
+ */
+
 #ifdef __OBJC__
     
     #import <Foundation/Foundation.h>

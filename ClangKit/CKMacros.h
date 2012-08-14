@@ -29,6 +29,13 @@
  
 /* $Id$ */
 
+/*!
+ * @header          CKMacros.h
+ * @author          Jean-David Gadina <macmade@digidna.net>
+ * @copyright       (c) 2011-2012, DigiDNA
+ * @abstract        Project private macros
+ */
+
 #ifndef __CK_MACROS_H__
 #define __CK_MACROS_H__
 

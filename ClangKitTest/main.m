@@ -29,6 +29,13 @@
  
 /* $Id$ */
 
+/*!
+ * @file            main.m
+ * @author          Jean-David Gadina <macmade@digidna.net>
+ * @copyright       (c) 2011-2012, DigiDNA
+ * @abstract        ClangKit test / demo project
+ */
+
 int main( void )
 {
     CKTranslationUnit * tu;
@@ -36,19 +43,23 @@ int main( void )
     
     @autoreleasepool
     {
+        /* First create a translation unit for Objective-C, using a string */
         tu = [ CKTranslationUnit    translationUnitWithText:    @"int main( void ) { return 0; }"
                                     language:                   CKLanguageObjC
                                     args:                       [ NSArray arrayWithObject: @"-Weverything" ]
              ];
         
+        /* Logs each diagnostic and fix-its */
         for( d in tu.diagnostics )
         {
             NSLog( @"Diagnostic: %@", d );
             NSLog( @"FixIts: %@", d.fixIts );
         }
         
+        /* Logs the available tokens */
         NSLog( @"%@", tu.tokens );
         
+        /* Changes the code, using the 'text' property */
         tu.text =   @"#import <Foundation/Foundation.h>\n"
                     @"\n"
                     @"@interface Foo: NSObject\n"
@@ -63,12 +74,14 @@ int main( void )
                     @"return 1;\n"
                     @"}\n";
         
+        /* Logs each diagnostic and fix-its */
         for( d in tu.diagnostics )
         {
             NSLog( @"Diagnostic: %@", d );
             NSLog( @"FixIts: %@", d.fixIts );
         }
         
+        /* Logs the available tokens */
         NSLog( @"%@", tu.tokens );
     }
     

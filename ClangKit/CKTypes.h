@@ -29,18 +29,63 @@
  
 /* $Id$ */
 
+/*!
+ * @header          CKTypes.h
+ * @author          Jean-David Gadina <macmade@digidna.net>
+ * @copyright       (c) 2011-2012, DigiDNA
+ * @abstract        Project public types
+ * @description     The project obviously uses libclang headers, but there is
+ *                  no reason for a project using ClangKit to include them.
+ *                  This header contains typedefs for libclang internal types,
+ *                  when no libclang headers are included. This way, we can
+ *                  ensure the public ClangKit interfaces will compile even
+ *                  if libclang headers are not included.
+ */
+
 #ifndef __CK_TYPES_H__
 #define __CK_TYPES_H__
 
 #ifndef CLANG_C_INDEX_H
 
+/*!
+ * @typedef         CXDiagnostic
+ * @abstract        libclang type for diagnostic objects.
+ */
 typedef void * CXDiagnostic;
+
+/*!
+ * @typedef         CXIndex
+ * @abstract        libclang type for index objects.
+ */
 typedef void * CXIndex;
+
+/*!
+ * @typedef         CXTranslationUnit
+ * @abstract        libclang type for translation unit objects.
+ */
 typedef void * CXTranslationUnit;
+
+/*!
+ * @typedef         CXFile
+ * @abstract        libclang type for file objects.
+ */
 typedef void * CXFile;
 
 #endif
 
+/*!
+ * @typedef         CKLanguage
+ * @abstract        Source code languages
+ * @description     ClangKit can be used to parse strings and files. For a file,
+ *                  the language is guessed from the file's extension. For
+ *                  strings, the language must be specified using one of this
+ *                  value.
+ * @constant        CKLanguageNone      Unknown language
+ * @constant        CKLanguageC         C source code
+ * @constant        CKLanguageCPP       C++ source code
+ * @constant        CKLanguageObjC      Objective-C source code
+ * @constant        CKLanguageObjCPP    Objective-C++ source code
+ */
 typedef enum
 {
     CKLanguageNone   = 0x00,

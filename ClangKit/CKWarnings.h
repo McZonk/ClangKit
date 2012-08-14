@@ -29,6 +29,13 @@
  
 /* $Id$ */
 
+/*!
+ * @header          CKWarnings.h
+ * @author          Jean-David Gadina <macmade@digidna.net>
+ * @copyright       (c) 2011-2012, DigiDNA
+ * @abstract        Enforcement of compiler warning flags
+ */
+
 #ifndef __CK_WARNINGS_H__
 #define __CK_WARNINGS_H__
 
