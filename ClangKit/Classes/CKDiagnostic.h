@@ -29,45 +29,190 @@
  
 /* $Id$ */
 
+/*!
+ * @header          CKDiagnostic.h
+ * @author          Jean-David Gadina <macmade@digidna.net>
+ * @copyright       (c) 2011-2012, DigiDNA
+ * @abstract        ClangKit Diagnostic class
+ */
+
 @class CKTranslationUnit;
 
+/*!
+ * @typedef         CKDiagnosticSeverity
+ * @abstract        Diagnostic severity
+ * @description     Possible values are defined below.
+ */
 typedef NSInteger CKDiagnosticSeverity;
 
+/*!
+ * @var             CKDiagnosticSeverityIgnored
+ * @abstract        Ignored
+ */
 FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityIgnored;
+
+/*!
+ * @var             CKDiagnosticSeverityNote
+ * @abstract        Notice
+ */
 FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityNote;
+
+/*!
+ * @var             CKDiagnosticSeverityWarning
+ * @abstract        Warning
+ */
 FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityWarning;
+
+/*!
+ * @var             CKDiagnosticSeverityError
+ * @abstract        Error
+ */
 FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityError;
+
+/*!
+ * @var             CKDiagnosticSeverityFatal
+ * @abstract        Fatal error
+ */
 FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
 
+/*!
+ * @class           CKDiagnostic
+ * @abstract        Diagnostic class
+ */
 @interface CKDiagnostic: NSObject
 {
 @protected
     
-    CXDiagnostic         _cxDiagnostic;
-    NSString           * _string;
-    NSString           * _spelling;
+    /*!
+     * @var             _cxDiagnostic
+     * @abstract        Internal libclang diagnostic object
+     */
+    CXDiagnostic _cxDiagnostic;
+    
+    /*!
+     * @var             _string
+     * @abstract        Diagnostic's formatted message
+     */
+    NSString * _string;
+    
+    /*!
+     * @var             _spelling
+     * @abstract        Diagnostic's  spelling
+     */
+    NSString * _spelling;
+    
+    /*!
+     * @var             _severity
+     * @abstract        Diagnostic's severity
+     */
     CKDiagnosticSeverity _severity;
-    NSArray            * _fixIts;
-    NSUInteger           _line;
-    NSUInteger           _column;
-    NSRange              _range;
+    
+    /*!
+     * @var             _fixIts
+     * @abstract        An array containing instances of 'CKFixIt'
+     */
+    NSArray * _fixIts;
+    
+    /*!
+     * @var             _line
+     * @abstract        Line number for the diagnostic
+     */
+    NSUInteger _line;
+    
+    /*!
+     * @var             _column
+     * @abstract        Column number for the diagnostic
+     */
+    NSUInteger _column;
+    
+    /*!
+     * @var             _range
+     * @abstract        Range of the diagnostic, based on the source code
+     */
+    NSRange _range;
     
 @private
     
+    /*!
+     * @var             __CKDiagnostic_Reserved
+     * @abstract        Reserved instance variables (binary compatibility)
+     */
     id __CKDiagnostic_Reserved[ 5 ] __attribute__( ( unused ) );
 }
 
-@property( atomic, readonly ) CXDiagnostic         cxDiagnostic;
-@property( atomic, readonly ) NSString           * string;
-@property( atomic, readonly ) NSString           * spelling;
-@property( atomic, readonly ) CKDiagnosticSeverity severity;
-@property( atomic, readonly ) NSArray            * fixIts;
-@property( atomic, readonly ) NSUInteger           line;
-@property( atomic, readonly ) NSUInteger           column;
-@property( atomic, readonly ) NSRange              range;
+/*!
+ * @property        cxDiagnostic
+ * @abstract        Internal libclang diagnostic object
+ */
+@property( atomic, readonly ) CXDiagnostic cxDiagnostic;
+    
+/*!
+ * @property        string
+ * @abstract        Diagnostic's formatted message
+ */
+@property( atomic, readonly ) NSString * string;
 
+/*!
+ * @property        spelling
+ * @abstract        Diagnostic's  spelling
+ */
+@property( atomic, readonly ) NSString * spelling;
+
+/*!
+ * @property        severity
+ * @abstract        Diagnostic's severity
+ */
+@property( atomic, readonly ) CKDiagnosticSeverity severity;
+
+/*!
+ * @property        fixIts
+ * @abstract        An array containing instances of 'CKFixIt'
+ */
+@property( atomic, readonly ) NSArray * fixIts;
+
+/*!
+ * @property        line
+ * @abstract        Line number for the diagnostic
+ */
+@property( atomic, readonly ) NSUInteger line;
+
+/*!
+ * @property        column
+ * @abstract        Column number for the diagnostic
+ */
+@property( atomic, readonly ) NSUInteger column;
+
+/*!
+ * @property        range
+ * @abstract        Range of the diagnostic, based on the source code
+ */
+@property( atomic, readonly ) NSRange range;
+
+/*
+ * @method          diagnosticsForTranslationUnit:
+ * @abstract        Get diagnostics for a translation unit
+ * @param           translationUnit     The translation unit from which to get the diagnostics
+ * @return          An array with instances of 'CKFixIt'
+ */
 + ( NSArray * )diagnosticsForTranslationUnit: ( CKTranslationUnit * )translationUnit;
+
+/*
+ * @method          diagnosticWithTranslationUnit:index:
+ * @abstract        Get a specific diagnostic from a translation unit
+ * @param           translationUnit     The translation unit from which to get the diagnostic
+ * @param           index               The index of the diagnostic in the translation unit
+ * @return          The diagnostic object
+ * @discussion      The returned object is autoreleased.
+ */
 + ( id )diagnosticWithTranslationUnit: ( CKTranslationUnit * )translationUnit index: ( NSUInteger )index;
+
+/*
+ * @method          initWithTranslationUnit:
+ * @abstract        Get a specific diagnostic from a translation unit
+ * @param           translationUnit     The translation unit from which to get the diagnostic
+ * @param           index               The index of the diagnostic in the translation unit
+ * @return          The diagnostic object
+ */
 - ( id )initWithTranslationUnit: ( CKTranslationUnit * )translationUnit index: ( NSUInteger )index;
 
 @end
