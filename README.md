@@ -76,6 +76,13 @@ Token types are:
 	CKTokenKind CKTokenKindLiteral;
 	CKTokenKind CKTokenKindComment;
 
+#### Cursors: 
+
+Each token has an associated cursor (the `cursor` property), that you can use to retrieve extended informations about the symbol.
+
+Cursors are the key for everything, and it would take too much lines describing all their features.  
+Take a look at the code, and maybe read some official Clang documentation.
+
 #### Diagnostics: 
 
 Diagnostics are available through the `diagnostics` property.  
@@ -127,17 +134,17 @@ The output will be:
 
     <CKDiagnostic: 0x101c00710>: Warning[1:31] - warning: no newline at end of file [-Wnewline-eof]
     (
-        "<CKToken: 0x101500f30>: Keyword[1:1] int",
-        "<CKToken: 0x101501710>: Identifier[1:5] main",
-        "<CKToken: 0x101501b40>: Punctuation[1:9] (",
-        "<CKToken: 0x101501f50>: Keyword[1:11] void",
-        "<CKToken: 0x101502380>: Punctuation[1:16] )",
-        "<CKToken: 0x101502790>: Punctuation[1:18] {",
-        "<CKToken: 0x101502bc0>: Keyword[1:20] return",
-        "<CKToken: 0x101502ff0>: Literal[1:27] 0",
-        "<CKToken: 0x101503410>: Punctuation[1:28] ;",
-        "<CKToken: 0x101503830>: Punctuation[1:30] }"
-    )
+        "<CKToken: 0x100715920>: Keyword[1:1] int (FunctionDecl)",
+    	"<CKToken: 0x100720970>: Identifier[1:5] main (FunctionDecl)",
+    	"<CKToken: 0x100720f40>: Punctuation[1:9] ( (FunctionDecl)",
+    	"<CKToken: 0x100721540>: Keyword[1:11] void (FunctionDecl)",
+    	"<CKToken: 0x100721b60>: Punctuation[1:16] ) (FunctionDecl)",
+    	"<CKToken: 0x100722160>: Punctuation[1:18] { (CompoundStmt)",
+    	"<CKToken: 0x100722760>: Keyword[1:20] return (ReturnStmt)",
+    	"<CKToken: 0x1007229e0>: Literal[1:27] 0 (IntegerLiteral)",
+    	"<CKToken: 0x100722fc0>: Punctuation[1:28] ; (CompoundStmt)",
+    	"<CKToken: 0x1007235a0>: Punctuation[1:30] } (CompoundStmt)"
+	)
 
 License
 -------
