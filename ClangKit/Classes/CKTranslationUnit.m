@@ -208,7 +208,7 @@
         _cxTranslationUnit,
         ( _unsavedFile == NULL ) ? 0 : 1,
         _unsavedFile,
-        clang_defaultReparseOptions( _cxTranslationUnit )
+        clang_defaultReparseOptions( _cxTranslationUnit ) | CXTranslationUnit_DetailedPreprocessingRecord
     );
 }
 

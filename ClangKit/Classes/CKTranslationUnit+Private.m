@@ -117,7 +117,7 @@
             _numArgs,
             _unsavedFile,
             ( _unsavedFile == NULL ) ? 0 : 1,
-            clang_defaultEditingTranslationUnitOptions()
+            clang_defaultEditingTranslationUnitOptions() | CXTranslationUnit_DetailedPreprocessingRecord
         );
         
         if( _cxTranslationUnit == NULL )
