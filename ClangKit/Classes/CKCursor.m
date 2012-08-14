@@ -197,11 +197,20 @@ CKCursorKind CKCursorKindLastPreprocessing                  = CXCursor_LastPrepr
 
 @implementation CKCursor
 
-@synthesize kind         = _kind;
-@synthesize displayName  = _displayName;
-@synthesize kindSpelling = _kindSpelling;
-@synthesize definition   = _definition;
-@synthesize location     = _location;
+@synthesize kind                = _kind;
+@synthesize displayName         = _displayName;
+@synthesize kindSpelling        = _kindSpelling;
+@synthesize location            = _location;
+@synthesize isDefinition        = _isDefinition;
+@synthesize isDeclaration       = _isDeclaration;
+@synthesize isReference         = _isReference;
+@synthesize isPreprocessing     = _isPreprocessing;
+@synthesize isExpression        = _isExpression;
+@synthesize isAttribute         = _isAttribute;
+@synthesize isInvalid           = _isInvalid;
+@synthesize isStatement         = _isStatement;
+@synthesize isTranslationUnit   = _isTranslationUnit;
+@synthesize isUnexposed         = _isUnexposed;
 
 + ( id )cursorWithLocation: ( CKSourceLocation * )location translationUnit: ( CKTranslationUnit * )translationUnit
 {
@@ -224,9 +233,15 @@ CKCursorKind CKCursorKindLastPreprocessing                  = CXCursor_LastPrepr
 
 - ( void )dealloc
 {
-    [ _displayName  release ];
-    [ _definition   release ];
-    [ _location     release ];
+    [ _displayName      release ];
+    [ _definition       release ];
+    [ _lexicalParent    release ];
+    [ _semanticParent   release ];
+    [ _canonical        release ];
+    [ _referenced       release ];
+    [ _location         release ];
+    
+    free( _cxCursorPointer );
     
     [ super dealloc ];
 }
@@ -236,9 +251,95 @@ CKCursorKind CKCursorKindLastPreprocessing                  = CXCursor_LastPrepr
     NSString * description;
     
     description = [ super description ];
-    description = [ description stringByAppendingFormat: @": %@ - %@ - %@", self.kindSpelling, self.displayName, self.location.fileName ];
+    description = [ description stringByAppendingFormat: @": %@ - %@", self.kindSpelling, self.displayName ];
     
     return description;
+}
+
+- ( CKCursor * )referenced
+{
+    CXCursor cursor;
+    CXCursor referenced;
+    
+    if( _referenced == nil && _cxCursorPointer != NULL && _isDefinition == NO )
+    {
+        memcpy( &cursor, _cxCursorPointer, sizeof( CXCursor ) );
+        
+        referenced  = clang_getCursorReferenced( cursor );
+        
+        if( clang_equalCursors( cursor, referenced ) == 0 )
+        {
+            _referenced = [ [ [ self class ] alloc ] initWithCXCursor: referenced ];
+        }
+    }
+    
+    return _referenced;
+}
+
+- ( CKCursor * )definition
+{
+    CXCursor cursor;
+    CXCursor definition;
+    
+    if( _definition == nil && _cxCursorPointer != NULL && _isDefinition == NO )
+    {
+        memcpy( &cursor, _cxCursorPointer, sizeof( CXCursor ) );
+        
+        definition  = clang_getCursorDefinition( cursor );
+        
+        if( clang_Cursor_isNull( definition ) == 0 )
+        _definition = [ [ [ self class ] alloc ] initWithCXCursor: definition ];
+    }
+    
+    return _definition;
+}
+
+- ( CKCursor * )canonical
+{
+    CXCursor cursor;
+    CXCursor canonical;
+    
+    if( _canonical == nil && _cxCursorPointer != NULL )
+    {
+        memcpy( &cursor, _cxCursorPointer, sizeof( CXCursor ) );
+        
+        canonical  = clang_getCanonicalCursor( cursor );
+        _canonical = [ [ [ self class ] alloc ] initWithCXCursor: canonical ];
+    }
+    
+    return _canonical;
+}
+
+- ( CKCursor * )lexicalParent
+{
+    CXCursor cursor;
+    CXCursor lexicalParent;
+    
+    if( _referenced == nil && _cxCursorPointer != NULL )
+    {
+        memcpy( &cursor, _cxCursorPointer, sizeof( CXCursor ) );
+        
+        lexicalParent  = clang_getCursorReferenced( cursor );
+        _lexicalParent = [ [ [ self class ] alloc ] initWithCXCursor: lexicalParent ];
+    }
+    
+    return _referenced;
+}
+
+- ( CKCursor * )semanticParent
+{
+    CXCursor cursor;
+    CXCursor semanticParent;
+    
+    if( _semanticParent == nil && _cxCursorPointer != NULL )
+    {
+        memcpy( &cursor, _cxCursorPointer, sizeof( CXCursor ) );
+        
+        semanticParent  = clang_getCursorReferenced( cursor );
+        _semanticParent = [ [ [ self class ] alloc ] initWithCXCursor: semanticParent ];
+    }
+    
+    return _semanticParent;
 }
 
 @end

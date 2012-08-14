@@ -38,11 +38,21 @@
 {
     CXString            displayName;
     CXString            kindSpelling;
-    CXCursor            definition;
     CXSourceLocation    location;
     
     if( ( self = [ self init ] ) )
     {
+        if( clang_Cursor_isNull( cursor ) )
+        {
+            [ self release ];
+            
+            return nil;
+        }
+        
+        _cxCursorPointer = calloc( sizeof( CXCursor ), 1 );
+        
+        memcpy( _cxCursorPointer, &cursor, sizeof( CXCursor ) );
+        
         _kind         = ( CKCursorKind )clang_getCursorKind( cursor );
         displayName   = clang_getCursorDisplayName( cursor );
         kindSpelling  = clang_getCursorKindSpelling( ( enum CXCursorKind )_kind );
@@ -51,15 +61,23 @@
         location      = clang_getCursorLocation( cursor );
         _location     = [ [ CKSourceLocation alloc ] initWithPointerData1: location.ptr_data[ 0 ] pointerData2: location.ptr_data[ 1 ] intData: location.int_data ];
         
-        if( clang_isCursorDefinition( cursor ) == 0 )
+        if( clang_isCursorDefinition( cursor ) )
         {
-            definition = clang_getCursorDefinition( cursor );
-            
-            if( clang_Cursor_isNull( definition ) == 0 )
-            {
-                _definition = [ [ [ self class ] alloc ] initWithCXCursor: definition ];
-            }
+            _isDefinition = YES;
         }
+        
+        [ self definition ];
+        [ self referenced ];
+        
+        if( clang_isDeclaration(     ( enum CXCursorKind )_kind ) ) { _isDeclaration     = YES; }
+        if( clang_isReference(       ( enum CXCursorKind )_kind ) ) { _isReference       = YES; }
+        if( clang_isPreprocessing(   ( enum CXCursorKind )_kind ) ) { _isPreprocessing   = YES; }
+        if( clang_isExpression(      ( enum CXCursorKind )_kind ) ) { _isExpression      = YES; }
+        if( clang_isAttribute(       ( enum CXCursorKind )_kind ) ) { _isAttribute       = YES; }
+        if( clang_isInvalid(         ( enum CXCursorKind )_kind ) ) { _isInvalid         = YES; }
+        if( clang_isStatement(       ( enum CXCursorKind )_kind ) ) { _isStatement       = YES; }
+        if( clang_isTranslationUnit( ( enum CXCursorKind )_kind ) ) { _isTranslationUnit = YES; }
+        if( clang_isUnexposed(       ( enum CXCursorKind )_kind ) ) { _isUnexposed       = YES; }
     }
     
     return self;

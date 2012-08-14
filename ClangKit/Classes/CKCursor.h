@@ -203,7 +203,22 @@ FOUNDATION_EXPORT CKCursorKind CKCursorKindLastPreprocessing;
     NSString         * _displayName;
     NSString         * _kindSpelling;
     CKCursor         * _definition;
+    CKCursor         * _semanticParent;
+    CKCursor         * _lexicalParent;
+    CKCursor         * _canonical;
+    CKCursor         * _referenced;
     CKSourceLocation * _location;
+    BOOL               _isDefinition;
+    BOOL               _isDeclaration;
+    BOOL               _isReference;
+    BOOL               _isPreprocessing;
+    BOOL               _isExpression;
+    BOOL               _isAttribute;
+    BOOL               _isInvalid;
+    BOOL               _isStatement;
+    BOOL               _isTranslationUnit;
+    BOOL               _isUnexposed;
+    void             * _cxCursorPointer;
     
 @private
     
@@ -214,7 +229,21 @@ FOUNDATION_EXPORT CKCursorKind CKCursorKindLastPreprocessing;
 @property( atomic, readonly ) NSString          * displayName;
 @property( atomic, readonly ) NSString          * kindSpelling;
 @property( atomic, readonly ) CKCursor          * definition;
+@property( atomic, readonly ) CKCursor          * semanticParent;
+@property( atomic, readonly ) CKCursor          * lexicalParent;
+@property( atomic, readonly ) CKCursor          * canonical;
+@property( atomic, readonly ) CKCursor          * referenced;
 @property( atomic, readonly ) CKSourceLocation  * location;
+@property( atomic, readonly ) BOOL                isDefinition;
+@property( atomic, readonly ) BOOL                isDeclaration;
+@property( atomic, readonly ) BOOL                isReference;
+@property( atomic, readonly ) BOOL                isPreprocessing;
+@property( atomic, readonly ) BOOL                isExpression;
+@property( atomic, readonly ) BOOL                isAttribute;
+@property( atomic, readonly ) BOOL                isInvalid;
+@property( atomic, readonly ) BOOL                isStatement;
+@property( atomic, readonly ) BOOL                isTranslationUnit;
+@property( atomic, readonly ) BOOL                isUnexposed;
 
 + ( id )cursorWithLocation: ( CKSourceLocation * )location translationUnit: ( CKTranslationUnit * )translationUnit;
 - ( id )initWithLocation: ( CKSourceLocation * )location translationUnit: ( CKTranslationUnit * )translationUnit;
