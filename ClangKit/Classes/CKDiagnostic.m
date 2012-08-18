@@ -42,7 +42,6 @@ CKDiagnosticSeverity CKDiagnosticSeverityFatal    = CXDiagnostic_Fatal;
 @implementation CKDiagnostic
 
 @synthesize cxDiagnostic    = _cxDiagnostic;
-@synthesize string          = _string;
 @synthesize spelling        = _spelling;
 @synthesize severity        = _severity;
 @synthesize fixIts          = _fixIts;
@@ -91,7 +90,6 @@ CKDiagnosticSeverity CKDiagnosticSeverityFatal    = CXDiagnostic_Fatal;
     clang_disposeDiagnostic( _cxDiagnostic );
     
     [ _fixIts   release ];
-    [ _string   release ];
     [ _spelling release ];
     
     [ super dealloc ];

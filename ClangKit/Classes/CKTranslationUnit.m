@@ -190,26 +190,32 @@
 
 - ( void )reparse
 {
-    if( _tokens.count > 0 )
+    @synchronized( self )
     {
-        clang_disposeTokens( _cxTranslationUnit, _tokensPointer, ( unsigned int )_tokens.count );
+        if( _tokens.count > 0 )
+        {
+            clang_disposeTokens( _cxTranslationUnit, _tokensPointer, ( unsigned int )_tokens.count );
+            
+            _tokensPointer = NULL;
+        }
         
-        _tokensPointer = NULL;
+        [ _tokens       release ];
+        [ _diagnostics  release ];
+        
+        _tokens      = nil;
+        _diagnostics = nil;
+        
+        clang_reparseTranslationUnit
+        (
+            _cxTranslationUnit,
+            ( _unsavedFile == NULL ) ? 0 : 1,
+            _unsavedFile,
+            clang_defaultReparseOptions( _cxTranslationUnit ) | CXTranslationUnit_DetailedPreprocessingRecord
+        );
+        
+        [ self tokens ];
+        [ self diagnostics ];
     }
-    
-    [ _tokens       release ];
-    [ _diagnostics  release ];
-    
-    _tokens      = nil;
-    _diagnostics = nil;
-    
-    clang_reparseTranslationUnit
-    (
-        _cxTranslationUnit,
-        ( _unsavedFile == NULL ) ? 0 : 1,
-        _unsavedFile,
-        clang_defaultReparseOptions( _cxTranslationUnit ) | CXTranslationUnit_DetailedPreprocessingRecord
-    );
 }
 
 - ( NSArray * )diagnostics

@@ -90,12 +90,6 @@ FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
     CXDiagnostic _cxDiagnostic;
     
     /*!
-     * @var             _string
-     * @abstract        Diagnostic's formatted message
-     */
-    NSString * _string;
-    
-    /*!
      * @var             _spelling
      * @abstract        Diagnostic's  spelling
      */
@@ -145,12 +139,6 @@ FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
  * @abstract        Internal libclang diagnostic object
  */
 @property( atomic, readonly ) CXDiagnostic cxDiagnostic;
-    
-/*!
- * @property        string
- * @abstract        Diagnostic's formatted message
- */
-@property( atomic, readonly ) NSString * string;
 
 /*!
  * @property        spelling

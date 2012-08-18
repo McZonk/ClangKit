@@ -47,10 +47,15 @@
     
     if( ( self = [ self init ] ) )
     {
+        if( diagnostic == NULL )
+        {
+            [ self release ];
+            
+            return nil;
+        }
+        
         _cxDiagnostic = diagnostic;
-        string        = clang_formatDiagnostic( _cxDiagnostic, clang_defaultDiagnosticDisplayOptions() );
         spelling      = clang_getDiagnosticSpelling( _cxDiagnostic );
-        _string       = [ [NSString alloc ] initWithCString: clang_getCString( string ) encoding: NSUTF8StringEncoding ];
         _spelling     = [ [NSString alloc ] initWithCString: clang_getCString( spelling ) encoding: NSUTF8StringEncoding ];
         _severity     = ( CKDiagnosticSeverity )clang_getDiagnosticSeverity( _cxDiagnostic );
         

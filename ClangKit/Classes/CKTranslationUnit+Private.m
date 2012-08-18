@@ -126,6 +126,9 @@
             
             return nil;
         }
+        
+        [ self tokens ];
+        [ self diagnostics ];
     }
     
     return self;
