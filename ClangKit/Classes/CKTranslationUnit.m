@@ -34,6 +34,7 @@
 #import "CKIndex.h"
 #import "CKDiagnostic.h"
 #import "CKToken.h"
+#import "CKCompletionResult.h"
 
 @implementation CKTranslationUnit
 
@@ -295,6 +296,55 @@
     description = [ description stringByAppendingFormat: @"%@", self.path ];
     
     return description;
+}
+
+- ( NSArray * )completionResultsForLine: ( NSUInteger )line column: ( NSUInteger )column
+{
+    NSMutableArray        * array;
+    CXCodeCompleteResults * results;
+    unsigned                i;
+    CXCompletionResult      result;
+    CKCompletionResult    * completionResult;
+    
+    if( _unsavedFile != NULL )
+    {
+        ( ( struct CXUnsavedFile * )_unsavedFile )->Filename = _path.fileSystemRepresentation;
+        ( ( struct CXUnsavedFile * )_unsavedFile )->Contents = _text.UTF8String;
+        ( ( struct CXUnsavedFile * )_unsavedFile )->Length   = _text.length;
+    }
+    
+    results = clang_codeCompleteAt
+    (
+        _cxTranslationUnit,
+        _path.fileSystemRepresentation,
+        ( unsigned int )line,
+        ( unsigned int )column,
+        _unsavedFile,
+        ( _unsavedFile == NULL ) ? 0 : 1,
+        clang_defaultCodeCompleteOptions()
+    );
+    
+    if( results == NULL )
+    {
+        return nil;
+    }
+    
+    array = [ NSMutableArray arrayWithCapacity: ( NSUInteger )( results->NumResults ) ];
+    
+    for( i = 0; i < results->NumResults; i++ )
+    {
+        result           = results->Results[ i ];
+        completionResult = [ CKCompletionResult completionResultWithCXCompletionString: result.CompletionString cursorKind: ( CKCursorKind )result.CursorKind ];
+        
+        if( completionResult != nil )
+        {
+            [ array addObject: completionResult ];
+        }
+    }
+    
+    clang_disposeCodeCompleteResults( results );
+    
+    return [ NSArray arrayWithArray: array ];
 }
 
 @end

@@ -76,5 +76,6 @@
 - ( id )initWithText: ( NSString * )text language: ( CKLanguage )language args: ( NSArray * )args;
 - ( id )initWithText: ( NSString * )text language: ( CKLanguage )language index: ( CKIndex * )index args: ( NSArray * )args;
 - ( void )reparse;
+- ( NSArray * )completionResultsForLine: ( NSUInteger )line column: ( NSUInteger )column;
 
 @end

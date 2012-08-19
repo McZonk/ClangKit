@@ -71,6 +71,12 @@ typedef void * CXTranslationUnit;
  */
 typedef void * CXFile;
 
+/*!
+ * @typedef         CXCompletionString
+ * @abstract        libclang type for completion strings.
+ */
+typedef void * CXCompletionString;
+
 #endif
 
 /*!

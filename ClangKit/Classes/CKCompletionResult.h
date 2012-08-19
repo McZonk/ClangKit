@@ -29,23 +29,28 @@
  
 /* $Id$ */
 
-/*!
- * @header          ClangKit.h
- * @author          Jean-David Gadina <macmade@digidna.net>
- * @copyright       (c) 2011-2012, DigiDNA
- * @abstract        ClangKit main header file
- * @description     Please only use this header file when working with ClangKit.
- *                  It contains all the public interfaces for the ClangKlit
- *                  classes. No other header file should be directly included.
- */
-
-#import "CKTypes.h"
-#import "CKDiagnostic.h"
-#import "CKFixIt.h"
-#import "CKIndex.h"
-#import "CKToken.h"
-#import "CKTranslationUnit.h"
 #import "CKCursor.h"
-#import "CKSourceLocation.h"
-#import "CKCompletionResult.h"
-#import "CKCompletionChunk.h"
+
+@interface CKCompletionResult: NSObject
+{
+@protected
+    
+    CXCompletionString _string;
+    CKCursorKind       _cursorKind;
+    NSArray          * _chunks;
+    NSString         * _comment;
+    
+@private
+    
+    id __CKCompletionResult_Reserved[ 5 ] __attribute__( ( unused ) );
+}
+
+@property( atomic, readonly ) CXCompletionString * string;
+@property( atomic, readonly ) CKCursorKind         cursorKind;
+@property( atomic, readonly ) NSArray            * chunks;
+@property( atomic, readonly ) NSString           * comment;
+
++ ( id )completionResultWithCXCompletionString: ( CXCompletionString )string cursorKind: ( CKCursorKind )cursorKind;
+- ( id )initWithCXCompletionString: ( CXCompletionString )string cursorKind: ( CKCursorKind )cursorKind;
+
+@end

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050543D115E063A100697329 /* CKCompletionChunk.h in Headers */ = {isa = PBXBuildFile; fileRef = 050543CD15E063A100697329 /* CKCompletionChunk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050543D215E063A100697329 /* CKCompletionChunk.m in Sources */ = {isa = PBXBuildFile; fileRef = 050543CE15E063A100697329 /* CKCompletionChunk.m */; };
+		050543D315E063A100697329 /* CKCompletionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 050543CF15E063A100697329 /* CKCompletionResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050543D415E063A100697329 /* CKCompletionResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 050543D015E063A100697329 /* CKCompletionResult.m */; };
+		050544BA15E06A8100697329 /* libclang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 050544B915E06A8100697329 /* libclang.a */; };
 		0518B9D315D7577D00349932 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0518B9D215D7577D00349932 /* Foundation.framework */; };
 		0518B9D615D7577D00349932 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0518B9D515D7577D00349932 /* main.m */; };
 		0518B9DF15D7589F00349932 /* ClangKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059872EE15D74D09006FF8D2 /* ClangKit.framework */; };
@@ -65,6 +70,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		050543CD15E063A100697329 /* CKCompletionChunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCompletionChunk.h; sourceTree = "<group>"; };
+		050543CE15E063A100697329 /* CKCompletionChunk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCompletionChunk.m; sourceTree = "<group>"; };
+		050543CF15E063A100697329 /* CKCompletionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCompletionResult.h; sourceTree = "<group>"; };
+		050543D015E063A100697329 /* CKCompletionResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCompletionResult.m; sourceTree = "<group>"; };
+		050544B915E06A8100697329 /* libclang.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libclang.a; path = ClangKit/LLVM/Release/lib/libclang.a; sourceTree = "<group>"; };
 		0518B9D015D7577D00349932 /* ClangKitTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ClangKitTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0518B9D215D7577D00349932 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0518B9D515D7577D00349932 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -122,12 +132,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				059872F215D74D09006FF8D2 /* Cocoa.framework in Frameworks */,
+				050544BA15E06A8100697329 /* libclang.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		050544B815E06A6C00697329 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				050544B915E06A8100697329 /* libclang.a */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 		0518B9D415D7577D00349932 /* ClangKitTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +170,7 @@
 				0518BA9B15D8615100349932 /* LICENSE.md */,
 				0518BA9C15D8615100349932 /* README.md */,
 				059872F715D74D09006FF8D2 /* ClangKit */,
+				050544B815E06A6C00697329 /* Libraries */,
 				0518B9D415D7577D00349932 /* ClangKitTest */,
 				059872F015D74D09006FF8D2 /* Frameworks */,
 				059872EF15D74D09006FF8D2 /* Products */,
@@ -212,6 +232,10 @@
 		0598730F15D74DE2006FF8D2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				050543CD15E063A100697329 /* CKCompletionChunk.h */,
+				050543CE15E063A100697329 /* CKCompletionChunk.m */,
+				050543CF15E063A100697329 /* CKCompletionResult.h */,
+				050543D015E063A100697329 /* CKCompletionResult.m */,
 				0598734B15D75153006FF8D2 /* CKDiagnostic.h */,
 				0598734C15D75153006FF8D2 /* CKDiagnostic.m */,
 				0598734D15D75153006FF8D2 /* CKDiagnostic+Private.h */,
@@ -260,6 +284,8 @@
 				05A73DB015D9553D00AB75F4 /* CKCursor.h in Headers */,
 				05A73DBD15D95DA600AB75F4 /* CKSourceLocation.h in Headers */,
 				05A73DC115D9645E00AB75F4 /* CKCursor+Private.h in Headers */,
+				050543D115E063A100697329 /* CKCompletionChunk.h in Headers */,
+				050543D315E063A100697329 /* CKCompletionResult.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +393,8 @@
 				05A73DB115D9553D00AB75F4 /* CKCursor.m in Sources */,
 				05A73DBE15D95DA600AB75F4 /* CKSourceLocation.m in Sources */,
 				05A73DC215D9645E00AB75F4 /* CKCursor+Private.m in Sources */,
+				050543D215E063A100697329 /* CKCompletionChunk.m in Sources */,
+				050543D415E063A100697329 /* CKCompletionResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,8 +626,10 @@
 				HEADER_SEARCH_PATHS = ClangKit/LLVM/Source/llvm/tools/clang/include;
 				INFOPLIST_FILE = "ClangKit/ClangKit-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = ClangKit/LLVM/Release/lib;
-				OTHER_LDFLAGS = "-lclang";
+				LIBRARY_SEARCH_PATHS = (
+					ClangKit/LLVM/Release/lib,
+					"\"$(SRCROOT)/ClangKit/LLVM/Release/lib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
@@ -619,8 +649,10 @@
 				HEADER_SEARCH_PATHS = ClangKit/LLVM/Source/llvm/tools/clang/include;
 				INFOPLIST_FILE = "ClangKit/ClangKit-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = ClangKit/LLVM/Release/lib;
-				OTHER_LDFLAGS = "-lclang";
+				LIBRARY_SEARCH_PATHS = (
+					ClangKit/LLVM/Release/lib,
+					"\"$(SRCROOT)/ClangKit/LLVM/Release/lib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;

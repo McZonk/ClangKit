@@ -29,23 +29,62 @@
  
 /* $Id$ */
 
-/*!
- * @header          ClangKit.h
- * @author          Jean-David Gadina <macmade@digidna.net>
- * @copyright       (c) 2011-2012, DigiDNA
- * @abstract        ClangKit main header file
- * @description     Please only use this header file when working with ClangKit.
- *                  It contains all the public interfaces for the ClangKlit
- *                  classes. No other header file should be directly included.
- */
-
-#import "CKTypes.h"
-#import "CKDiagnostic.h"
-#import "CKFixIt.h"
-#import "CKIndex.h"
-#import "CKToken.h"
-#import "CKTranslationUnit.h"
-#import "CKCursor.h"
-#import "CKSourceLocation.h"
 #import "CKCompletionResult.h"
 #import "CKCompletionChunk.h"
+
+@class CKTranslationUnit;
+
+@implementation CKCompletionResult
+
+@synthesize string      = _string;
+@synthesize cursorKind  = _cursorKind;
+@synthesize chunks      = _chunks;
+@synthesize comment     = _comment;
+
++ ( id )completionResultWithCXCompletionString: ( CXCompletionString )string cursorKind: ( CKCursorKind )cursorKind
+{
+    return [ [ [ self alloc ] initWithCXCompletionString: string cursorKind: cursorKind ] autorelease ];
+}
+
+- ( id )initWithCXCompletionString: ( CXCompletionString )string cursorKind: ( CKCursorKind )cursorKind
+{
+    //CXString            comment;
+    unsigned int        chunkCount;
+    unsigned int        i;
+    NSMutableArray    * chunks;
+    CKCompletionChunk * chunk;
+    
+    if( ( self = [ self init ] ) )
+    {
+        _string     = string;
+        _cursorKind = cursorKind;
+        //comment     = clang_getCompletionBriefComment( string );
+        //_comment    = [ [ NSString alloc ] initWithCString: clang_getCString( comment ) encoding: NSUTF8StringEncoding ];
+        chunkCount  = clang_getNumCompletionChunks( string );
+        chunks      = [ NSMutableArray arrayWithCapacity: ( NSUInteger )chunkCount ];
+        
+        for( i = 0; i < chunkCount; i++ )
+        {
+            chunk = [ CKCompletionChunk completionChunkWithCXCompletionString: string chunkNumber: ( NSUInteger )i ];
+            
+            if( chunk != nil )
+            {
+                [ chunks addObject: chunk ];
+            }
+        }
+        
+        _chunks = [ [ NSArray alloc ] initWithArray: chunks ];
+    }
+    
+    return self;
+}
+
+- ( void )dealloc
+{
+    [ _comment release ];
+    [ _chunks  release ];
+    
+    [ super dealloc ];
+}
+
+@end
