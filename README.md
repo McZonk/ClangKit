@@ -98,7 +98,20 @@ Diagnostic severities are:
 
 #### Fix-its:
 
-Each `CKDiagnostic` instance may contains fix-its, through its `fixIts` property.
+Each `CKDiagnostic` instance may contains fix-its, through its `fixIts` property.  
+`CKFixIt` instances contain the fix-it text, as well as a `NSRange`, indicating where the text should be added/replaced.
+
+#### Code completion:
+
+Code completion results can be retrieved from a translation unit (`CKTranslationUnit`):
+
+    - ( NSArray * )completionResultsForLine: ( NSUInteger )line column: ( NSUInteger )column;
+
+Given a specific line and column, you'll be able to get completion results for that specific location.  
+The results array will contains instances of `CKCompletionResult`.
+
+Each `CKCompletionResult` may contain several chunks (`CKCompletionChunk`), accessible to its `chunks` property.  
+The chunks are used to describe the completion result.
 
 ### ARC note:
 

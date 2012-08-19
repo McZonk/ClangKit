@@ -38,7 +38,6 @@
     CXCompletionString _string;
     CKCursorKind       _cursorKind;
     NSArray          * _chunks;
-    NSString         * _comment;
     
 @private
     
@@ -48,7 +47,6 @@
 @property( atomic, readonly ) CXCompletionString * string;
 @property( atomic, readonly ) CKCursorKind         cursorKind;
 @property( atomic, readonly ) NSArray            * chunks;
-@property( atomic, readonly ) NSString           * comment;
 
 + ( id )completionResultWithCXCompletionString: ( CXCompletionString )string cursorKind: ( CKCursorKind )cursorKind;
 - ( id )initWithCXCompletionString: ( CXCompletionString )string cursorKind: ( CKCursorKind )cursorKind;

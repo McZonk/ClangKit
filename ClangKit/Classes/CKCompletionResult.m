@@ -39,7 +39,6 @@
 @synthesize string      = _string;
 @synthesize cursorKind  = _cursorKind;
 @synthesize chunks      = _chunks;
-@synthesize comment     = _comment;
 
 + ( id )completionResultWithCXCompletionString: ( CXCompletionString )string cursorKind: ( CKCursorKind )cursorKind
 {
@@ -48,7 +47,6 @@
 
 - ( id )initWithCXCompletionString: ( CXCompletionString )string cursorKind: ( CKCursorKind )cursorKind
 {
-    //CXString            comment;
     unsigned int        chunkCount;
     unsigned int        i;
     NSMutableArray    * chunks;
@@ -58,8 +56,6 @@
     {
         _string     = string;
         _cursorKind = cursorKind;
-        //comment     = clang_getCompletionBriefComment( string );
-        //_comment    = [ [ NSString alloc ] initWithCString: clang_getCString( comment ) encoding: NSUTF8StringEncoding ];
         chunkCount  = clang_getNumCompletionChunks( string );
         chunks      = [ NSMutableArray arrayWithCapacity: ( NSUInteger )chunkCount ];
         
@@ -81,7 +77,6 @@
 
 - ( void )dealloc
 {
-    [ _comment release ];
     [ _chunks  release ];
     
     [ super dealloc ];
