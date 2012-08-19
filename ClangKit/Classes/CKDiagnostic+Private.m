@@ -37,7 +37,6 @@
 
 - ( id )initWithCXDiagnostic: ( CXDiagnostic )diagnostic translationUnit: ( CKTranslationUnit * )translationUnit
 {
-    CXString         string;
     CXString         spelling;
     CXSourceLocation location;
     CXSourceRange    range;
@@ -59,7 +58,6 @@
         _spelling     = [ [NSString alloc ] initWithCString: clang_getCString( spelling ) encoding: NSUTF8StringEncoding ];
         _severity     = ( CKDiagnosticSeverity )clang_getDiagnosticSeverity( _cxDiagnostic );
         
-        clang_disposeString( string );
         clang_disposeString( spelling );
         
         location  = clang_getDiagnosticLocation( diagnostic );
