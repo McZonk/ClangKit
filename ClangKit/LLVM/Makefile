@@ -57,6 +57,9 @@ all: llvm_co clang_co crt_co llvm_build
 # Build the full project
 all: llvm_build
 
+# Build the full project (debug mode)
+debug: llvm_co clang_co crt_co llvm_build_debug
+
 # Cleans the build files
 clean:
 	@echo "    *** Cleaning all build files"
@@ -82,4 +85,10 @@ crt_co:
 llvm_build:
 	@echo "    *** Building LLVM toolchain"
 	@$(CD) $(DIR_BUILD) && ../$(DIR_LLVM)configure --enable-optimized
+	@$(CD) $(DIR_BUILD) && $(MAKE)
+
+# LLVM build (debug mode)
+llvm_build_debug:
+	@echo "    *** Building LLVM toolchain"
+	@$(CD) $(DIR_BUILD) && ../$(DIR_LLVM)configure
 	@$(CD) $(DIR_BUILD) && $(MAKE)
