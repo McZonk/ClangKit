@@ -11,7 +11,6 @@
 		050543D215E063A100697329 /* CKCompletionChunk.m in Sources */ = {isa = PBXBuildFile; fileRef = 050543CE15E063A100697329 /* CKCompletionChunk.m */; };
 		050543D315E063A100697329 /* CKCompletionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 050543CF15E063A100697329 /* CKCompletionResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		050543D415E063A100697329 /* CKCompletionResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 050543D015E063A100697329 /* CKCompletionResult.m */; };
-		050544BA15E06A8100697329 /* libclang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 050544B915E06A8100697329 /* libclang.a */; };
 		0518B9D315D7577D00349932 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0518B9D215D7577D00349932 /* Foundation.framework */; };
 		0518B9D615D7577D00349932 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0518B9D515D7577D00349932 /* main.m */; };
 		0518B9DF15D7589F00349932 /* ClangKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059872EE15D74D09006FF8D2 /* ClangKit.framework */; };
@@ -21,6 +20,7 @@
 		0518BA9E15D8615100349932 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0518BA9C15D8615100349932 /* README.md */; };
 		0518BAA115D869D700349932 /* ClangKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 059872FE15D74D09006FF8D2 /* ClangKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0518BAA215D869D700349932 /* CKTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598737B15D751B8006FF8D2 /* CKTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		058B0B4915E2B5D20039F0FE /* libclang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0535EBF115E17EC70058D3A9 /* libclang.a */; };
 		059872F215D74D09006FF8D2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059872F115D74D09006FF8D2 /* Cocoa.framework */; };
 		059872FC15D74D09006FF8D2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 059872FA15D74D09006FF8D2 /* InfoPlist.strings */; };
 		0598734915D74F8B006FF8D2 /* CKMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598734715D74F8B006FF8D2 /* CKMacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -74,7 +74,6 @@
 		050543CE15E063A100697329 /* CKCompletionChunk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCompletionChunk.m; sourceTree = "<group>"; };
 		050543CF15E063A100697329 /* CKCompletionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCompletionResult.h; sourceTree = "<group>"; };
 		050543D015E063A100697329 /* CKCompletionResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCompletionResult.m; sourceTree = "<group>"; };
-		050544B915E06A8100697329 /* libclang.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libclang.a; path = ClangKit/LLVM/Release/lib/libclang.a; sourceTree = "<group>"; };
 		0518B9D015D7577D00349932 /* ClangKitTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ClangKitTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0518B9D215D7577D00349932 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0518B9D515D7577D00349932 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +82,8 @@
 		0518B9EB15D7F63A00349932 /* CKTranslationUnit+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CKTranslationUnit+Private.m"; sourceTree = "<group>"; };
 		0518BA9B15D8615100349932 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
 		0518BA9C15D8615100349932 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		0535EBF115E17EC70058D3A9 /* libclang.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libclang.a; path = ClangKit/LLVM/Release/lib/libclang.a; sourceTree = "<group>"; };
+		0535EBF315E17ED30058D3A9 /* libclang.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libclang.a; path = ClangKit/LLVM/Debug/lib/libclang.a; sourceTree = "<group>"; };
 		059872EE15D74D09006FF8D2 /* ClangKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClangKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		059872F115D74D09006FF8D2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		059872F415D74D09006FF8D2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -132,7 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				059872F215D74D09006FF8D2 /* Cocoa.framework in Frameworks */,
-				050544BA15E06A8100697329 /* libclang.a in Frameworks */,
+				058B0B4915E2B5D20039F0FE /* libclang.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +143,8 @@
 		050544B815E06A6C00697329 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				050544B915E06A8100697329 /* libclang.a */,
+				0535EBF015E17EB60058D3A9 /* Release */,
+				0535EBEF15E17EAE0058D3A9 /* Debug */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -162,6 +164,22 @@
 				0518B9D815D7577D00349932 /* ClangKitTest-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0535EBEF15E17EAE0058D3A9 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				0535EBF315E17ED30058D3A9 /* libclang.a */,
+			);
+			name = Debug;
+			sourceTree = "<group>";
+		};
+		0535EBF015E17EB60058D3A9 /* Release */ = {
+			isa = PBXGroup;
+			children = (
+				0535EBF115E17EC70058D3A9 /* libclang.a */,
+			);
+			name = Release;
 			sourceTree = "<group>";
 		};
 		059872E215D74D09006FF8D2 = {
@@ -617,7 +635,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -629,6 +646,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					ClangKit/LLVM/Release/lib,
 					"\"$(SRCROOT)/ClangKit/LLVM/Release/lib\"",
+					"\"$(SRCROOT)/ClangKit/LLVM/Debug/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -652,6 +670,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					ClangKit/LLVM/Release/lib,
 					"\"$(SRCROOT)/ClangKit/LLVM/Release/lib\"",
+					"\"$(SRCROOT)/ClangKit/LLVM/Debug/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

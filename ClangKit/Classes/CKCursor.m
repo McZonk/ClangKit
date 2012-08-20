@@ -241,7 +241,7 @@ CKCursorKind CKCursorKindLastPreprocessing                  = CXCursor_LastPrepr
     [ _referenced       release ];
     [ _location         release ];
     
-    free( _cxCursorPointer );
+	free( _cxCursorPointer );
     
     [ super dealloc ];
 }

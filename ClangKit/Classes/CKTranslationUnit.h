@@ -45,6 +45,7 @@
     NSArray           * _tokens;
     void              * _tokensPointer;
     void              * _unsavedFile;
+	NSLock            * _lock;
     
 @private
     

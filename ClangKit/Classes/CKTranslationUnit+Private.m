@@ -41,6 +41,7 @@
     
     if( ( self = [ self init ] ) )
     {
+		_lock  = [ NSLock new ];
         _path  = [ path copy ];
         _index = ( index == nil ) ? [ CKIndex new ] : [ index retain ];
         

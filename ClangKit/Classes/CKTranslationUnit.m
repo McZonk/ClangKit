@@ -185,6 +185,7 @@
     [ _text         release ];
     [ _index        release ];
     [ _diagnostics  release ];
+	[ _lock			release ];
     
     [ super dealloc ];
 }
@@ -193,6 +194,8 @@
 {
     @synchronized( self )
     {
+		[ _lock lock ];
+		
         if( _tokens.count > 0 )
         {
             clang_disposeTokens( _cxTranslationUnit, _tokensPointer, ( unsigned int )_tokens.count );
@@ -213,6 +216,8 @@
             _unsavedFile,
             clang_defaultReparseOptions( _cxTranslationUnit ) | CXTranslationUnit_DetailedPreprocessingRecord
         );
+		
+		[ _lock unlock ];
         
         [ self tokens ];
         [ self diagnostics ];
@@ -225,7 +230,11 @@
     {
         if( _diagnostics == nil )
         {
+			[ _lock lock ];
+			
             _diagnostics = [ [ CKDiagnostic diagnosticsForTranslationUnit: self ] retain ];
+			
+			[ _lock unlock ];
         }
         
         return _diagnostics;
@@ -237,8 +246,12 @@
     @synchronized( self )
     {
         if( _tokens == nil )
-        {
+		{
+			[ _lock lock ];
+			
             _tokens = [ [ CKToken tokensForTranslationUnit: self tokens: &_tokensPointer ] retain ];
+			
+			[ _lock unlock ];
         }
         
         return _tokens;
@@ -306,7 +319,9 @@
     CXCompletionResult      result;
     CKCompletionResult    * completionResult;
     
-    if( _unsavedFile != NULL )
+	[ _lock lock ];
+    
+	if( _unsavedFile != NULL )
     {
         ( ( struct CXUnsavedFile * )_unsavedFile )->Filename = _path.fileSystemRepresentation;
         ( ( struct CXUnsavedFile * )_unsavedFile )->Contents = _text.UTF8String;
@@ -326,7 +341,9 @@
     
     if( results == NULL )
     {
-        return nil;
+		[ _lock unlock ];
+		
+		return nil;
     }
     
     array = [ NSMutableArray arrayWithCapacity: ( NSUInteger )( results->NumResults ) ];
@@ -343,6 +360,8 @@
     }
     
     clang_disposeCodeCompleteResults( results );
+	
+	[ _lock unlock ];
     
     return [ NSArray arrayWithArray: array ];
 }
