@@ -283,12 +283,18 @@
                 
                 _text = [ text retain ];
             }
-            
-            ( ( struct CXUnsavedFile * )_unsavedFile )->Filename = _path.fileSystemRepresentation;
-            ( ( struct CXUnsavedFile * )_unsavedFile )->Contents = _text.UTF8String;
-            ( ( struct CXUnsavedFile * )_unsavedFile )->Length   = _text.length;
-            
-            [ self reparse ];
+            @try
+            {
+                ( ( struct CXUnsavedFile * )_unsavedFile )->Filename = _path.fileSystemRepresentation;
+                ( ( struct CXUnsavedFile * )_unsavedFile )->Contents = _text.UTF8String;
+                ( ( struct CXUnsavedFile * )_unsavedFile )->Length   = _text.length;
+                
+                [ self reparse ];
+            }
+            @catch ( NSException * e )
+            {
+                ( void )e;
+            }
         }
     }
 }
