@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-# Copyright (c) 2012, Jean-David Gadina <macmade@eosgarden.com>
+# Copyright (c) 2012, Jean-David Gadina - www.xs-labs.com
 # All rights reserved
 #-------------------------------------------------------------------------------
 
