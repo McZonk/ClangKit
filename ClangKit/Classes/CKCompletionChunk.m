@@ -69,7 +69,7 @@ CKCompletionChunkKind CKCompletionChunkKindVerticalSpace    = CXCompletionChunk_
     
     if( ( self = [ self init ] ) )
     {
-        _kind = ( CKCompletionChunkKind )clang_getCompletionChunkKind( string, ( unsigned int )chunkNumber );
+        _kind = clang_getCompletionChunkKind( string, ( unsigned int )chunkNumber );
         text  = clang_getCompletionChunkText( string, ( unsigned int )chunkNumber );
         _text = [ [ NSString alloc ] initWithCString: clang_getCString( text ) encoding: NSUTF8StringEncoding ];
     }

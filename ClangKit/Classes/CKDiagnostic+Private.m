@@ -56,7 +56,7 @@
         _cxDiagnostic = diagnostic;
         spelling      = clang_getDiagnosticSpelling( _cxDiagnostic );
         _spelling     = [ [NSString alloc ] initWithCString: clang_getCString( spelling ) encoding: NSUTF8StringEncoding ];
-        _severity     = ( CKDiagnosticSeverity )clang_getDiagnosticSeverity( _cxDiagnostic );
+        _severity     = clang_getDiagnosticSeverity( _cxDiagnostic );
         
         clang_disposeString( spelling );
         
