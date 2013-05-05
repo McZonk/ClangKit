@@ -42,23 +42,24 @@ DIR_BUILD           = ./Build/
 DIR_LLVM            = ./Source/llvm/
 DIR_CLANG           = $(DIR_LLVM)tools/clang/
 DIR_CRT             = $(DIR_LLVM)projects/compiler-rt/
+DIR_DEBUG           = ./Build/
+DIR_RELEASE         = ./Release/
 
 #-------------------------------------------------------------------------------
 # Built-in targets
 #-------------------------------------------------------------------------------
 
 # Declaration for phony targets, to avoid problems with local files
-all: llvm_co clang_co crt_co llvm_build
+all: llvm_co clang_co crt_co llvm_build llvm_build_debug
 
 #-------------------------------------------------------------------------------
 # Phony targets
 #-------------------------------------------------------------------------------
 
 # Build the full project
-all: llvm_build
-
-# Build the full project (debug mode)
-debug: llvm_co clang_co crt_co llvm_build_debug
+all: llvm_co clang_co crt_co llvm_build llvm_build_debug
+	cp $(DIR_BUILD)Debug+Asserts/lib/libclang.a $(DIR_DEBUG)lib/
+	cp $(DIR_BUILD)Release+Asserts/lib/libclang.a $(DIR_RELEASE)lib/
 
 # Cleans the build files
 clean:
