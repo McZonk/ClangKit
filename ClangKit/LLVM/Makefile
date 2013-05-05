@@ -42,7 +42,7 @@ DIR_BUILD           = ./Build/
 DIR_LLVM            = ./Source/llvm/
 DIR_CLANG           = $(DIR_LLVM)tools/clang/
 DIR_CRT             = $(DIR_LLVM)projects/compiler-rt/
-DIR_DEBUG           = ./Build/
+DIR_DEBUG           = ./Debug/
 DIR_RELEASE         = ./Release/
 
 #-------------------------------------------------------------------------------
@@ -50,7 +50,7 @@ DIR_RELEASE         = ./Release/
 #-------------------------------------------------------------------------------
 
 # Declaration for phony targets, to avoid problems with local files
-all: llvm_co clang_co crt_co llvm_build llvm_build_debug
+all: llvm_co clang_co crt_co llvm_build llvm_build_debug copy
 
 #-------------------------------------------------------------------------------
 # Phony targets
@@ -58,8 +58,6 @@ all: llvm_co clang_co crt_co llvm_build llvm_build_debug
 
 # Build the full project
 all: llvm_co clang_co crt_co llvm_build llvm_build_debug
-	cp $(DIR_BUILD)Debug+Asserts/lib/libclang.a $(DIR_DEBUG)lib/
-	cp $(DIR_BUILD)Release+Asserts/lib/libclang.a $(DIR_RELEASE)lib/
 
 # Cleans the build files
 clean:
@@ -93,3 +91,8 @@ llvm_build_debug:
 	@echo "    *** Building LLVM toolchain"
 	@$(CD) $(DIR_BUILD) && ../$(DIR_LLVM)configure
 	@$(CD) $(DIR_BUILD) && $(MAKE)
+
+# Copy build files
+copy:
+	cp $(DIR_BUILD)Debug+Asserts/lib/*.a $(DIR_DEBUG)lib/
+	cp $(DIR_BUILD)Release+Asserts/lib/*.a $(DIR_RELEASE)lib/
