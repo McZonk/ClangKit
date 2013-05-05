@@ -19,7 +19,7 @@
 		0518BA9E15D8615100349932 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0518BA9C15D8615100349932 /* README.md */; };
 		0518BAA115D869D700349932 /* ClangKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 059872FE15D74D09006FF8D2 /* ClangKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0518BAA215D869D700349932 /* CKTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598737B15D751B8006FF8D2 /* CKTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		058B0B4915E2B5D20039F0FE /* libclang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0535EBF115E17EC70058D3A9 /* libclang.a */; };
+		05323A391736D6BA00D550F7 /* libclang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0535EBF315E17ED30058D3A9 /* libclang.a */; };
 		059872F215D74D09006FF8D2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059872F115D74D09006FF8D2 /* Cocoa.framework */; };
 		059872FC15D74D09006FF8D2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 059872FA15D74D09006FF8D2 /* InfoPlist.strings */; };
 		0598734915D74F8B006FF8D2 /* CKMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598734715D74F8B006FF8D2 /* CKMacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -131,7 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				059872F215D74D09006FF8D2 /* Cocoa.framework in Frameworks */,
-				058B0B4915E2B5D20039F0FE /* libclang.a in Frameworks */,
+				05323A391736D6BA00D550F7 /* libclang.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
