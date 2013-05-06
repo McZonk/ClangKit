@@ -486,7 +486,7 @@
 			attributes = {
 				CLASSPREFIX = CK;
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = eosgarden;
+				ORGANIZATIONNAME = XS-Labs;
 			};
 			buildConfigurationList = 059872E715D74D09006FF8D2 /* Build configuration list for PBXProject "ClangKit" */;
 			compatibilityVersion = "Xcode 3.2";
