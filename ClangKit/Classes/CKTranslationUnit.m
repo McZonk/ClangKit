@@ -214,7 +214,11 @@
             _cxTranslationUnit,
             ( _unsavedFile == NULL ) ? 0 : 1,
             _unsavedFile,
-            clang_defaultReparseOptions( _cxTranslationUnit ) | CXTranslationUnit_DetailedPreprocessingRecord
+            clang_defaultReparseOptions( _cxTranslationUnit )
+          | CXTranslationUnit_DetailedPreprocessingRecord
+          | CXTranslationUnit_PrecompiledPreamble
+          | CXTranslationUnit_CacheCompletionResults
+          | CXTranslationUnit_Incomplete
         );
 		
 		[ _lock unlock ];
