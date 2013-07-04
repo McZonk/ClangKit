@@ -485,8 +485,8 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CK;
-				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = XS-Labs;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "XS-Labs";
 			};
 			buildConfigurationList = 059872E715D74D09006FF8D2 /* Build configuration list for PBXProject "ClangKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -599,7 +599,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
 				CLANG_ANALYZER_GCD = YES;
 				CLANG_ANALYZER_MALLOC = YES;
@@ -685,7 +684,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
 				CLANG_ANALYZER_GCD = YES;
 				CLANG_ANALYZER_MALLOC = YES;
