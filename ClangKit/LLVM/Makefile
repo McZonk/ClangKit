@@ -57,7 +57,7 @@ all: llvm_co clang_co crt_co llvm_build llvm_build_debug copy
 #-------------------------------------------------------------------------------
 
 # Build the full project
-all: llvm_co clang_co crt_co llvm_build llvm_build_debug
+all: llvm_co clang_co crt_co llvm_build llvm_build_debug copy
 
 # Cleans the build files
 clean:
