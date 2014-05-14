@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.2//EN" "/System/Library/DTDs/HeaderDoc-1.2.dtd">
+<header id="//xsdoc_ref/doc/header/CKMacros.h" lang="c" filename="CKMacros.h" headerpath="/Volumes/Brain/Documents/Development/GitHub/ClangKit/Documentation/../ClangKit/CKMacros.h"><name>CKMacros.h</name>
+<includes>
+</includes>
+<desc><p/></desc>
+<defines><pdefine id="//xsdoc_ref/c/macro/__CK_MACROS_H__" definetype="value" lang="c"><name>__CK_MACROS_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__CK_MACROS_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, May 14, 2014</timestamp>
+</header>

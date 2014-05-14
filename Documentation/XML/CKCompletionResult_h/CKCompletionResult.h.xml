@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.2//EN" "/System/Library/DTDs/HeaderDoc-1.2.dtd">
+<header id="//xsdoc_ref/doc/header/CKCompletionResult.h" lang="c" filename="CKCompletionResult.h" headerpath="/Volumes/Brain/Documents/Development/GitHub/ClangKit/Documentation/../ClangKit/Classes/CKCompletionResult.h"><name>CKCompletionResult.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKCursor.h">"CKCursor.h"</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><class id="//xsdoc_ref/occ/cl/CKCompletionResult" lang="occ"><name>CKCompletionResult</name>
+<attributes><attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/NSObject">NSObject</hd_link></value></attribute>
+</attributes>
+<declaration> @<declaration_type>interface</declaration_type> <declaration_type>CKCompletionResult</declaration_type>: <declaration_type>NSObject</declaration_type> { 
+        @@protected  <declaration_type>CXCompletionString</declaration_type> <declaration_var>_string</declaration_var>; 
+        <declaration_type>CKCursorKind</declaration_type> <declaration_var>_cursorKind</declaration_var>; 
+        <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> <declaration_var>_chunks</declaration_var>;  
+        @@private  <declaration_type>id</declaration_type> <declaration_type>__CKCompletionResult_Reserved</declaration_type>[ <declaration_number>5</declaration_number> ] <declaration_keyword>__attribute__</declaration_keyword>( ( <declaration_var>unused</declaration_var> ) ); 
+        }  @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CXCompletionString</declaration_type> <declaration_type>*</declaration_type><declaration_var>string</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursorKind</declaration_type> <declaration_var>cursorKind</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type><declaration_var>chunks</declaration_var>;   + ( <declaration_param>id</declaration_param> )<declaration_type>completionResultWithCXCompletionString</declaration_type>: ( <declaration_param>CXCompletionString</declaration_param> )<declaration_type>string</declaration_type> <declaration_type>cursorKind</declaration_type>: ( <declaration_param>CKCursorKind</declaration_param> )<declaration_var>cursorKind</declaration_var>;  
+    - ( <declaration_param>id</declaration_param> )<declaration_type>initWithCXCompletionString</declaration_type>: ( <declaration_param>CXCompletionString</declaration_param> )<declaration_type>string</declaration_type> <declaration_type>cursorKind</declaration_type>: ( <declaration_param>CKCursorKind</declaration_param> )<declaration_var>cursorKind</declaration_var>;   
+    @@end </declaration>
+<desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/clm/CKCompletionResult/completionResultWithCXCompletionString:cursorKind:" lang="occ" type="clm" accessControl="private"><name>completionResultWithCXCompletionString:cursorKind:</name>
+<parsedparameterlist>
+<parsedparameter><type>( CXCompletionString )</type><name>string</name></parsedparameter>
+<parsedparameter><type>( CKCursorKind )</type><name>cursorKind</name></parsedparameter>
+<parsedparameter><type>( CXCompletionString )</type><name>string</name></parsedparameter>
+<parsedparameter><type>( CKCursorKind )</type><name>cursorKind</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<declaration>+ ( <declaration_type>id</declaration_type> )<declaration_function>completionResultWithCXCompletionString</declaration_function>: ( <declaration_type>CXCompletionString</declaration_type> )<declaration_param>string</declaration_param> 
+        <declaration_function>cursorKind</declaration_function>: ( <declaration_type>CKCursorKind</declaration_type> )<declaration_var>cursorKind</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/instm/CKCompletionResult/initWithCXCompletionString:cursorKind:" lang="occ" type="instm" accessControl="private"><name>initWithCXCompletionString:cursorKind:</name>
+<parsedparameterlist>
+<parsedparameter><type>( CXCompletionString )</type><name>string</name></parsedparameter>
+<parsedparameter><type>( CKCursorKind )</type><name>cursorKind</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithCXCompletionString</declaration_function>: ( <declaration_type>CXCompletionString</declaration_type> )<declaration_param>string</declaration_param> 
+        <declaration_function>cursorKind</declaration_function>: ( <declaration_type>CKCursorKind</declaration_type> )<declaration_var>cursorKind</declaration_var>; </declaration>
+<desc><p/></desc>
+</method></methods>
+<properties><property id="//xsdoc_ref/occ/instp/CKCompletionResult/chunks" lang="occ" accessControl="private"><name>chunks</name>
+<returntype>NSArray            *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> <declaration_var>chunks</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCompletionResult/cursorKind" lang="occ" accessControl="private"><name>cursorKind</name>
+<returntype>CKCursorKind</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursorKind</declaration_type> <declaration_var>cursorKind</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCompletionResult/string" lang="occ" accessControl="private"><name>string</name>
+<returntype>CXCompletionString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CXCompletionString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>string</declaration_var>; </declaration>
+<desc><p/></desc>
+</property></properties>
+<globals><variable id="//xsdoc_ref/occ/data/CKCompletionResult/__CKCompletionResult_Reserved" lang="occ" accessControl="private"><name>__CKCompletionResult_Reserved</name>
+<returntype>id</returntype>
+<declaration><declaration_type>id</declaration_type> <declaration_type>__CKCompletionResult_Reserved</declaration_type>[ <declaration_number>5</declaration_number> ] <declaration_keyword>__attribute__</declaration_keyword>( ( <declaration_var>unused</declaration_var> ) ); </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/occ/data/CKCompletionResult/_chunks" lang="occ" accessControl="protected"><name>_chunks</name>
+<returntype>NSArray *</returntype>
+<declaration><declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> <declaration_var>_chunks</declaration_var>; </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/occ/data/CKCompletionResult/_cursorKind" lang="occ" accessControl="protected"><name>_cursorKind</name>
+<returntype>CKCursorKind</returntype>
+<declaration><declaration_type>CKCursorKind</declaration_type> <declaration_var>_cursorKind</declaration_var>; </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/occ/data/CKCompletionResult/_string" lang="occ" accessControl="protected"><name>_string</name>
+<returntype>CXCompletionString</returntype>
+<declaration><declaration_type>CXCompletionString</declaration_type> <declaration_var>_string</declaration_var>; </declaration>
+<desc><p/></desc>
+</variable></globals>
+<timestamp>Wednesday, May 14, 2014</timestamp>
+</class></classes>
+<timestamp>Wednesday, May 14, 2014</timestamp>
+</header>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.2//EN" "/System/Library/DTDs/HeaderDoc-1.2.dtd">
+<header id="//xsdoc_ref/doc/header/CKTypes.h" lang="c" filename="CKTypes.h" headerpath="/Volumes/Brain/Documents/Development/GitHub/ClangKit/Documentation/../ClangKit/CKTypes.h"><name>CKTypes.h</name>
+<includes>
+</includes>
+<desc><p/></desc>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/CKLanguage" lang="c" type="simple"><name>CKLanguage</name>
+<abstract><p>Source code languages
+</p></abstract>
+<constantlist>
+<constant><name>CKLanguageNone</name><desc><p>Unknown language</p></desc></constant>
+<constant><name>CKLanguageC</name><desc><p>C source code</p></desc></constant>
+<constant><name>CKLanguageCPP</name><desc><p>C++ source code</p></desc></constant>
+<constant><name>CKLanguageObjC</name><desc><p>Objective-C source code</p></desc></constant>
+<constant><name>CKLanguageObjCPP</name><desc><p>Objective-C++ source code</p></desc></constant>
+</constantlist>
+<parsedparameterlist>
+<parsedparameter><type></type><name>CKLanguageNone</name></parsedparameter>
+<parsedparameter><type></type><name>CKLanguageC</name></parsedparameter>
+<parsedparameter><type></type><name>CKLanguageCPP</name></parsedparameter>
+<parsedparameter><type></type><name>CKLanguageObjC</name></parsedparameter>
+<parsedparameter><type></type><name>CKLanguageObjCPP</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_comment>/*!</declaration_comment>
+    <declaration_comment>*/</declaration_comment>
+<declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>CKLanguageNone</declaration_var> = <declaration_number>0x00</declaration_number>, 
+    <declaration_var>CKLanguageC</declaration_var> = <declaration_number>0x01</declaration_number>, 
+    <declaration_var>CKLanguageCPP</declaration_var> = <declaration_number>0x02</declaration_number>, 
+    <declaration_var>CKLanguageObjC</declaration_var> = <declaration_number>0x03</declaration_number>, 
+    <declaration_var>CKLanguageObjCPP</declaration_var> = <declaration_number>0x04</declaration_number> 
+} <declaration_var>CKLanguage</declaration_var>;  </declaration>
+<desc><p>ClangKit can be used to parse strings and files. For a file,
+the language is guessed from the file's extension. For
+strings, the language must be specified using one of this
+value.
+</p></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/CXCompletionString" lang="c" type="simple"><name>CXCompletionString</name>
+<abstract><p>libclang type for completion strings.
+</p></abstract>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>CXCompletionString</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/CXDiagnostic" lang="c" type="simple"><name>CXDiagnostic</name>
+<abstract><p>libclang type for diagnostic objects.
+</p></abstract>
+<declaration> <declaration_comment>/*!</declaration_comment>
+    <declaration_comment>*/</declaration_comment>
+<declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>CXDiagnostic</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/CXFile" lang="c" type="simple"><name>CXFile</name>
+<abstract><p>libclang type for file objects.
+</p></abstract>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>CXFile</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/CXIndex" lang="c" type="simple"><name>CXIndex</name>
+<abstract><p>libclang type for index objects.
+</p></abstract>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>CXIndex</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/CXTranslationUnit" lang="c" type="simple"><name>CXTranslationUnit</name>
+<abstract><p>libclang type for translation unit objects.
+</p></abstract>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>CXTranslationUnit</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__CK_TYPES_H__" definetype="value" lang="c"><name>__CK_TYPES_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__CK_TYPES_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, May 14, 2014</timestamp>
+</header>

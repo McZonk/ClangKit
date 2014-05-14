@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.2//EN" "/System/Library/DTDs/HeaderDoc-1.2.dtd">
+<header id="//xsdoc_ref/doc/header/CKDiagnostic.m" lang="occ" filename="CKDiagnostic.m" headerpath="/Volumes/Brain/Documents/Development/GitHub/ClangKit/Documentation/../ClangKit/Classes/CKDiagnostic.m"><name>CKDiagnostic.m</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKDiagnostic.h">"CKDiagnostic.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKDiagnostic+Private.h">"CKDiagnostic+Private.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKTranslationUnit.h">"CKTranslationUnit.h"</hd_link></include>
+</includes>
+<desc><p/></desc>
+<globals><variable id="//xsdoc_ref/c/data/CKDiagnosticSeverityError" lang="occ"><name>CKDiagnosticSeverityError</name>
+<value>CXDiagnostic_Error</value>
+<returntype>CKDiagnosticSeverity</returntype>
+<declaration><declaration_type>CKDiagnosticSeverity</declaration_type> <declaration_type>CKDiagnosticSeverityError</declaration_type> = <declaration_var>CXDiagnostic_Error</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKDiagnosticSeverityFatal" lang="occ"><name>CKDiagnosticSeverityFatal</name>
+<value>CXDiagnostic_Fatal</value>
+<returntype>CKDiagnosticSeverity</returntype>
+<declaration><declaration_type>CKDiagnosticSeverity</declaration_type> <declaration_type>CKDiagnosticSeverityFatal</declaration_type> = <declaration_var>CXDiagnostic_Fatal</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKDiagnosticSeverityIgnored" lang="occ"><name>CKDiagnosticSeverityIgnored</name>
+<value>CXDiagnostic_Ignored</value>
+<returntype>CKDiagnosticSeverity</returntype>
+<declaration> <declaration_type>CKDiagnosticSeverity</declaration_type> <declaration_type>CKDiagnosticSeverityIgnored</declaration_type> = <declaration_var>CXDiagnostic_Ignored</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKDiagnosticSeverityNote" lang="occ"><name>CKDiagnosticSeverityNote</name>
+<value>CXDiagnostic_Note</value>
+<returntype>CKDiagnosticSeverity</returntype>
+<declaration><declaration_type>CKDiagnosticSeverity</declaration_type> <declaration_type>CKDiagnosticSeverityNote</declaration_type> = <declaration_var>CXDiagnostic_Note</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKDiagnosticSeverityWarning" lang="occ"><name>CKDiagnosticSeverityWarning</name>
+<value>CXDiagnostic_Warning</value>
+<returntype>CKDiagnosticSeverity</returntype>
+<declaration><declaration_type>CKDiagnosticSeverity</declaration_type> <declaration_type>CKDiagnosticSeverityWarning</declaration_type> = <declaration_var>CXDiagnostic_Warning</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable></globals>
+<classes><class id="//xsdoc_ref/occ/cl/CKDiagnostic" lang="occ"><name>CKDiagnostic</name>
+<attributes><attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/end">end</hd_link></value></attribute>
+</attributes>
+<declaration>@<declaration_type>implementation</declaration_type> <declaration_type>CKDiagnostic</declaration_type>  @<declaration_type>synthesize</declaration_type> <declaration_type>cxDiagnostic</declaration_type> = <declaration_var>_cxDiagnostic</declaration_var>;  
+    @<declaration_type>synthesize</declaration_type> <declaration_type>spelling</declaration_type> = <declaration_var>_spelling</declaration_var>;  @<declaration_type>synthesize</declaration_type> <declaration_type>severity</declaration_type> = <declaration_var>_severity</declaration_var>;  
+    @<declaration_type>synthesize</declaration_type> <declaration_type>fixIts</declaration_type> = <declaration_var>_fixIts</declaration_var>;  @<declaration_type>synthesize</declaration_type> <declaration_type>line</declaration_type> = <declaration_var>_line</declaration_var>;  @<declaration_type>synthesize</declaration_type> <declaration_type>column</declaration_type> = 
+    <declaration_var>_column</declaration_var>;  @<declaration_type>synthesize</declaration_type> <declaration_type>range</declaration_type> = <declaration_var>_range</declaration_var>;   + (
+            <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>diagnosticsForTranslationUnit</declaration_type>: (
+            <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>translationUnit</declaration_type> @end </declaration>
+<desc><p/></desc>
+<globals><variable id="//xsdoc_ref/occ/data/CKDiagnostic/column" lang="occ" accessControl="private"><name>column</name>
+<value>_column</value>
+<returntype>synthesize</returntype>
+<declaration>@<declaration_type>synthesize</declaration_type> <declaration_type>column</declaration_type> = <declaration_var>_column</declaration_var>; </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/occ/data/CKDiagnostic/cxDiagnostic" lang="occ" accessControl="private"><name>cxDiagnostic</name>
+<value>_cxDiagnostic</value>
+<returntype>synthesize</returntype>
+<declaration>@<declaration_type>synthesize</declaration_type> <declaration_type>cxDiagnostic</declaration_type> = <declaration_var>_cxDiagnostic</declaration_var>; </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/occ/data/CKDiagnostic/fixIts" lang="occ" accessControl="private"><name>fixIts</name>
+<value>_fixIts</value>
+<returntype>synthesize</returntype>
+<declaration>@<declaration_type>synthesize</declaration_type> <declaration_type>fixIts</declaration_type> = <declaration_var>_fixIts</declaration_var>; </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/occ/data/CKDiagnostic/line" lang="occ" accessControl="private"><name>line</name>
+<value>_line</value>
+<returntype>synthesize</returntype>
+<declaration>@<declaration_type>synthesize</declaration_type> <declaration_type>line</declaration_type> = <declaration_var>_line</declaration_var>; </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/occ/data/CKDiagnostic/range" lang="occ" accessControl="private"><name>range</name>
+<value>_range</value>
+<returntype>synthesize</returntype>
+<declaration>@<declaration_type>synthesize</declaration_type> <declaration_type>range</declaration_type> = <declaration_var>_range</declaration_var>; </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/occ/data/CKDiagnostic/severity" lang="occ" accessControl="private"><name>severity</name>
+<value>_severity</value>
+<returntype>synthesize</returntype>
+<declaration>@<declaration_type>synthesize</declaration_type> <declaration_type>severity</declaration_type> = <declaration_var>_severity</declaration_var>; </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/occ/data/CKDiagnostic/spelling" lang="occ" accessControl="private"><name>spelling</name>
+<value>_spelling</value>
+<returntype>synthesize</returntype>
+<declaration>@<declaration_type>synthesize</declaration_type> <declaration_type>spelling</declaration_type> = <declaration_var>_spelling</declaration_var>; </declaration>
+<desc><p/></desc>
+</variable></globals>
+<timestamp>Wednesday, May 14, 2014</timestamp>
+</class></classes>
+<timestamp>Wednesday, May 14, 2014</timestamp>
+</header>

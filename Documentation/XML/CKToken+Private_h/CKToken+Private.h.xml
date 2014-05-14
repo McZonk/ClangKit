@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.2//EN" "/System/Library/DTDs/HeaderDoc-1.2.dtd">
+<header id="//xsdoc_ref/doc/header/CKToken+Private.h" lang="c" filename="CKToken+Private.h" headerpath="/Volumes/Brain/Documents/Development/GitHub/ClangKit/Documentation/../ClangKit/Classes/CKToken+Private.h"><name>CKToken+Private.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKToken.h">"CKToken.h"</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><category id="//xsdoc_ref/occ/cat/CKToken(Private)" lang="occ"><name>CKToken(Private)</name>
+<attributes><attribute><name>Extends Class</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/CKToken">CKToken</hd_link></value></attribute>
+</attributes>
+<declaration> @<declaration_type>interface</declaration_type> <declaration_function>CKToken</declaration_function>(
+        <declaration_param>Private</declaration_param> )  - (
+            <declaration_param>id</declaration_param> )<declaration_type>initWithCXToken</declaration_type>: (
+            <declaration_param>CXToken</declaration_param> )<declaration_type>token</declaration_type> <declaration_type>translationUnit</declaration_type>: (
+            <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>translationUnit</declaration_var>;   @@end </declaration>
+<desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/instm/CKToken(Private)/initWithCXToken:translationUnit:" lang="occ" type="instm" accessControl="private"><name>initWithCXToken:translationUnit:</name>
+<parsedparameterlist>
+<parsedparameter><type>( CXToken )</type><name>token</name></parsedparameter>
+<parsedparameter><type>( CKTranslationUnit * )</type><name>translationUnit</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithCXToken</declaration_function>: ( <declaration_type>CXToken</declaration_type> )<declaration_param>token</declaration_param> <declaration_function>translationUnit</declaration_function>: ( <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>translationUnit</declaration_var>; </declaration>
+<desc><p/></desc>
+</method></methods>
+<timestamp>Wednesday, May 14, 2014</timestamp>
+</category></classes>
+<timestamp>Wednesday, May 14, 2014</timestamp>
+</header>

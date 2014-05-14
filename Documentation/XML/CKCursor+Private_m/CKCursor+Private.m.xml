@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.2//EN" "/System/Library/DTDs/HeaderDoc-1.2.dtd">
+<header id="//xsdoc_ref/doc/header/CKCursor+Private.m" lang="occ" filename="CKCursor+Private.m" headerpath="/Volumes/Brain/Documents/Development/GitHub/ClangKit/Documentation/../ClangKit/Classes/CKCursor+Private.m"><name>CKCursor+Private.m</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKCursor+Private.h">"CKCursor+Private.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKSourceLocation.h">"CKSourceLocation.h"</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><class id="//xsdoc_ref/occ/cl/CKCursor" lang="occ"><name>CKCursor</name>
+<attributes><attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/end">end</hd_link></value></attribute>
+</attributes>
+<declaration> @<declaration_type>implementation</declaration_type> <declaration_function>CKCursor</declaration_function>(
+        <declaration_param>Private</declaration_param> )  - (
+        <declaration_param>id</declaration_param> )<declaration_type>initWithCXCursor</declaration_type>: (
+        <declaration_param>CXCursor</declaration_param> )<declaration_type>cursor</declaration_type> { 
+        <declaration_type>CXString</declaration_type> <declaration_var>displayName</declaration_var>; 
+        <declaration_type>CXString</declaration_type> <declaration_var>kindSpelling</declaration_var>; 
+        <declaration_type>CXSourceLocation</declaration_type> <declaration_var>location</declaration_var>;  
+        <declaration_function>if</declaration_function>( (
+                <declaration_type>self</declaration_type> = [ <declaration_type>self</declaration_type> <declaration_type>init</declaration_type> ] ) ) { 
+            <declaration_function>if</declaration_function>( <declaration_function>clang_Cursor_isNull</declaration_function>(
+                    <declaration_param>cursor</declaration_param> ) ) { 
+                [ <declaration_type>self</declaration_type> <declaration_type>release</declaration_type> ];  
+                <declaration_type>return</declaration_type> <declaration_keyword>nil</declaration_keyword>; 
+                        }  <declaration_type>_cxCursorPointer</declaration_type> = <declaration_function>calloc</declaration_function>(
+                <declaration_function>sizeof</declaration_function>(
+                    <declaration_param>CXCursor</declaration_param> ),
+                <declaration_number>1</declaration_number> );  
+            <declaration_function>memcpy</declaration_function>(
+                <declaration_param>_cxCursorPointer</declaration_param>,
+                &amp;<declaration_param>cursor</declaration_param>,
+                <declaration_function>sizeof</declaration_function>(
+                    <declaration_param>CXCursor</declaration_param> ) );  
+            <declaration_type>_kind</declaration_type> = <declaration_function>clang_getCursorKind</declaration_function>(
+                <declaration_param>cursor</declaration_param> ); 
+            <declaration_type>displayName</declaration_type> = <declaration_function>clang_getCursorDisplayName</declaration_function>(
+                <declaration_param>cursor</declaration_param> ); 
+            <declaration_type>kindSpelling</declaration_type> = <declaration_function>clang_getCursorKindSpelling</declaration_function>(
+                (
+                    <declaration_keyword>enum</declaration_keyword> <declaration_param>CXCursorKind</declaration_param> )<declaration_param>_kind</declaration_param> ); 
+            <declaration_type>_displayName</declaration_type> = [ [ <declaration_type>NSString</declaration_type> <declaration_type>alloc</declaration_type> ] <declaration_type>initWithCString</declaration_type>: <declaration_function>clang_getCString</declaration_function>(
+                    <declaration_param>displayName</declaration_param>) <declaration_type>encoding</declaration_type>: <declaration_type>NSUTF8StringEncoding</declaration_type> ]; 
+            <declaration_type>_kindSpelling</declaration_type> = [ [ <declaration_type>NSString</declaration_type> <declaration_type>alloc</declaration_type> ] <declaration_type>initWithCString</declaration_type>: <declaration_function>clang_getCString</declaration_function>(
+                    <declaration_param>kindSpelling</declaration_param>) <declaration_type>encoding</declaration_type>: <declaration_type>NSUTF8StringEncoding</declaration_type> ]; 
+            <declaration_type>location</declaration_type> = <declaration_function>clang_getCursorLocation</declaration_function>(
+                <declaration_param>cursor</declaration_param> ); 
+            <declaration_type>_location</declaration_type> = [ [ <declaration_type>CKSourceLocation</declaration_type> <declaration_type>alloc</declaration_type> ] <declaration_type>initWithPointerData1</declaration_type>: (
+                    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>location</declaration_type>.<declaration_type>ptr_data</declaration_type>[ <declaration_number>0</declaration_number> ] <declaration_type>pointerData2</declaration_type>: (
+                    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>location</declaration_type>.<declaration_type>ptr_data</declaration_type>[ <declaration_number>1</declaration_number> ] <declaration_type>intData</declaration_type>: <declaration_type>location</declaration_type>.<declaration_type>int_data</declaration_type> ];  
+            <declaration_function>if</declaration_function>( <declaration_function>clang_isCursorDefinition</declaration_function>(
+                    <declaration_param>cursor</declaration_param> ) ) { 
+                <declaration_type>_isDefinition</declaration_type> = <declaration_keyword>YES</declaration_keyword>; 
+                        }  [ <declaration_type>self</declaration_type> <declaration_type>definition</declaration_type> ]; 
+            [ <declaration_type>self</declaration_type> <declaration_type>referenced</declaration_type> ];  
+            <declaration_function>if</declaration_function>( <declaration_function>clang_isDeclaration</declaration_function>(
+                    (
+                        <declaration_keyword>enum</declaration_keyword> <declaration_param>CXCursorKind</declaration_param> )<declaration_param>_kind</declaration_param> ) ) {
+                <declaration_type>_isDeclaration</declaration_type> = <declaration_keyword>YES</declaration_keyword>;
+                        } <declaration_function>if</declaration_function>( <declaration_function>clang_isReference</declaration_function>(
+                    (
+                        <declaration_keyword>enum</declaration_keyword> <declaration_param>CXCursorKind</declaration_param> )<declaration_param>_kind</declaration_param> ) ) {
+                <declaration_type>_isReference</declaration_type> = <declaration_keyword>YES</declaration_keyword>;
+                        } <declaration_function>if</declaration_function>( <declaration_function>clang_isPreprocessing</declaration_function>(
+                    (
+                        <declaration_keyword>enum</declaration_keyword> <declaration_param>CXCursorKind</declaration_param> )<declaration_param>_kind</declaration_param> ) ) {
+                <declaration_type>_isPreprocessing</declaration_type> = <declaration_keyword>YES</declaration_keyword>;
+                        } <declaration_function>if</declaration_function>( <declaration_function>clang_isExpression</declaration_function>(
+                    (
+                        <declaration_keyword>enum</declaration_keyword> <declaration_param>CXCursorKind</declaration_param> )<declaration_param>_kind</declaration_param> ) ) {
+                <declaration_type>_isExpression</declaration_type> = <declaration_keyword>YES</declaration_keyword>;
+                        } <declaration_function>if</declaration_function>( <declaration_function>clang_isAttribute</declaration_function>(
+                    (
+                        <declaration_keyword>enum</declaration_keyword> <declaration_param>CXCursorKind</declaration_param> )<declaration_param>_kind</declaration_param> ) ) {
+                <declaration_type>_isAttribute</declaration_type> = <declaration_keyword>YES</declaration_keyword>;
+                        } <declaration_function>if</declaration_function>( <declaration_function>clang_isInvalid</declaration_function>(
+                    (
+                        <declaration_keyword>enum</declaration_keyword> <declaration_param>CXCursorKind</declaration_param> )<declaration_param>_kind</declaration_param> ) ) {
+                <declaration_type>_isInvalid</declaration_type> = <declaration_keyword>YES</declaration_keyword>;
+                        } <declaration_function>if</declaration_function>( <declaration_function>clang_isStatement</declaration_function>(
+                    (
+                        <declaration_keyword>enum</declaration_keyword> <declaration_param>CXCursorKind</declaration_param> )<declaration_param>_kind</declaration_param> ) ) {
+                <declaration_type>_isStatement</declaration_type> = <declaration_keyword>YES</declaration_keyword>;
+                        } <declaration_function>if</declaration_function>( <declaration_function>clang_isTranslationUnit</declaration_function>(
+                    (
+                        <declaration_keyword>enum</declaration_keyword> <declaration_param>CXCursorKind</declaration_param> )<declaration_param>_kind</declaration_param> ) ) {
+                <declaration_type>_isTranslationUnit</declaration_type> = <declaration_keyword>YES</declaration_keyword>;
+                        } <declaration_function>if</declaration_function>( <declaration_function>clang_isUnexposed</declaration_function>(
+                    (
+                        <declaration_keyword>enum</declaration_keyword> <declaration_param>CXCursorKind</declaration_param> )<declaration_param>_kind</declaration_param> ) ) {
+                <declaration_type>_isUnexposed</declaration_type> = <declaration_keyword>YES</declaration_keyword>;
+                        } 
+                }  <declaration_type>return</declaration_type> <declaration_var>self</declaration_var>; 
+        }  @@end </declaration>
+<desc><p/></desc>
+<timestamp>Wednesday, May 14, 2014</timestamp>
+</class></classes>
+<timestamp>Wednesday, May 14, 2014</timestamp>
+</header>

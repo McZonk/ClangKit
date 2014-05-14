@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.2//EN" "/System/Library/DTDs/HeaderDoc-1.2.dtd">
+<header id="//xsdoc_ref/doc/header/ClangKit.h" lang="c" filename="ClangKit.h" headerpath="/Volumes/Brain/Documents/Development/GitHub/ClangKit/Documentation/../ClangKit/ClangKit.h"><name>ClangKit.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKTypes.h">"CKTypes.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKDiagnostic.h">"CKDiagnostic.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKFixIt.h">"CKFixIt.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKIndex.h">"CKIndex.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKToken.h">"CKToken.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKTranslationUnit.h">"CKTranslationUnit.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKCursor.h">"CKCursor.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKSourceLocation.h">"CKSourceLocation.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKCompletionResult.h">"CKCompletionResult.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKCompletionChunk.h">"CKCompletionChunk.h"</hd_link></include>
+</includes>
+<desc><p/></desc>
+<timestamp>Wednesday, May 14, 2014</timestamp>
+</header>

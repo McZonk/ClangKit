@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.2//EN" "/System/Library/DTDs/HeaderDoc-1.2.dtd">
+<header id="//xsdoc_ref/doc/header/CKCompletionResult.m" lang="occ" filename="CKCompletionResult.m" headerpath="/Volumes/Brain/Documents/Development/GitHub/ClangKit/Documentation/../ClangKit/Classes/CKCompletionResult.m"><name>CKCompletionResult.m</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKCompletionResult.h">"CKCompletionResult.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKCompletionChunk.h">"CKCompletionChunk.h"</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><class id="//xsdoc_ref/occ/cl/CKCompletionResult" lang="occ"><name>CKCompletionResult</name>
+<attributes><attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/end">end</hd_link></value></attribute>
+</attributes>
+<declaration>@<declaration_type>implementation</declaration_type> <declaration_type>CKCompletionResult</declaration_type>  @<declaration_type>synthesize</declaration_type> <declaration_type>string</declaration_type> = <declaration_var>_string</declaration_var>;  
+    @<declaration_type>synthesize</declaration_type> <declaration_type>cursorKind</declaration_type> = <declaration_var>_cursorKind</declaration_var>;  @<declaration_type>synthesize</declaration_type> <declaration_type>chunks</declaration_type> = <declaration_var>_chunks</declaration_var>;   
+    + (
+            <declaration_param>id</declaration_param> )<declaration_type>completionResultWithCXCompletionString</declaration_type>: (
+            <declaration_param>CXCompletionString</declaration_param> )<declaration_type>string</declaration_type> <declaration_type>cursorKind</declaration_type>: (
+            <declaration_param>CKCursorKind</declaration_param> )<declaration_type>cursorKind</declaration_type> @end </declaration>
+<desc><p/></desc>
+<globals><variable id="//xsdoc_ref/occ/data/CKCompletionResult/chunks" lang="occ" accessControl="private"><name>chunks</name>
+<value>_chunks</value>
+<returntype>synthesize</returntype>
+<declaration>@<declaration_type>synthesize</declaration_type> <declaration_type>chunks</declaration_type> = <declaration_var>_chunks</declaration_var>; </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/occ/data/CKCompletionResult/cursorKind" lang="occ" accessControl="private"><name>cursorKind</name>
+<value>_cursorKind</value>
+<returntype>synthesize</returntype>
+<declaration>@<declaration_type>synthesize</declaration_type> <declaration_type>cursorKind</declaration_type> = <declaration_var>_cursorKind</declaration_var>; </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/occ/data/CKCompletionResult/string" lang="occ" accessControl="private"><name>string</name>
+<value>_string</value>
+<returntype>synthesize</returntype>
+<declaration>@<declaration_type>synthesize</declaration_type> <declaration_type>string</declaration_type> = <declaration_var>_string</declaration_var>; </declaration>
+<desc><p/></desc>
+</variable></globals>
+<timestamp>Wednesday, May 14, 2014</timestamp>
+</class><class id="//xsdoc_ref/occ/cl/CKTranslationUnit" lang="occ"><name>CKTranslationUnit</name>
+<declaration> @<declaration_type>class</declaration_type> <declaration_var>CKTranslationUnit</declaration_var>;  </declaration>
+<desc><p/></desc>
+<timestamp>Wednesday, May 14, 2014</timestamp>
+</class></classes>
+<timestamp>Wednesday, May 14, 2014</timestamp>
+</header>

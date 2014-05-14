@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.2//EN" "/System/Library/DTDs/HeaderDoc-1.2.dtd">
+<header id="//xsdoc_ref/doc/header/CKFixIt.m" lang="occ" filename="CKFixIt.m" headerpath="/Volumes/Brain/Documents/Development/GitHub/ClangKit/Documentation/../ClangKit/Classes/CKFixIt.m"><name>CKFixIt.m</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKFixIt.h">"CKFixIt.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CKDiagnostic.h">"CKDiagnostic.h"</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><class id="//xsdoc_ref/occ/cl/CKFixIt" lang="occ"><name>CKFixIt</name>
+<attributes><attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/end">end</hd_link></value></attribute>
+</attributes>
+<declaration> @<declaration_type>implementation</declaration_type> <declaration_type>CKFixIt</declaration_type>  @<declaration_type>synthesize</declaration_type> <declaration_type>string</declaration_type> = <declaration_var>_string</declaration_var>;  @<declaration_type>synthesize</declaration_type> <declaration_type>range</declaration_type> = 
+    <declaration_var>_range</declaration_var>;   + (
+            <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>fixItsForDiagnostic</declaration_type>: (
+            <declaration_type>CKDiagnostic</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>diagnostic</declaration_type> @end </declaration>
+<desc><p/></desc>
+<globals><variable id="//xsdoc_ref/occ/data/CKFixIt/range" lang="occ" accessControl="private"><name>range</name>
+<value>_range</value>
+<returntype>synthesize</returntype>
+<declaration>@<declaration_type>synthesize</declaration_type> <declaration_type>range</declaration_type> = <declaration_var>_range</declaration_var>; </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/occ/data/CKFixIt/string" lang="occ" accessControl="private"><name>string</name>
+<value>_string</value>
+<returntype>synthesize</returntype>
+<declaration>@<declaration_type>synthesize</declaration_type> <declaration_type>string</declaration_type> = <declaration_var>_string</declaration_var>; </declaration>
+<desc><p/></desc>
+</variable></globals>
+<timestamp>Wednesday, May 14, 2014</timestamp>
+</class></classes>
+<timestamp>Wednesday, May 14, 2014</timestamp>
+</header>
