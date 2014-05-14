@@ -37,7 +37,6 @@
 		057601781738547500C67831 /* libLLVMMC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 057601681738547500C67831 /* libLLVMMC.a */; };
 		057601791738547500C67831 /* libLLVMMCParser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 057601691738547500C67831 /* libLLVMMCParser.a */; };
 		0576017A1738547500C67831 /* libLLVMSupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0576016A1738547500C67831 /* libLLVMSupport.a */; };
-		0576018D1738548900C67831 /* .dir in Resources */ = {isa = PBXBuildFile; fileRef = 0576017C1738548900C67831 /* .dir */; };
 		0576018E1738548900C67831 /* libclang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0576017D1738548900C67831 /* libclang.a */; };
 		0576018F1738548900C67831 /* libclangAnalysis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0576017E1738548900C67831 /* libclangAnalysis.a */; };
 		057601901738548900C67831 /* libclangAST.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0576017F1738548900C67831 /* libclangAST.a */; };
@@ -132,7 +131,6 @@
 		057601681738547500C67831 /* libLLVMMC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLLVMMC.a; sourceTree = "<group>"; };
 		057601691738547500C67831 /* libLLVMMCParser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLLVMMCParser.a; sourceTree = "<group>"; };
 		0576016A1738547500C67831 /* libLLVMSupport.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLLVMSupport.a; sourceTree = "<group>"; };
-		0576017C1738548900C67831 /* .dir */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .dir; sourceTree = "<group>"; };
 		0576017D1738548900C67831 /* libclang.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libclang.a; sourceTree = "<group>"; };
 		0576017E1738548900C67831 /* libclangAnalysis.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libclangAnalysis.a; sourceTree = "<group>"; };
 		0576017F1738548900C67831 /* libclangAST.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libclangAST.a; sourceTree = "<group>"; };
@@ -291,7 +289,6 @@
 		0576017B1738548900C67831 /* Release */ = {
 			isa = PBXGroup;
 			children = (
-				0576017C1738548900C67831 /* .dir */,
 				0576017D1738548900C67831 /* libclang.a */,
 				0576017E1738548900C67831 /* libclangAnalysis.a */,
 				0576017F1738548900C67831 /* libclangAST.a */,
@@ -513,7 +510,6 @@
 			files = (
 				059872FC15D74D09006FF8D2 /* InfoPlist.strings in Resources */,
 				0518BA9E15D8615100349932 /* README.md in Resources */,
-				0576018D1738548900C67831 /* .dir in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
