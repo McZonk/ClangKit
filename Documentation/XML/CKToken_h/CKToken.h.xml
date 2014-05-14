@@ -4,7 +4,43 @@
 <includes>
 </includes>
 <desc><p/></desc>
-<classes><class id="//xsdoc_ref/occ/cl/CKToken" lang="occ"><name>CKToken</name>
+<globals><variable id="//xsdoc_ref/c/data/CKTokenKindComment" lang="c"><name>CKTokenKindComment</name>
+<abstract><p>Token kind - Comment
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKTokenKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKTokenKind</declaration_type> <declaration_var>CKTokenKindComment</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKTokenKindIdentifier" lang="c"><name>CKTokenKindIdentifier</name>
+<abstract><p>Token kind - Identifier
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKTokenKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKTokenKind</declaration_type> <declaration_var>CKTokenKindIdentifier</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKTokenKindKeyword" lang="c"><name>CKTokenKindKeyword</name>
+<abstract><p>Token kind - Keyword
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKTokenKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKTokenKind</declaration_type> <declaration_var>CKTokenKindKeyword</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKTokenKindLiteral" lang="c"><name>CKTokenKindLiteral</name>
+<abstract><p>Token kind - Literal
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKTokenKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKTokenKind</declaration_type> <declaration_var>CKTokenKindLiteral</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKTokenKindPunctuation" lang="c"><name>CKTokenKindPunctuation</name>
+<abstract><p>Token kind - Punctuation
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKTokenKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKTokenKind</declaration_type> <declaration_var>CKTokenKindPunctuation</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable></globals>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/CKTokenKind" lang="c" type="simple"><name>CKTokenKind</name>
+<abstract><p>Token kind
+</p></abstract>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>NSInteger</declaration_type> <declaration_var>CKTokenKind</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><classes><class id="//xsdoc_ref/occ/cl/CKToken" lang="occ"><name>CKToken</name>
 <abstract><p>Token class
 </p></abstract>
 <attributes><attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/NSObject">NSObject</hd_link></value></attribute>
@@ -17,16 +53,119 @@
         <declaration_type>NSRange</declaration_type> <declaration_var>_range</declaration_var>; 
         <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type> <declaration_var>_cursor</declaration_var>; 
         <declaration_type>CKSourceLocation</declaration_type> <declaration_type>*</declaration_type> <declaration_var>_sourceLocation</declaration_var>; 
-        }  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>spelling</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>CKTokenKind</declaration_type> <declaration_var>kind</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>NSUInteger</declaration_type> <declaration_var>line</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>NSUInteger</declaration_type> <declaration_var>column</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>NSRange</declaration_type> <declaration_var>range</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type><declaration_var>cursor</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>CKSourceLocation</declaration_type> <declaration_type>*</declaration_type><declaration_var>sourceLocation</declaration_var>;   + ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>tokensForTranslationUnit</declaration_type>: ( <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>translationUnit</declaration_type> <declaration_type>tokens</declaration_type>: ( <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_type>*</declaration_type> )<declaration_var>tokensPointer</declaration_var>;   
+        }  <declaration_comment>/*!
+@property        spelling
+@abstract        The token's spelling</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>spelling</declaration_var>;   <declaration_comment>/*!
+@property        kind
+@abstract        The token kind</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CKTokenKind</declaration_type> <declaration_var>kind</declaration_var>;   <declaration_comment>/*!
+@property        line
+@abstract        The line number for the token</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSUInteger</declaration_type> <declaration_var>line</declaration_var>;   <declaration_comment>/*!
+@property        column
+@abstract        The column number for the token</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSUInteger</declaration_type> <declaration_var>column</declaration_var>;   <declaration_comment>/*!
+@property        range
+@abstract        The token's range</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSRange</declaration_type> <declaration_var>range</declaration_var>;   <declaration_comment>/*!
+@property        cursor
+@abstract        The token's cursor</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type><declaration_var>cursor</declaration_var>;   <declaration_comment>/*!
+@property        sourceLocation
+@abstract        The source location of the token</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CKSourceLocation</declaration_type> <declaration_type>*</declaration_type><declaration_var>sourceLocation</declaration_var>;   <declaration_comment>/*!
+@method          tokensForTranslationUnit:tokens:
+@abstract        Gets a list of token objects from a translation unit
+@param           translationUnit     The translation unit
+@param           tokensPointer       Optional - Used to retrieve the internal libclang tokens
+@return          An array of token objects</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>tokensForTranslationUnit</declaration_type>: ( <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>translationUnit</declaration_type> <declaration_type>tokens</declaration_type>: ( <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_type>*</declaration_type> )<declaration_var>tokensPointer</declaration_var>;   
     @@end </declaration>
 <desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/clm/CKToken/tokensForTranslationUnit:tokens:" lang="occ" type="clm" accessControl="protected"><name>tokensForTranslationUnit:tokens:</name>
+<abstract><p>Gets a list of token objects from a translation unit
+</p></abstract>
+<parameterlist>
+<parameter><name>translationUnit</name><desc><p>The translation unit</p></desc></parameter>
+<parameter><name>tokensPointer</name><desc><p>Optional - Used to retrieve the internal libclang tokens</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( CKTranslationUnit * )</type><name>translationUnit</name></parsedparameter>
+<parsedparameter><type>( void ** )</type><name>tokensPointer</name></parsedparameter>
+</parsedparameterlist>
+<returntype> NSArray * </returntype>
+<result><p>An array of token objects
+</p></result>
+<declaration>+ ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_function>tokensForTranslationUnit</declaration_function>: ( <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>translationUnit</declaration_param> 
+        <declaration_function>tokens</declaration_function>: ( <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_type>*</declaration_type> )<declaration_var>tokensPointer</declaration_var>; </declaration>
+<desc><p/></desc>
+</method></methods>
+<properties><property id="//xsdoc_ref/occ/instp/CKToken/column" lang="occ" accessControl="protected"><name>column</name>
+<abstract><p>The column number for the token
+</p></abstract>
+<returntype>NSUInteger</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSUInteger</declaration_type> <declaration_var>column</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKToken/cursor" lang="occ" accessControl="protected"><name>cursor</name>
+<abstract><p>The token's cursor
+</p></abstract>
+<returntype>CKCursor *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type> <declaration_var>cursor</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKToken/kind" lang="occ" accessControl="protected"><name>kind</name>
+<abstract><p>The token kind
+</p></abstract>
+<returntype>CKTokenKind</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CKTokenKind</declaration_type> <declaration_var>kind</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKToken/line" lang="occ" accessControl="protected"><name>line</name>
+<abstract><p>The line number for the token
+</p></abstract>
+<returntype>NSUInteger</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSUInteger</declaration_type> <declaration_var>line</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKToken/range" lang="occ" accessControl="protected"><name>range</name>
+<abstract><p>The token's range
+</p></abstract>
+<returntype>NSRange</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSRange</declaration_type> <declaration_var>range</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKToken/sourceLocation" lang="occ" accessControl="protected"><name>sourceLocation</name>
+<abstract><p>The source location of the token
+</p></abstract>
+<returntype>CKSourceLocation *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CKSourceLocation</declaration_type> <declaration_type>*</declaration_type> <declaration_var>sourceLocation</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKToken/spelling" lang="occ" accessControl="protected"><name>spelling</name>
+<abstract><p>The token's spelling
+</p></abstract>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>spelling</declaration_var>; </declaration>
+<desc><p/></desc>
+</property></properties>
 <timestamp>Wednesday, May 14, 2014</timestamp>
 </class></classes>
 <timestamp>Wednesday, May 14, 2014</timestamp>

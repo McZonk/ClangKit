@@ -13,13 +13,65 @@
         @@protected  <declaration_type>CXIndex</declaration_type> <declaration_var>_cxIndex</declaration_var>; 
         <declaration_type>BOOL</declaration_type> <declaration_var>_excludeDeclarationsFromPCH</declaration_var>; 
         <declaration_type>BOOL</declaration_type> <declaration_var>_displayDiagnostics</declaration_var>; 
-        }  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>CXIndex</declaration_type> <declaration_var>cxIndex</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
+        }  <declaration_comment>/*!
+@property        cxIndex
+@abstract        Internal libclang index object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CXIndex</declaration_type> <declaration_var>cxIndex</declaration_var>;   <declaration_comment>/*!
+@property        excludeDeclarationsFromPCH
+@abstract        Whether to exclude declarations from the PCH file or not</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
         <declaration_param>readwrite</declaration_param>,
-        <declaration_param>assign</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>excludeDeclarationsFromPCH</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>assign</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>excludeDeclarationsFromPCH</declaration_var>;   <declaration_comment>/*!
+@property        displayDiagnostics
+@abstract        Whether to display diagnostics or not</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
         <declaration_param>readwrite</declaration_param>,
-        <declaration_param>assign</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>displayDiagnostics</declaration_var>;   + ( <declaration_param>id</declaration_param> )<declaration_var>index</declaration_var>;   @@end </declaration>
+        <declaration_param>assign</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>displayDiagnostics</declaration_var>;   <declaration_comment>/*!
+@method          index
+@abstract        Gets an index object
+@return          The index object
+@discussion      The returned object is autoreleased.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>id</declaration_param> )<declaration_var>index</declaration_var>;   @@end </declaration>
 <desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/clm/CKIndex/index" lang="occ" type="clm" accessControl="protected"><name>index</name>
+<abstract><p>Gets an index object
+</p></abstract>
+<returntype> id </returntype>
+<result><p>The index object
+</p></result>
+<declaration>+ ( <declaration_type>id</declaration_type> )<declaration_var>index</declaration_var>; </declaration>
+<desc><p>The returned object is autoreleased.
+</p></desc>
+</method></methods>
+<properties><property id="//xsdoc_ref/occ/instp/CKIndex/cxIndex" lang="occ" accessControl="protected"><name>cxIndex</name>
+<abstract><p>Internal libclang index object
+</p></abstract>
+<returntype>CXIndex</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CXIndex</declaration_type> <declaration_var>cxIndex</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKIndex/displayDiagnostics" lang="occ" accessControl="protected"><name>displayDiagnostics</name>
+<abstract><p>Whether to display diagnostics or not
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>assign</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>displayDiagnostics</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKIndex/excludeDeclarationsFromPCH" lang="occ" accessControl="protected"><name>excludeDeclarationsFromPCH</name>
+<abstract><p>Whether to exclude declarations from the PCH file or not
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>assign</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>excludeDeclarationsFromPCH</declaration_var>; </declaration>
+<desc><p/></desc>
+</property></properties>
 <timestamp>Wednesday, May 14, 2014</timestamp>
 </class></classes>
 <timestamp>Wednesday, May 14, 2014</timestamp>

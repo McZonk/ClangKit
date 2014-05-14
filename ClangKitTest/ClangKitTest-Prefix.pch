@@ -40,7 +40,6 @@
     
     #import <Foundation/Foundation.h>
     #import "CKWarnings.h"
-    #import "CKMacros.h"
     #import "ClangKit.h"
     
 #endif

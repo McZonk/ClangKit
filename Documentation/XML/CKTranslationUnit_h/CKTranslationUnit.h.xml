@@ -21,14 +21,42 @@
         <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>_tokensPointer</declaration_var>; 
         <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>_unsavedFile</declaration_var>; 
         <declaration_type>NSLock</declaration_type> <declaration_type>*</declaration_type> <declaration_var>_lock</declaration_var>; 
-        }  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>path</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
+        }  <declaration_comment>/*!
+@property        path
+@abstract        Translation's unit path</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>path</declaration_var>;   <declaration_comment>/*!
+@property        text
+@abstract        Translation's unit text</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
         <declaration_param>readwrite</declaration_param>,
-        <declaration_param>retain</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>text</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>CXTranslationUnit</declaration_type> <declaration_var>cxTranslationUnit</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type><declaration_var>index</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type><declaration_var>diagnostics</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type><declaration_var>tokens</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>retain</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>text</declaration_var>;   <declaration_comment>/*!
+@property        cxTranslationUnit
+@abstract        Internal libclang translation unit object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CXTranslationUnit</declaration_type> <declaration_var>cxTranslationUnit</declaration_var>;   <declaration_comment>/*!
+@property        index
+@abstract        The index object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type><declaration_var>index</declaration_var>;   <declaration_comment>/*!
+@property        diagnostics
+@abstract        An array of diagnostics for the translation unit</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type><declaration_var>diagnostics</declaration_var>;   <declaration_comment>/*!
+@property        tokens
+@abstract        An array of tokens for the translation unit</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type><declaration_var>tokens</declaration_var>;   <declaration_comment>/*!
+@property        cxFile
+@abstract        Internal libclang file object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
         <declaration_param>readonly</declaration_param> ) <declaration_type>CXFile</declaration_type> <declaration_var>cxFile</declaration_var>;   + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>path</declaration_var>;  
     + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>path</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>index</declaration_var>;  
     + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>path</declaration_type> <declaration_type>args</declaration_type>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>;  
@@ -47,6 +75,57 @@
     - ( <declaration_param>void</declaration_param> )<declaration_var>reparse</declaration_var>;  - ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>completionResultsForLine</declaration_type>: ( <declaration_param>NSUInteger</declaration_param> )<declaration_type>line</declaration_type> <declaration_type>column</declaration_type>: ( <declaration_param>NSUInteger</declaration_param> )<declaration_var>column</declaration_var>;   
     @@end </declaration>
 <desc><p/></desc>
+<properties><property id="//xsdoc_ref/occ/instp/CKTranslationUnit/cxFile" lang="occ" accessControl="protected"><name>cxFile</name>
+<abstract><p>Internal libclang file object
+</p></abstract>
+<returntype>CXFile</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CXFile</declaration_type> <declaration_var>cxFile</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKTranslationUnit/cxTranslationUnit" lang="occ" accessControl="protected"><name>cxTranslationUnit</name>
+<abstract><p>Internal libclang translation unit object
+</p></abstract>
+<returntype>CXTranslationUnit</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CXTranslationUnit</declaration_type> <declaration_var>cxTranslationUnit</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKTranslationUnit/diagnostics" lang="occ" accessControl="protected"><name>diagnostics</name>
+<abstract><p>An array of diagnostics for the translation unit
+</p></abstract>
+<returntype>NSArray *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> <declaration_var>diagnostics</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKTranslationUnit/index" lang="occ" accessControl="protected"><name>index</name>
+<abstract><p>The index object
+</p></abstract>
+<returntype>CKIndex *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> <declaration_var>index</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKTranslationUnit/path" lang="occ" accessControl="protected"><name>path</name>
+<abstract><p>Translation's unit path
+</p></abstract>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>path</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKTranslationUnit/text" lang="occ" accessControl="protected"><name>text</name>
+<abstract><p>Translation's unit text
+</p></abstract>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>retain</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>text</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKTranslationUnit/tokens" lang="occ" accessControl="protected"><name>tokens</name>
+<abstract><p>An array of tokens for the translation unit
+</p></abstract>
+<returntype>NSArray *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> <declaration_var>tokens</declaration_var>; </declaration>
+<desc><p/></desc>
+</property></properties>
 <timestamp>Wednesday, May 14, 2014</timestamp>
 </class></classes>
 <timestamp>Wednesday, May 14, 2014</timestamp>

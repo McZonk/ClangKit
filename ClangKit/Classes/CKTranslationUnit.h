@@ -52,13 +52,47 @@
 	NSLock            * _lock;
 }
 
-@property( atomic, readonly          ) NSString        * path;
-@property( atomic, readwrite, retain ) NSString        * text;
-@property( atomic, readonly          ) CXTranslationUnit cxTranslationUnit;
-@property( atomic, readonly          ) CKIndex         * index;
-@property( atomic, readonly          ) NSArray         * diagnostics;
-@property( atomic, readonly          ) NSArray         * tokens;
-@property( atomic, readonly          ) CXFile            cxFile;
+/*!
+ * @property        path
+ * @abstract        Translation's unit path
+ */
+@property( atomic, readonly ) NSString * path;
+
+/*!
+ * @property        text
+ * @abstract        Translation's unit text
+ */
+@property( atomic, readwrite, retain ) NSString * text;
+
+/*!
+ * @property        cxTranslationUnit
+ * @abstract        Internal libclang translation unit object
+ */
+@property( atomic, readonly ) CXTranslationUnit cxTranslationUnit;
+
+/*!
+ * @property        index
+ * @abstract        The index object
+ */
+@property( atomic, readonly ) CKIndex * index;
+
+/*!
+ * @property        diagnostics
+ * @abstract        An array of diagnostics for the translation unit
+ */
+@property( atomic, readonly ) NSArray * diagnostics;
+
+/*!
+ * @property        tokens
+ * @abstract        An array of tokens for the translation unit
+ */
+@property( atomic, readonly ) NSArray * tokens;
+
+/*!
+ * @property        cxFile
+ * @abstract        Internal libclang file object
+ */
+@property( atomic, readonly ) CXFile cxFile;
 
 + ( id )translationUnitWithPath: ( NSString * )path;
 + ( id )translationUnitWithPath: ( NSString * )path index: ( CKIndex * )index;
