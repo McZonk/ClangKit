@@ -115,6 +115,7 @@
 		0518BA9C15D8615100349932 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		05323C8A1736D8EB00D550F7 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		05323C8C1736D8EF00D550F7 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		0569CBDF1923F0B10089E263 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		0576015B1738547500C67831 /* libclang.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libclang.a; sourceTree = "<group>"; };
 		0576015C1738547500C67831 /* libclangAnalysis.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libclangAnalysis.a; sourceTree = "<group>"; };
 		0576015D1738547500C67831 /* libclangAST.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libclangAST.a; sourceTree = "<group>"; };
@@ -262,6 +263,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0569CBDE1923F0B10089E263 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				0569CBDF1923F0B10089E263 /* Makefile */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
 		0576015A1738547500C67831 /* Debug */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				0518BA9C15D8615100349932 /* README.md */,
+				0569CBDE1923F0B10089E263 /* Documentation */,
 				059872F715D74D09006FF8D2 /* ClangKit */,
 				050544B815E06A6C00697329 /* Libraries */,
 				0518B9D415D7577D00349932 /* ClangKitTest */,
