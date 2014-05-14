@@ -36,10 +36,6 @@
     CXIndex _cxIndex;
     BOOL    _excludeDeclarationsFromPCH;
     BOOL    _displayDiagnostics;
-    
-@private
-    
-    id __CKIndex_Reserved[ 5 ] __attribute__( ( unused ) );
 }
 
 @property( atomic, readonly          ) CXIndex   cxIndex;

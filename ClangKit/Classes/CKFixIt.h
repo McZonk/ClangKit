@@ -37,10 +37,6 @@
     
     NSString * _string;
     NSRange    _range;
-    
-@private
-    
-    id __CKFixIt_Reserved[ 5 ] __attribute__( ( unused ) );
 }
 
 @property( atomic, readonly ) NSString * string;

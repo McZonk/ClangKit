@@ -219,10 +219,6 @@ FOUNDATION_EXPORT CKCursorKind CKCursorKindLastPreprocessing;
     BOOL               _isTranslationUnit;
     BOOL               _isUnexposed;
     void             * _cxCursorPointer;
-    
-@private
-    
-    id __CKCursor_Reserved[ 5 ] __attribute__( ( unused ) );
 }
 
 @property( atomic, readonly ) CKCursorKind        kind;

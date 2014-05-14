@@ -37,10 +37,6 @@
     void       * _ptrData2;
     unsigned int _intData;
     NSString   * _fileName;
-    
-@private
-    
-    id __CKSourceLocation_Reserved[ 5 ] __attribute__( ( unused ) );
 }
 
 @property( atomic, readonly ) void       * ptrData1;

@@ -38,10 +38,6 @@
     CXCompletionString _string;
     CKCursorKind       _cursorKind;
     NSArray          * _chunks;
-    
-@private
-    
-    id __CKCompletionResult_Reserved[ 5 ] __attribute__( ( unused ) );
 }
 
 @property( atomic, readonly ) CXCompletionString * string;

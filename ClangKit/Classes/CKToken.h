@@ -52,10 +52,6 @@ FOUNDATION_EXPORT CKTokenKind CKTokenKindComment;
     NSRange            _range;
     CKCursor         * _cursor;
     CKSourceLocation * _sourceLocation;
-    
-@private
-    
-    id __CKToken_Reserved[ 5 ] __attribute__( ( unused ) );
 }
 
 @property( atomic, readonly ) NSString         * spelling;

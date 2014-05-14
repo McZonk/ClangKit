@@ -59,10 +59,6 @@ FOUNDATION_EXPORT CKCompletionChunkKind CKCompletionChunkKindVerticalSpace;
     
     NSString            * _text;
     CKCompletionChunkKind _kind;
-    
-@private
-    
-    id __CKCompletionChunk_Reserved[ 5 ] __attribute__( ( unused ) );
 }
 
 @property( atomic, readonly ) NSString            * text;

@@ -124,14 +124,6 @@ FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
      * @abstract        Range of the diagnostic, based on the source code
      */
     NSRange _range;
-    
-@private
-    
-    /*!
-     * @var             __CKDiagnostic_Reserved
-     * @abstract        Reserved instance variables (binary compatibility)
-     */
-    id __CKDiagnostic_Reserved[ 5 ] __attribute__( ( unused ) );
 }
 
 /*!

@@ -46,10 +46,6 @@
     void              * _tokensPointer;
     void              * _unsavedFile;
 	NSLock            * _lock;
-    
-@private
-    
-    id __CKTranslationUnit_Reserved[ 5 ] __attribute__( ( unused ) );
 }
 
 @property( atomic, readonly          ) NSString        * path;
