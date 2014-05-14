@@ -4,7 +4,139 @@
 <includes>
 </includes>
 <desc><p/></desc>
-<classes><class id="//xsdoc_ref/occ/cl/CKCompletionChunk" lang="occ"><name>CKCompletionChunk</name>
+<globals><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindColon" lang="c"><name>CKCompletionChunkKindColon</name>
+<abstract><p>Completion chunk kind - Colon
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindColon</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindComma" lang="c"><name>CKCompletionChunkKindComma</name>
+<abstract><p>Completion chunk kind - Comma
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindComma</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindCurrentParameter" lang="c"><name>CKCompletionChunkKindCurrentParameter</name>
+<abstract><p>Completion chunk kind - Current parameter
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindCurrentParameter</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindEqual" lang="c"><name>CKCompletionChunkKindEqual</name>
+<abstract><p>Completion chunk kind - Equal
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindEqual</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindHorizontalSpace" lang="c"><name>CKCompletionChunkKindHorizontalSpace</name>
+<abstract><p>Completion chunk kind - Horizontal space
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindHorizontalSpace</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindInformative" lang="c"><name>CKCompletionChunkKindInformative</name>
+<abstract><p>Completion chunk kind - Informative
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindInformative</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindLeftAngle" lang="c"><name>CKCompletionChunkKindLeftAngle</name>
+<abstract><p>Completion chunk kind - Left angle
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindLeftAngle</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindLeftBrace" lang="c"><name>CKCompletionChunkKindLeftBrace</name>
+<abstract><p>Completion chunk kind - Left brace
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindLeftBrace</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindLeftBracket" lang="c"><name>CKCompletionChunkKindLeftBracket</name>
+<abstract><p>Completion chunk kind - Left bracket
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindLeftBracket</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindLeftParen" lang="c"><name>CKCompletionChunkKindLeftParen</name>
+<abstract><p>Completion chunk kind - Left parenthesis
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindLeftParen</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindOptional" lang="c"><name>CKCompletionChunkKindOptional</name>
+<abstract><p>Completion chunk kind - Optional
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindOptional</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindPlaceholder" lang="c"><name>CKCompletionChunkKindPlaceholder</name>
+<abstract><p>Completion chunk kind - Placeholder
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindPlaceholder</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindResultType" lang="c"><name>CKCompletionChunkKindResultType</name>
+<abstract><p>Completion chunk kind - Result type
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindResultType</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindRightAngle" lang="c"><name>CKCompletionChunkKindRightAngle</name>
+<abstract><p>Completion chunk kind - Right angle
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindRightAngle</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindRightBrace" lang="c"><name>CKCompletionChunkKindRightBrace</name>
+<abstract><p>Completion chunk kind - Right brace
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindRightBrace</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindRightBracket" lang="c"><name>CKCompletionChunkKindRightBracket</name>
+<abstract><p>Completion chunk kind - Right bracket
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindRightBracket</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindRightParen" lang="c"><name>CKCompletionChunkKindRightParen</name>
+<abstract><p>Completion chunk kind - Right parenthesis
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindRightParen</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindSemiColon" lang="c"><name>CKCompletionChunkKindSemiColon</name>
+<abstract><p>Completion chunk kind - Semi colon
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindSemiColon</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindText" lang="c"><name>CKCompletionChunkKindText</name>
+<abstract><p>Completion chunk kind - Text
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindText</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindTypedText" lang="c"><name>CKCompletionChunkKindTypedText</name>
+<abstract><p>Completion chunk kind - Typed text
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindTypedText</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCompletionChunkKindVerticalSpace" lang="c"><name>CKCompletionChunkKindVerticalSpace</name>
+<abstract><p>Completion chunk kind - Vertical space
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCompletionChunkKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>CKCompletionChunkKindVerticalSpace</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable></globals>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/CKCompletionChunkKind" lang="c" type="simple"><name>CKCompletionChunkKind</name>
+<abstract><p>Completion chunk kind
+</p></abstract>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>NSUInteger</declaration_type> <declaration_var>CKCompletionChunkKind</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><classes><class id="//xsdoc_ref/occ/cl/CKCompletionChunk" lang="occ"><name>CKCompletionChunk</name>
 <abstract><p>Completion chunk class
 </p></abstract>
 <attributes><attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/NSObject">NSObject</hd_link></value></attribute>
@@ -12,12 +144,88 @@
 <declaration>@<declaration_type>interface</declaration_type> <declaration_type>CKCompletionChunk</declaration_type>: <declaration_type>NSObject</declaration_type> { 
         @@protected  <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>_text</declaration_var>; 
         <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>_kind</declaration_var>; 
-        }  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>text</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>kind</declaration_var>;   + ( <declaration_param>id</declaration_param> )<declaration_type>completionChunkWithCXCompletionString</declaration_type>: ( <declaration_param>CXCompletionString</declaration_param> )<declaration_type>string</declaration_type> <declaration_type>chunkNumber</declaration_type>: ( <declaration_param>NSUInteger</declaration_param> )<declaration_var>chunkNumber</declaration_var>;  
+        }  <declaration_comment>/*!
+@property        text
+@abstract        The completion chunk's text</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>text</declaration_var>;   <declaration_comment>/*!
+@property        kind
+@abstract        The completion chunk's kind</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>kind</declaration_var>;   <declaration_comment>/*!
+@method          completionChunkWithCXCompletionString:chunkNumber:
+@abstract        Gets a completion chunk from a completion string
+@param           string      The completion string
+@param           chunkNumber The chunk number
+@return          The completion chunk object
+@discussion      The returned object is autoreleased.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>id</declaration_param> )<declaration_type>completionChunkWithCXCompletionString</declaration_type>: ( <declaration_param>CXCompletionString</declaration_param> )<declaration_type>string</declaration_type> <declaration_type>chunkNumber</declaration_type>: ( <declaration_param>NSUInteger</declaration_param> )<declaration_var>chunkNumber</declaration_var>;   
+    <declaration_comment>/*!
+@method          initWithCXCompletionString:chunkNumber:
+@abstract        Initializes a completion chunk from a completion string
+@param           string      The completion string
+@param           chunkNumber The chunk number
+@return          The completion chunk object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
     - ( <declaration_param>id</declaration_param> )<declaration_type>initWithCXCompletionString</declaration_type>: ( <declaration_param>CXCompletionString</declaration_param> )<declaration_type>string</declaration_type> <declaration_type>chunkNumber</declaration_type>: ( <declaration_param>NSUInteger</declaration_param> )<declaration_var>chunkNumber</declaration_var>;   
     @@end </declaration>
 <desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/clm/CKCompletionChunk/completionChunkWithCXCompletionString:chunkNumber:" lang="occ" type="clm" accessControl="protected"><name>completionChunkWithCXCompletionString:chunkNumber:</name>
+<abstract><p>Gets a completion chunk from a completion string
+</p></abstract>
+<parameterlist>
+<parameter><name>string</name><desc><p>The completion string</p></desc></parameter>
+<parameter><name>chunkNumber</name><desc><p>The chunk number</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( CXCompletionString )</type><name>string</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>chunkNumber</name></parsedparameter>
+<parsedparameter><type>( CXCompletionString )</type><name>string</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>chunkNumber</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The completion chunk object
+</p></result>
+<declaration>+ ( <declaration_type>id</declaration_type> )<declaration_function>completionChunkWithCXCompletionString</declaration_function>: ( <declaration_type>CXCompletionString</declaration_type> )<declaration_param>string</declaration_param> 
+        <declaration_function>chunkNumber</declaration_function>: ( <declaration_type>NSUInteger</declaration_type> )<declaration_var>chunkNumber</declaration_var>; </declaration>
+<desc><p>The returned object is autoreleased.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/instm/CKCompletionChunk/initWithCXCompletionString:chunkNumber:" lang="occ" type="instm" accessControl="protected"><name>initWithCXCompletionString:chunkNumber:</name>
+<abstract><p>Initializes a completion chunk from a completion string
+</p></abstract>
+<parameterlist>
+<parameter><name>string</name><desc><p>The completion string</p></desc></parameter>
+<parameter><name>chunkNumber</name><desc><p>The chunk number</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( CXCompletionString )</type><name>string</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>chunkNumber</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The completion chunk object
+</p></result>
+<declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithCXCompletionString</declaration_function>: ( <declaration_type>CXCompletionString</declaration_type> )<declaration_param>string</declaration_param> 
+        <declaration_function>chunkNumber</declaration_function>: ( <declaration_type>NSUInteger</declaration_type> )<declaration_var>chunkNumber</declaration_var>; </declaration>
+<desc><p/></desc>
+</method></methods>
+<properties><property id="//xsdoc_ref/occ/instp/CKCompletionChunk/kind" lang="occ" accessControl="protected"><name>kind</name>
+<abstract><p>The completion chunk's kind
+</p></abstract>
+<returntype>CKCompletionChunkKind</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CKCompletionChunkKind</declaration_type> <declaration_var>kind</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCompletionChunk/text" lang="occ" accessControl="protected"><name>text</name>
+<abstract><p>The completion chunk's text
+</p></abstract>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>text</declaration_var>; </declaration>
+<desc><p/></desc>
+</property></properties>
 <timestamp>Wednesday, May 14, 2014</timestamp>
 </class></classes>
 <timestamp>Wednesday, May 14, 2014</timestamp>

@@ -12,13 +12,113 @@
 <declaration>@<declaration_type>interface</declaration_type> <declaration_type>CKFixIt</declaration_type>: <declaration_type>NSObject</declaration_type> { 
         @@protected  <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>_string</declaration_var>; 
         <declaration_type>NSRange</declaration_type> <declaration_var>_range</declaration_var>; 
-        }  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>string</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>NSRange</declaration_type> <declaration_var>range</declaration_var>;   + ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>fixItsForDiagnostic</declaration_type>: ( <declaration_type>CKDiagnostic</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>diagnostic</declaration_var>;  
-    + ( <declaration_param>id</declaration_param> )<declaration_type>fixItWithDiagnostic</declaration_type>: ( <declaration_type>CKDiagnostic</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>diagnostic</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_param>NSUInteger</declaration_param> )<declaration_var>index</declaration_var>;  
+        }  <declaration_comment>/*!
+@property        string
+@abstract        The fix-it's string</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>string</declaration_var>;   <declaration_comment>/*!
+@property        range
+@abstract        The fix-it's range</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSRange</declaration_type> <declaration_var>range</declaration_var>;   <declaration_comment>/*!
+@method          fixItsForDiagnostic:
+@abstract        Gets fix-it objects from a diagnostic object
+@param           diagnostic  The diagnostic object
+@return          An array of fix-it objects</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>fixItsForDiagnostic</declaration_type>: ( <declaration_type>CKDiagnostic</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>diagnostic</declaration_var>;   
+    <declaration_comment>/*!
+@method          fixItWithDiagnostic:index:
+@abstract        Gets a fix-it object from a diagnostic object
+@param           diagnostic  The diagnostic object
+@param           index       The index
+@return          The fix-it object
+@discussion      The returned object is autoreleased.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>id</declaration_param> )<declaration_type>fixItWithDiagnostic</declaration_type>: ( <declaration_type>CKDiagnostic</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>diagnostic</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_param>NSUInteger</declaration_param> )<declaration_var>index</declaration_var>;   
+    <declaration_comment>/*!
+@method          initWithDiagnostic:index:
+@abstract        Initializes a fix-it object with a diagnostic object
+@param           diagnostic  The diagnostic object
+@param           index       The index
+@return          The fix-it object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
     - ( <declaration_param>id</declaration_param> )<declaration_type>initWithDiagnostic</declaration_type>: ( <declaration_type>CKDiagnostic</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>diagnostic</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_param>NSUInteger</declaration_param> )<declaration_var>index</declaration_var>;   
     @@end </declaration>
 <desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/clm/CKFixIt/fixItsForDiagnostic:" lang="occ" type="clm" accessControl="protected"><name>fixItsForDiagnostic:</name>
+<abstract><p>Gets fix-it objects from a diagnostic object
+</p></abstract>
+<parameterlist>
+<parameter><name>diagnostic</name><desc><p>The diagnostic object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( CKDiagnostic * )</type><name>diagnostic</name></parsedparameter>
+<parsedparameter><type>( CKDiagnostic * )</type><name>diagnostic</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( CKDiagnostic * )</type><name>diagnostic</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>index</name></parsedparameter>
+</parsedparameterlist>
+<returntype> NSArray * </returntype>
+<result><p>An array of fix-it objects
+</p></result>
+<declaration>+ ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_function>fixItsForDiagnostic</declaration_function>: ( <declaration_type>CKDiagnostic</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>diagnostic</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/clm/CKFixIt/fixItWithDiagnostic:index:" lang="occ" type="clm" accessControl="protected"><name>fixItWithDiagnostic:index:</name>
+<abstract><p>Gets a fix-it object from a diagnostic object
+</p></abstract>
+<parameterlist>
+<parameter><name>diagnostic</name><desc><p>The diagnostic object</p></desc></parameter>
+<parameter><name>index</name><desc><p>The index</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( CKDiagnostic * )</type><name>diagnostic</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( CKDiagnostic * )</type><name>diagnostic</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>index</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The fix-it object
+</p></result>
+<declaration>+ ( <declaration_type>id</declaration_type> )<declaration_function>fixItWithDiagnostic</declaration_function>: ( <declaration_type>CKDiagnostic</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>diagnostic</declaration_param> 
+        <declaration_function>index</declaration_function>: ( <declaration_type>NSUInteger</declaration_type> )<declaration_var>index</declaration_var>; </declaration>
+<desc><p>The returned object is autoreleased.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/instm/CKFixIt/initWithDiagnostic:index:" lang="occ" type="instm" accessControl="protected"><name>initWithDiagnostic:index:</name>
+<abstract><p>Initializes a fix-it object with a diagnostic object
+</p></abstract>
+<parameterlist>
+<parameter><name>diagnostic</name><desc><p>The diagnostic object</p></desc></parameter>
+<parameter><name>index</name><desc><p>The index</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( CKDiagnostic * )</type><name>diagnostic</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>index</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The fix-it object
+</p></result>
+<declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithDiagnostic</declaration_function>: ( <declaration_type>CKDiagnostic</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>diagnostic</declaration_param> 
+        <declaration_function>index</declaration_function>: ( <declaration_type>NSUInteger</declaration_type> )<declaration_var>index</declaration_var>; </declaration>
+<desc><p/></desc>
+</method></methods>
+<properties><property id="//xsdoc_ref/occ/instp/CKFixIt/range" lang="occ" accessControl="protected"><name>range</name>
+<abstract><p>The fix-it's range
+</p></abstract>
+<returntype>NSRange</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSRange</declaration_type> <declaration_var>range</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKFixIt/string" lang="occ" accessControl="protected"><name>string</name>
+<abstract><p>The fix-it's string
+</p></abstract>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>string</declaration_var>; </declaration>
+<desc><p/></desc>
+</property></properties>
 <timestamp>Wednesday, May 14, 2014</timestamp>
 </class></classes>
 <timestamp>Wednesday, May 14, 2014</timestamp>

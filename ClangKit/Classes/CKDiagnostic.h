@@ -82,47 +82,13 @@ FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
 {
 @protected
     
-    /*!
-     * @var             _cxDiagnostic
-     * @abstract        Internal libclang diagnostic object
-     */
-    CXDiagnostic _cxDiagnostic;
-    
-    /*!
-     * @var             _spelling
-     * @abstract        Diagnostic's  spelling
-     */
-    NSString * _spelling;
-    
-    /*!
-     * @var             _severity
-     * @abstract        Diagnostic's severity
-     */
-    CKDiagnosticSeverity _severity;
-    
-    /*!
-     * @var             _fixIts
-     * @abstract        An array containing instances of 'CKFixIt'
-     */
-    NSArray * _fixIts;
-    
-    /*!
-     * @var             _line
-     * @abstract        Line number for the diagnostic
-     */
-    NSUInteger _line;
-    
-    /*!
-     * @var             _column
-     * @abstract        Column number for the diagnostic
-     */
-    NSUInteger _column;
-    
-    /*!
-     * @var             _range
-     * @abstract        Range of the diagnostic, based on the source code
-     */
-    NSRange _range;
+    CXDiagnostic            _cxDiagnostic;
+    NSString              * _spelling;
+    CKDiagnosticSeverity    _severity;
+    NSArray               * _fixIts;
+    NSUInteger              _line;
+    NSUInteger              _column;
+    NSRange                 _range;
 }
 
 /*!
@@ -169,7 +135,7 @@ FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
 
 /*!
  * @method          diagnosticsForTranslationUnit:
- * @abstract        Get diagnostics for a translation unit
+ * @abstract        Gets diagnostics objects for a translation unit
  * @param           translationUnit     The translation unit from which to get the diagnostics
  * @return          An array with instances of 'CKFixIt'
  */
@@ -177,7 +143,7 @@ FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
 
 /*!
  * @method          diagnosticWithTranslationUnit:index:
- * @abstract        Get a specific diagnostic from a translation unit
+ * @abstract        Gets a specific diagnostic from a translation unit
  * @param           translationUnit     The translation unit from which to get the diagnostic
  * @param           index               The index of the diagnostic in the translation unit
  * @return          The diagnostic object
@@ -187,7 +153,7 @@ FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
 
 /*!
  * @method          initWithTranslationUnit:
- * @abstract        Get a specific diagnostic from a translation unit
+ * @abstract        Initializes a specific diagnostic with a translation unit
  * @param           translationUnit     The translation unit from which to get the diagnostic
  * @param           index               The index of the diagnostic in the translation unit
  * @return          The diagnostic object

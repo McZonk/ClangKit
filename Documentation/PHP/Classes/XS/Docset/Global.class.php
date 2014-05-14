@@ -28,58 +28,10 @@
 
 require_once dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'Member.class.php';
 
-class XS_Docset_Method extends XS_Docset_Member
+class XS_Docset_Global extends XS_Docset_Member
 {
-    protected $_class = NULL;
-    
-    public function __construct( XS_Docset_Class $class, SimpleXMLElement $xml )
+    public function __construct( SimpleXMLElement $xml )
     {
         parent::__construct( $xml );
-        
-        $this->_class = $class;
-    }
-    
-    public function getName()
-    {
-        $name = parent::getName();
-        
-        if( $this->isStatic() )
-        {
-            return "+&nbsp;" . $name; 
-        }
-        else
-        {
-            return "-&nbsp;" . $name;
-        }
-    }
-    
-    public function isStatic()
-    {
-        if( !isset( $this->_xml[ 'type' ] ) )
-        {
-            return false;
-        }
-        
-        if( $this->_xml[ 'type' ] == "clm" )
-        {
-            return true;
-        }
-        
-        return false;
-    }
-    
-    public function isOptional()
-    {
-        return isset( $this->_xml[ 'optionalOrRequired' ] ) && ( string )( $this->_xml[ 'optionalOrRequired' ] ) === '@optional';
-    }
-    
-    public function getNotes()
-    {
-        if( $this->isOptional() )
-        {
-            return 'This method is optional.';
-        }
-        
-        return NULL;
     }
 }

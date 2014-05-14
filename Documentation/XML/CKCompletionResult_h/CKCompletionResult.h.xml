@@ -14,13 +14,127 @@
         @@protected  <declaration_type>CXCompletionString</declaration_type> <declaration_var>_string</declaration_var>; 
         <declaration_type>CKCursorKind</declaration_type> <declaration_var>_cursorKind</declaration_var>; 
         <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> <declaration_var>_chunks</declaration_var>; 
-        }  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>CXCompletionString</declaration_type> <declaration_type>*</declaration_type><declaration_var>string</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursorKind</declaration_type> <declaration_var>cursorKind</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type><declaration_var>chunks</declaration_var>;   + ( <declaration_param>id</declaration_param> )<declaration_type>completionResultWithCXCompletionString</declaration_type>: ( <declaration_param>CXCompletionString</declaration_param> )<declaration_type>string</declaration_type> <declaration_type>cursorKind</declaration_type>: ( <declaration_param>CKCursorKind</declaration_param> )<declaration_var>cursorKind</declaration_var>;  
+        }  <declaration_comment>/*!
+@property        text
+@abstract        The completion result's text</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CXCompletionString</declaration_type> <declaration_type>*</declaration_type><declaration_var>string</declaration_var>;   <declaration_comment>/*!
+@property        cursorKind
+@abstract        The completion result's cursor kind</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursorKind</declaration_type> <declaration_var>cursorKind</declaration_var>;   <declaration_comment>/*!
+@property        chunks
+@abstract        The completion chunks (an array of CKCompletionChunk objects)</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type><declaration_var>chunks</declaration_var>;   <declaration_comment>/*!
+@method          completionResultWithCXCompletionString:cursorKind:
+@abstract        Gets a completion result from a completion string
+@param           string      The completion string
+@param           cursorKind  The cursor kind
+@return          The completion result object
+@discussion      The returned object is autoreleased.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>id</declaration_param> )<declaration_type>completionResultWithCXCompletionString</declaration_type>: ( <declaration_param>CXCompletionString</declaration_param> )<declaration_type>string</declaration_type> <declaration_type>cursorKind</declaration_type>: ( <declaration_param>CKCursorKind</declaration_param> )<declaration_var>cursorKind</declaration_var>;   
+    <declaration_comment>/*!
+@method          initWithCXCompletionString:
+@abstract        Initializes a completion result from a completion string
+@param           string      The completion string
+@param           cursorKind  The cursor kind
+@return          The completion result object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
     - ( <declaration_param>id</declaration_param> )<declaration_type>initWithCXCompletionString</declaration_type>: ( <declaration_param>CXCompletionString</declaration_param> )<declaration_type>string</declaration_type> <declaration_type>cursorKind</declaration_type>: ( <declaration_param>CKCursorKind</declaration_param> )<declaration_var>cursorKind</declaration_var>;   
     @@end </declaration>
 <desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/clm/CKCompletionResult/completionResultWithCXCompletionString:cursorKind:" lang="occ" type="clm" accessControl="protected"><name>completionResultWithCXCompletionString:cursorKind:</name>
+<abstract><p>Gets a completion result from a completion string
+</p></abstract>
+<parameterlist>
+<parameter><name>string</name><desc><p>The completion string</p></desc></parameter>
+<parameter><name>cursorKind</name><desc><p>The cursor kind</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( CXCompletionString )</type><name>string</name></parsedparameter>
+<parsedparameter><type>( CKCursorKind )</type><name>cursorKind</name></parsedparameter>
+<parsedparameter><type>( CXCompletionString )</type><name>string</name></parsedparameter>
+<parsedparameter><type>( CKCursorKind )</type><name>cursorKind</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The completion result object
+</p></result>
+<declaration>+ ( <declaration_type>id</declaration_type> )<declaration_function>completionResultWithCXCompletionString</declaration_function>: ( <declaration_type>CXCompletionString</declaration_type> )<declaration_param>string</declaration_param> 
+        <declaration_function>cursorKind</declaration_function>: ( <declaration_type>CKCursorKind</declaration_type> )<declaration_var>cursorKind</declaration_var>; </declaration>
+<desc><p>The returned object is autoreleased.
+</p></desc>
+</method><method id="//xsdoc_ref/doc/title:instm/CKCompletionResult/initWithCXCompletionString:" lang="occ" type="instm" accessControl="protected"><name>initWithCXCompletionString:</name>
+<abstract><p>Initializes a completion result from a completion string
+</p></abstract>
+<parameterlist>
+<parameter><name>string</name><desc><p>The completion string</p></desc></parameter>
+<parameter><name>cursorKind</name><desc><p>The cursor kind</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( CXCompletionString )</type><name>string</name></parsedparameter>
+<parsedparameter><type>( CKCursorKind )</type><name>cursorKind</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>initWithCXCompletionString:cursorKind:</name><value><hd_link logicalPath="//xsdoc_ref/occ/instm/CKCompletionResult/initWithCXCompletionString:cursorKind:" isseealso="yes">initWithCXCompletionString:cursorKind:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> id </returntype>
+<result><p>The completion result object
+</p></result>
+<declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithCXCompletionString</declaration_function>: ( <declaration_type>CXCompletionString</declaration_type> )<declaration_param>string</declaration_param> 
+        <declaration_function>cursorKind</declaration_function>: ( <declaration_type>CKCursorKind</declaration_type> )<declaration_var>cursorKind</declaration_var>; </declaration>
+<desc><p/></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/occ/instm/CKCompletionResult/initWithCXCompletionString:cursorKind:</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/occ/instm/CKCompletionResult/initWithCXCompletionString:cursorKind:" lang="occ" type="instm" accessControl="protected"><name>initWithCXCompletionString:cursorKind:</name>
+<abstract><p>Initializes a completion result from a completion string
+</p></abstract>
+<parameterlist>
+<parameter><name>string</name><desc><p>The completion string</p></desc></parameter>
+<parameter><name>cursorKind</name><desc><p>The cursor kind</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( CXCompletionString )</type><name>string</name></parsedparameter>
+<parsedparameter><type>( CKCursorKind )</type><name>cursorKind</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>initWithCXCompletionString:</name><value><hd_link logicalPath="//xsdoc_ref/doc/title:instm/CKCompletionResult/initWithCXCompletionString:" isseealso="yes">initWithCXCompletionString:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> id </returntype>
+<declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithCXCompletionString</declaration_function>: ( <declaration_type>CXCompletionString</declaration_type> )<declaration_param>string</declaration_param> 
+        <declaration_function>cursorKind</declaration_function>: ( <declaration_type>CKCursorKind</declaration_type> )<declaration_var>cursorKind</declaration_var>; </declaration>
+<desc><p/></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/doc/title:instm/CKCompletionResult/initWithCXCompletionString:</relateduid>
+</autorelated>
+</method></methods>
+<properties><property id="//xsdoc_ref/occ/instp/CKCompletionResult/chunks" lang="occ" accessControl="protected"><name>chunks</name>
+<abstract><p>The completion chunks (an array of CKCompletionChunk objects)
+</p></abstract>
+<returntype>NSArray *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> <declaration_var>chunks</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCompletionResult/cursorKind" lang="occ" accessControl="protected"><name>cursorKind</name>
+<abstract><p>The completion result's cursor kind
+</p></abstract>
+<returntype>CKCursorKind</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursorKind</declaration_type> <declaration_var>cursorKind</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCompletionResult/string" lang="occ" accessControl="protected"><name>string</name>
+<abstract><p>The completion result's text
+</p></abstract>
+<returntype>CXCompletionString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CXCompletionString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>string</declaration_var>; </declaration>
+<desc><p/></desc>
+</property></properties>
 <timestamp>Wednesday, May 14, 2014</timestamp>
 </class></classes>
 <timestamp>Wednesday, May 14, 2014</timestamp>

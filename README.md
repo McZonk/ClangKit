@@ -26,7 +26,7 @@ The project is not yet compatible with iOS, but everything should be fine, as Li
 Documentation
 -------------
 
-Documentation can be found at: http://xs-labs.com/en/projects/clang-kit/documentation/
+Documentation and API reference can be found at: http://doc.xs-labs.com/ClangKit/
 
 Project home
 ------------
