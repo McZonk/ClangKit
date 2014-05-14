@@ -55,7 +55,6 @@
 		0576019D1738548900C67831 /* libLLVMSupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0576018C1738548900C67831 /* libLLVMSupport.a */; };
 		059872F215D74D09006FF8D2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059872F115D74D09006FF8D2 /* Cocoa.framework */; };
 		059872FC15D74D09006FF8D2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 059872FA15D74D09006FF8D2 /* InfoPlist.strings */; };
-		0598734915D74F8B006FF8D2 /* CKMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598734715D74F8B006FF8D2 /* CKMacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0598734A15D74F8B006FF8D2 /* CKWarnings.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598734815D74F8B006FF8D2 /* CKWarnings.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0598736315D75153006FF8D2 /* CKDiagnostic.h in Headers */ = {isa = PBXBuildFile; fileRef = 0598734B15D75153006FF8D2 /* CKDiagnostic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0598736415D75153006FF8D2 /* CKDiagnostic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598734C15D75153006FF8D2 /* CKDiagnostic.m */; };
@@ -157,7 +156,6 @@
 		059872FB15D74D09006FF8D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		059872FD15D74D09006FF8D2 /* ClangKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClangKit-Prefix.pch"; sourceTree = "<group>"; };
 		059872FE15D74D09006FF8D2 /* ClangKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClangKit.h; sourceTree = "<group>"; };
-		0598734715D74F8B006FF8D2 /* CKMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKMacros.h; sourceTree = "<group>"; };
 		0598734815D74F8B006FF8D2 /* CKWarnings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKWarnings.h; sourceTree = "<group>"; };
 		0598734B15D75153006FF8D2 /* CKDiagnostic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKDiagnostic.h; sourceTree = "<group>"; };
 		0598734C15D75153006FF8D2 /* CKDiagnostic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKDiagnostic.m; sourceTree = "<group>"; };
@@ -376,7 +374,6 @@
 		059872F815D74D09006FF8D2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0598734715D74F8B006FF8D2 /* CKMacros.h */,
 				0598734815D74F8B006FF8D2 /* CKWarnings.h */,
 				0598737B15D751B8006FF8D2 /* CKTypes.h */,
 				059872F915D74D09006FF8D2 /* ClangKit-Info.plist */,
@@ -426,7 +423,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0598734915D74F8B006FF8D2 /* CKMacros.h in Headers */,
 				0598734A15D74F8B006FF8D2 /* CKWarnings.h in Headers */,
 				0598736315D75153006FF8D2 /* CKDiagnostic.h in Headers */,
 				0598736515D75153006FF8D2 /* CKDiagnostic+Private.h in Headers */,

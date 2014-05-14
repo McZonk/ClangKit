@@ -31,6 +31,10 @@
 
 @class CKIndex;
 
+/*!
+ * @class           CKTranslationUnit
+ * @abstract        Translation unit class
+ */
 @interface CKTranslationUnit: NSObject
 {
 @protected

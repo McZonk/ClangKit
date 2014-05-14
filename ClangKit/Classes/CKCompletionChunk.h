@@ -53,6 +53,10 @@ FOUNDATION_EXPORT CKCompletionChunkKind CKCompletionChunkKindEqual;
 FOUNDATION_EXPORT CKCompletionChunkKind CKCompletionChunkKindHorizontalSpace;
 FOUNDATION_EXPORT CKCompletionChunkKind CKCompletionChunkKindVerticalSpace;
 
+/*!
+ * @class           CKCompletionChunk
+ * @abstract        Completion chunk class
+ */
 @interface CKCompletionChunk: NSObject
 {
 @protected

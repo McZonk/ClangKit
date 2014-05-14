@@ -195,6 +195,10 @@ FOUNDATION_EXPORT CKCursorKind CKCursorKindLastPreprocessing;
 @class CKTranslationUnit;
 @class CKSourceLocation;
 
+/*!
+ * @class           CKCursor
+ * @abstract        Cursor class
+ */
 @interface CKCursor : NSObject
 {
 @protected

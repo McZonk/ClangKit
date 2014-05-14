@@ -81,7 +81,7 @@ class XS_Docset_Header extends XS_Docset_Member
         
         if( $this->_sourceRootPrefix !== NULL && strlen( $this->_sourceRootPrefix ) > 0 )
         {
-            $pos  = strpos( $path, $this->_sourceRootPrefix );
+            $pos  = strrpos( $path, $this->_sourceRootPrefix );
         
             if( $pos !== false )
             {
@@ -476,11 +476,48 @@ class XS_Docset_Header extends XS_Docset_Member
         $html[] = '<ul>';
     
         foreach( $this->getClasses() as $class )
-        {                        
-            $html[] = '<li>';   
+        {
+            $html[] = '<li>';
+            $html[] = '<div>';
             $html[] = '<a href="#' . $class->getID() . '" title="' . $class->getName() . '">';
             $html[] = $class->getName();   
             $html[] = '</a>';
+            $html[] = '</div>';
+            
+            if( count( $class->getMethods() ) )
+            {
+                $html[] = '<h4>Tasks</h4>';
+                $html[] = '<ul>';
+                
+                foreach( $class->getMethods() as $method )
+                {
+                    $html[] = '<li>';
+                    $html[] = '<a href="#' . $method->getID() . '" title="' . $method->getName() . '">';
+                    $html[] = $method->getName();   
+                    $html[] = '</a>';
+                    $html[] = '</li>';
+                }
+                
+                $html[] = '</ul>';
+            }
+            
+            if( count( $class->getProperties() ) )
+            {
+                $html[] = '<h4>Properties</h4>';
+                $html[] = '<ul>';
+                
+                foreach( $class->getProperties() as $property )
+                {
+                    $html[] = '<li>';
+                    $html[] = '<a href="#' . $property->getID() . '" title="' . $property->getName() . '">';
+                    $html[] = $property->getName();   
+                    $html[] = '</a>';
+                    $html[] = '</li>';
+                }
+                
+                $html[] = '</ul>';
+            }
+            
             $html[] = '</li>';
         }
     

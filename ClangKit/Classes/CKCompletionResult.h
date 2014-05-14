@@ -31,6 +31,10 @@
 
 #import "CKCursor.h"
 
+/*!
+ * @class           CKCompletionResult
+ * @abstract        Completion result class
+ */
 @interface CKCompletionResult: NSObject
 {
 @protected

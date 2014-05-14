@@ -1,46 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.2//EN" "/System/Library/DTDs/HeaderDoc-1.2.dtd">
 <header id="//xsdoc_ref/doc/header/CKDiagnostic.h" lang="c" filename="CKDiagnostic.h" headerpath="/Volumes/Brain/Documents/Development/GitHub/ClangKit/Documentation/../ClangKit/Classes/CKDiagnostic.h"><name>CKDiagnostic.h</name>
+<abstract><p>ClangKit Diagnostic class
+</p></abstract>
+<attributes><attribute><name>Author</name><value>Jean-David Gadina <macmade/></value></attribute>
+</attributes>
 <includes>
 </includes>
 <desc><p/></desc>
-<globals><variable id="//xsdoc_ref/c/data/CKDiagnosticSeverityError" lang="occ"><name>CKDiagnosticSeverityError</name>
-<abstract><p>Error
+<globals><variable id="//xsdoc_ref/c/data/CKDiagnosticSeverityError" lang="c"><name>CKDiagnosticSeverityError</name>
+<abstract><p>Diagnostic severity - Error
 </p></abstract>
 <returntype>FOUNDATION_EXPORT CKDiagnosticSeverity</returntype>
 <declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKDiagnosticSeverity</declaration_type> <declaration_var>CKDiagnosticSeverityError</declaration_var>;  </declaration>
 <desc><p/></desc>
-</variable><variable id="//xsdoc_ref/c/data/CKDiagnosticSeverityFatal" lang="occ"><name>CKDiagnosticSeverityFatal</name>
-<abstract><p>Fatal error
+</variable><variable id="//xsdoc_ref/c/data/CKDiagnosticSeverityFatal" lang="c"><name>CKDiagnosticSeverityFatal</name>
+<abstract><p>Diagnostic severity - Fatal error
 </p></abstract>
 <returntype>FOUNDATION_EXPORT CKDiagnosticSeverity</returntype>
 <declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKDiagnosticSeverity</declaration_type> <declaration_var>CKDiagnosticSeverityFatal</declaration_var>;  </declaration>
 <desc><p/></desc>
-</variable><variable id="//xsdoc_ref/c/data/CKDiagnosticSeverityIgnored" lang="occ"><name>CKDiagnosticSeverityIgnored</name>
-<abstract><p>Ignored
+</variable><variable id="//xsdoc_ref/c/data/CKDiagnosticSeverityIgnored" lang="c"><name>CKDiagnosticSeverityIgnored</name>
+<abstract><p>Diagnostic severity - Ignored
 </p></abstract>
 <returntype>FOUNDATION_EXPORT CKDiagnosticSeverity</returntype>
 <declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKDiagnosticSeverity</declaration_type> <declaration_var>CKDiagnosticSeverityIgnored</declaration_var>;  </declaration>
 <desc><p/></desc>
-</variable><variable id="//xsdoc_ref/c/data/CKDiagnosticSeverityNote" lang="occ"><name>CKDiagnosticSeverityNote</name>
-<abstract><p>Notice
+</variable><variable id="//xsdoc_ref/c/data/CKDiagnosticSeverityNote" lang="c"><name>CKDiagnosticSeverityNote</name>
+<abstract><p>Diagnostic severity - Notice
 </p></abstract>
 <returntype>FOUNDATION_EXPORT CKDiagnosticSeverity</returntype>
 <declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKDiagnosticSeverity</declaration_type> <declaration_var>CKDiagnosticSeverityNote</declaration_var>;  </declaration>
 <desc><p/></desc>
-</variable><variable id="//xsdoc_ref/c/data/CKDiagnosticSeverityWarning" lang="occ"><name>CKDiagnosticSeverityWarning</name>
-<abstract><p>Warning
+</variable><variable id="//xsdoc_ref/c/data/CKDiagnosticSeverityWarning" lang="c"><name>CKDiagnosticSeverityWarning</name>
+<abstract><p>Diagnostic severity - Warning
 </p></abstract>
 <returntype>FOUNDATION_EXPORT CKDiagnosticSeverity</returntype>
 <declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKDiagnosticSeverity</declaration_type> <declaration_var>CKDiagnosticSeverityWarning</declaration_var>;  </declaration>
 <desc><p/></desc>
 </variable></globals>
-<typedefs><typedef id="//xsdoc_ref/c/tdef/CKDiagnosticSeverity" lang="occ" type="simple"><name>CKDiagnosticSeverity</name>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/CKDiagnosticSeverity" lang="c" type="simple"><name>CKDiagnosticSeverity</name>
 <abstract><p>Diagnostic severity
 </p></abstract>
 <declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>NSInteger</declaration_type> <declaration_var>CKDiagnosticSeverity</declaration_var>;  </declaration>
-<desc><p>Possible values are defined below.
-</p></desc>
+<desc><p/></desc>
 </typedef></typedefs><classes><class id="//xsdoc_ref/occ/cl/CKDiagnostic" lang="occ"><name>CKDiagnostic</name>
 <abstract><p>Diagnostic class
 </p></abstract>
@@ -81,12 +84,7 @@
 @var             _range
 @abstract        Range of the diagnostic, based on the source code</declaration_comment>
             <declaration_comment>*/</declaration_comment>
-        <declaration_type>NSRange</declaration_type> <declaration_var>_range</declaration_var>;  
-        @@private  <declaration_comment>/*!
-@var             __CKDiagnostic_Reserved
-@abstract        Reserved instance variables (binary compatibility)</declaration_comment>
-            <declaration_comment>*/</declaration_comment>
-        <declaration_type>id</declaration_type> <declaration_type>__CKDiagnostic_Reserved</declaration_type>[ <declaration_number>5</declaration_number> ] <declaration_keyword>__attribute__</declaration_keyword>( ( <declaration_var>unused</declaration_var> ) ); 
+        <declaration_type>NSRange</declaration_type> <declaration_var>_range</declaration_var>; 
         }  <declaration_comment>/*!
 @property        cxDiagnostic
 @abstract        Internal libclang diagnostic object</declaration_comment>
@@ -94,7 +92,7 @@
     @property( <declaration_param>atomic</declaration_param>,
         <declaration_param>readonly</declaration_param> ) <declaration_type>CXDiagnostic</declaration_type> <declaration_var>cxDiagnostic</declaration_var>;   <declaration_comment>/*!
 @property        spelling
-@abstract        Diagnostic's  spelling</declaration_comment>
+@abstract        Diagnostic's spelling</declaration_comment>
         <declaration_comment>*/</declaration_comment>
     @property( <declaration_param>atomic</declaration_param>,
         <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>spelling</declaration_var>;   <declaration_comment>/*!
@@ -122,33 +120,38 @@
 @abstract        Range of the diagnostic, based on the source code</declaration_comment>
         <declaration_comment>*/</declaration_comment>
     @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>NSRange</declaration_type> <declaration_var>range</declaration_var>;   <declaration_comment>/*
- * @method          diagnosticsForTranslationUnit:
- * @abstract        Get diagnostics for a translation unit
- * @param           translationUnit     The translation unit from which to get the diagnostics
- * @return          An array with instances of 'CKFixIt'</declaration_comment>
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSRange</declaration_type> <declaration_var>range</declaration_var>;   <declaration_comment>/*!
+@method          diagnosticsForTranslationUnit:
+@abstract        Get diagnostics for a translation unit
+@param           translationUnit     The translation unit from which to get the diagnostics
+@return          An array with instances of 'CKFixIt'</declaration_comment>
         <declaration_comment>*/</declaration_comment>
     + ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>diagnosticsForTranslationUnit</declaration_type>: ( <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>translationUnit</declaration_var>;   
-    <declaration_comment>/*
- * @method          diagnosticWithTranslationUnit:index:
- * @abstract        Get a specific diagnostic from a translation unit
- * @param           translationUnit     The translation unit from which to get the diagnostic
- * @param           index               The index of the diagnostic in the translation unit
- * @return          The diagnostic object
- * @discussion      The returned object is autoreleased.</declaration_comment>
+    <declaration_comment>/*!
+@method          diagnosticWithTranslationUnit:index:
+@abstract        Get a specific diagnostic from a translation unit
+@param           translationUnit     The translation unit from which to get the diagnostic
+@param           index               The index of the diagnostic in the translation unit
+@return          The diagnostic object
+@discussion      The returned object is autoreleased.</declaration_comment>
         <declaration_comment>*/</declaration_comment>
     + ( <declaration_param>id</declaration_param> )<declaration_type>diagnosticWithTranslationUnit</declaration_type>: ( <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>translationUnit</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_param>NSUInteger</declaration_param> )<declaration_var>index</declaration_var>;   
-    <declaration_comment>/*
- * @method          initWithTranslationUnit:
- * @abstract        Get a specific diagnostic from a translation unit
- * @param           translationUnit     The translation unit from which to get the diagnostic
- * @param           index               The index of the diagnostic in the translation unit
- * @return          The diagnostic object</declaration_comment>
+    <declaration_comment>/*!
+@method          initWithTranslationUnit:
+@abstract        Get a specific diagnostic from a translation unit
+@param           translationUnit     The translation unit from which to get the diagnostic
+@param           index               The index of the diagnostic in the translation unit
+@return          The diagnostic object</declaration_comment>
         <declaration_comment>*/</declaration_comment>
     - ( <declaration_param>id</declaration_param> )<declaration_type>initWithTranslationUnit</declaration_type>: ( <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>translationUnit</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_param>NSUInteger</declaration_param> )<declaration_var>index</declaration_var>;   
     @@end </declaration>
 <desc><p/></desc>
-<methods><method id="//xsdoc_ref/occ/clm/CKDiagnostic/diagnosticsForTranslationUnit:" lang="occ" type="clm" accessControl="private"><name>diagnosticsForTranslationUnit:</name>
+<methods><method id="//xsdoc_ref/occ/clm/CKDiagnostic/diagnosticsForTranslationUnit:" lang="occ" type="clm" accessControl="protected"><name>diagnosticsForTranslationUnit:</name>
+<abstract><p>Get diagnostics for a translation unit
+</p></abstract>
+<parameterlist>
+<parameter><name>translationUnit</name><desc><p>The translation unit from which to get the diagnostics</p></desc></parameter>
+</parameterlist>
 <parsedparameterlist>
 <parsedparameter><type>( CKTranslationUnit * )</type><name>translationUnit</name></parsedparameter>
 <parsedparameter><type>( CKTranslationUnit * )</type><name>translationUnit</name></parsedparameter>
@@ -157,9 +160,17 @@
 <parsedparameter><type>( NSUInteger )</type><name>index</name></parsedparameter>
 </parsedparameterlist>
 <returntype> NSArray * </returntype>
+<result><p>An array with instances of 'CKFixIt'
+</p></result>
 <declaration>+ ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_function>diagnosticsForTranslationUnit</declaration_function>: ( <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>translationUnit</declaration_var>; </declaration>
 <desc><p/></desc>
-</method><method id="//xsdoc_ref/occ/clm/CKDiagnostic/diagnosticWithTranslationUnit:index:" lang="occ" type="clm" accessControl="private"><name>diagnosticWithTranslationUnit:index:</name>
+</method><method id="//xsdoc_ref/occ/clm/CKDiagnostic/diagnosticWithTranslationUnit:index:" lang="occ" type="clm" accessControl="protected"><name>diagnosticWithTranslationUnit:index:</name>
+<abstract><p>Get a specific diagnostic from a translation unit
+</p></abstract>
+<parameterlist>
+<parameter><name>translationUnit</name><desc><p>The translation unit from which to get the diagnostic</p></desc></parameter>
+<parameter><name>index</name><desc><p>The index of the diagnostic in the translation unit</p></desc></parameter>
+</parameterlist>
 <parsedparameterlist>
 <parsedparameter><type>( CKTranslationUnit * )</type><name>translationUnit</name></parsedparameter>
 <parsedparameter><type>( NSUInteger )</type><name>index</name></parsedparameter>
@@ -167,76 +178,108 @@
 <parsedparameter><type>( NSUInteger )</type><name>index</name></parsedparameter>
 </parsedparameterlist>
 <returntype> id </returntype>
+<result><p>The diagnostic object
+</p></result>
 <declaration>+ ( <declaration_type>id</declaration_type> )<declaration_function>diagnosticWithTranslationUnit</declaration_function>: ( <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>translationUnit</declaration_param> 
         <declaration_function>index</declaration_function>: ( <declaration_type>NSUInteger</declaration_type> )<declaration_var>index</declaration_var>; </declaration>
-<desc><p/></desc>
-</method><method id="//xsdoc_ref/occ/instm/CKDiagnostic/initWithTranslationUnit:index:" lang="occ" type="instm" accessControl="private"><name>initWithTranslationUnit:index:</name>
+<desc><p>The returned object is autoreleased.
+</p></desc>
+</method><method id="//xsdoc_ref/doc/title:instm/CKDiagnostic/initWithTranslationUnit:" lang="occ" type="instm" accessControl="protected"><name>initWithTranslationUnit:</name>
+<abstract><p>Get a specific diagnostic from a translation unit
+</p></abstract>
+<parameterlist>
+<parameter><name>translationUnit</name><desc><p>The translation unit from which to get the diagnostic</p></desc></parameter>
+<parameter><name>index</name><desc><p>The index of the diagnostic in the translation unit</p></desc></parameter>
+</parameterlist>
 <parsedparameterlist>
 <parsedparameter><type>( CKTranslationUnit * )</type><name>translationUnit</name></parsedparameter>
 <parsedparameter><type>( NSUInteger )</type><name>index</name></parsedparameter>
 </parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>initWithTranslationUnit:index:</name><value><hd_link logicalPath="//xsdoc_ref/occ/instm/CKDiagnostic/initWithTranslationUnit:index:" isseealso="yes">initWithTranslationUnit:index:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> id </returntype>
+<result><p>The diagnostic object
+</p></result>
+<declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithTranslationUnit</declaration_function>: ( <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>translationUnit</declaration_param> 
+        <declaration_function>index</declaration_function>: ( <declaration_type>NSUInteger</declaration_type> )<declaration_var>index</declaration_var>; </declaration>
+<desc><p/></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/occ/instm/CKDiagnostic/initWithTranslationUnit:index:</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/occ/instm/CKDiagnostic/initWithTranslationUnit:index:" lang="occ" type="instm" accessControl="protected"><name>initWithTranslationUnit:index:</name>
+<abstract><p>Get a specific diagnostic from a translation unit
+</p></abstract>
+<parameterlist>
+<parameter><name>translationUnit</name><desc><p>The translation unit from which to get the diagnostic</p></desc></parameter>
+<parameter><name>index</name><desc><p>The index of the diagnostic in the translation unit</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( CKTranslationUnit * )</type><name>translationUnit</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>index</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>initWithTranslationUnit:</name><value><hd_link logicalPath="//xsdoc_ref/doc/title:instm/CKDiagnostic/initWithTranslationUnit:" isseealso="yes">initWithTranslationUnit:</hd_link></value></item></list></listattribute>
+</attributelists>
 <returntype> id </returntype>
 <declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithTranslationUnit</declaration_function>: ( <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>translationUnit</declaration_param> 
         <declaration_function>index</declaration_function>: ( <declaration_type>NSUInteger</declaration_type> )<declaration_var>index</declaration_var>; </declaration>
 <desc><p/></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/doc/title:instm/CKDiagnostic/initWithTranslationUnit:</relateduid>
+</autorelated>
 </method></methods>
-<properties><property id="//xsdoc_ref/occ/instp/CKDiagnostic/column" lang="occ" accessControl="private"><name>column</name>
+<properties><property id="//xsdoc_ref/occ/instp/CKDiagnostic/column" lang="occ" accessControl="protected"><name>column</name>
 <abstract><p>Column number for the diagnostic
 </p></abstract>
 <returntype>NSUInteger</returntype>
 <declaration>@property( <declaration_param>atomic</declaration_param>,
     <declaration_param>readonly</declaration_param> ) <declaration_type>NSUInteger</declaration_type> <declaration_var>column</declaration_var>; </declaration>
 <desc><p/></desc>
-</property><property id="//xsdoc_ref/occ/instp/CKDiagnostic/cxDiagnostic" lang="occ" accessControl="private"><name>cxDiagnostic</name>
+</property><property id="//xsdoc_ref/occ/instp/CKDiagnostic/cxDiagnostic" lang="occ" accessControl="protected"><name>cxDiagnostic</name>
 <abstract><p>Internal libclang diagnostic object
 </p></abstract>
 <returntype>CXDiagnostic</returntype>
 <declaration>@property( <declaration_param>atomic</declaration_param>,
     <declaration_param>readonly</declaration_param> ) <declaration_type>CXDiagnostic</declaration_type> <declaration_var>cxDiagnostic</declaration_var>; </declaration>
 <desc><p/></desc>
-</property><property id="//xsdoc_ref/occ/instp/CKDiagnostic/fixIts" lang="occ" accessControl="private"><name>fixIts</name>
+</property><property id="//xsdoc_ref/occ/instp/CKDiagnostic/fixIts" lang="occ" accessControl="protected"><name>fixIts</name>
 <abstract><p>An array containing instances of 'CKFixIt'
 </p></abstract>
 <returntype>NSArray *</returntype>
 <declaration>@property( <declaration_param>atomic</declaration_param>,
     <declaration_param>readonly</declaration_param> ) <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> <declaration_var>fixIts</declaration_var>; </declaration>
 <desc><p/></desc>
-</property><property id="//xsdoc_ref/occ/instp/CKDiagnostic/line" lang="occ" accessControl="private"><name>line</name>
+</property><property id="//xsdoc_ref/occ/instp/CKDiagnostic/line" lang="occ" accessControl="protected"><name>line</name>
 <abstract><p>Line number for the diagnostic
 </p></abstract>
 <returntype>NSUInteger</returntype>
 <declaration>@property( <declaration_param>atomic</declaration_param>,
     <declaration_param>readonly</declaration_param> ) <declaration_type>NSUInteger</declaration_type> <declaration_var>line</declaration_var>; </declaration>
 <desc><p/></desc>
-</property><property id="//xsdoc_ref/occ/instp/CKDiagnostic/range" lang="occ" accessControl="private"><name>range</name>
+</property><property id="//xsdoc_ref/occ/instp/CKDiagnostic/range" lang="occ" accessControl="protected"><name>range</name>
 <abstract><p>Range of the diagnostic, based on the source code
 </p></abstract>
 <returntype>NSRange</returntype>
 <declaration>@property( <declaration_param>atomic</declaration_param>,
     <declaration_param>readonly</declaration_param> ) <declaration_type>NSRange</declaration_type> <declaration_var>range</declaration_var>; </declaration>
 <desc><p/></desc>
-</property><property id="//xsdoc_ref/occ/instp/CKDiagnostic/severity" lang="occ" accessControl="private"><name>severity</name>
+</property><property id="//xsdoc_ref/occ/instp/CKDiagnostic/severity" lang="occ" accessControl="protected"><name>severity</name>
 <abstract><p>Diagnostic's severity
 </p></abstract>
 <returntype>CKDiagnosticSeverity</returntype>
 <declaration>@property( <declaration_param>atomic</declaration_param>,
     <declaration_param>readonly</declaration_param> ) <declaration_type>CKDiagnosticSeverity</declaration_type> <declaration_var>severity</declaration_var>; </declaration>
 <desc><p/></desc>
-</property><property id="//xsdoc_ref/occ/instp/CKDiagnostic/spelling" lang="occ" accessControl="private"><name>spelling</name>
-<abstract><p>Diagnostic's  spelling
+</property><property id="//xsdoc_ref/occ/instp/CKDiagnostic/spelling" lang="occ" accessControl="protected"><name>spelling</name>
+<abstract><p>Diagnostic's spelling
 </p></abstract>
 <returntype>NSString *</returntype>
 <declaration>@property( <declaration_param>atomic</declaration_param>,
     <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>spelling</declaration_var>; </declaration>
 <desc><p/></desc>
 </property></properties>
-<globals><variable id="//xsdoc_ref/occ/data/CKDiagnostic/__CKDiagnostic_Reserved" lang="occ" accessControl="private"><name>__CKDiagnostic_Reserved</name>
-<abstract><p>Reserved instance variables (binary compatibility)
-</p></abstract>
-<returntype>id</returntype>
-<declaration><declaration_type>id</declaration_type> <declaration_type>__CKDiagnostic_Reserved</declaration_type>[ <declaration_number>5</declaration_number> ] <declaration_keyword>__attribute__</declaration_keyword>( ( <declaration_var>unused</declaration_var> ) ); </declaration>
-<desc><p/></desc>
-</variable><variable id="//xsdoc_ref/occ/data/CKDiagnostic/_column" lang="occ" accessControl="protected"><name>_column</name>
+<globals><variable id="//xsdoc_ref/occ/data/CKDiagnostic/_column" lang="occ" accessControl="protected"><name>_column</name>
 <abstract><p>Column number for the diagnostic
 </p></abstract>
 <returntype>NSUInteger</returntype>
@@ -280,54 +323,8 @@
 <desc><p/></desc>
 </variable></globals>
 <timestamp>Wednesday, May 14, 2014</timestamp>
-</class><class id="//xsdoc_ref/occ/cl/CKTranslationUnit" lang="occ"><name>CKTranslationUnit</name>
-<declaration><declaration_comment>/*******************************************************************************
- * Copyright (c) 2012, Jean-David Gadina - www.xs-labs.com
- * All rights reserved.
- * 
- * Boost Software License - Version 1.0 - August 17th, 2003
- * 
- * Permission is hereby granted, free of charge, to any person or organization
- * obtaining a copy of the software and accompanying documentation covered by
- * this license (the "Software") to use, reproduce, display, distribute,
- * execute, and transmit the Software, and to prepare derivative works of the
- * Software, and to permit third-parties to whom the Software is furnished to
- * do so, all subject to the following:
- * 
- * The copyright notices in the Software and this entire statement, including
- * the above license grant, this restriction and the following disclaimer,
- * must be included in all copies of the Software, in whole or in part, and
- * all derivative works of the Software, unless such copies or derivative
- * works are solely in the form of machine-executable object code generated by
- * a source language processor.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT
- * SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
- * FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
- * DEALINGS IN THE SOFTWARE.</declaration_comment>
-    <declaration_comment>*/</declaration_comment>
-<declaration_comment>/* $Id$ */</declaration_comment>
-<declaration_comment>/*!
-@header          CKDiagnostic.h
-@author          Jean-David Gadina &lt;macmade@digidna.net&gt;
-@copyright       (c) 2011-2012, DigiDNA
-@abstract        ClangKit Diagnostic class</declaration_comment>
-    <declaration_comment>*/</declaration_comment>
-@<declaration_type>class</declaration_type> <declaration_var>CKTranslationUnit</declaration_var>;  </declaration>
-<desc><p/></desc>
-<classes><class id="//xsdoc_ref/occ/cl/CKTranslationUnit/CKTranslationUnit" lang="occ"><name>CKTranslationUnit</name>
-<abstract><p>ClangKit Diagnostic class
-</p></abstract>
-<attributes><attribute><name>Author</name><value>Jean-David Gadina <macmade/></value></attribute>
-</attributes>
-<declaration>@<declaration_type>class</declaration_type> <declaration_var>CKTranslationUnit</declaration_var>;  </declaration>
-<desc><p/></desc>
-<timestamp>Wednesday, May 14, 2014</timestamp>
 </class></classes>
-<timestamp>Wednesday, May 14, 2014</timestamp>
-</class></classes>
+<copyrightinfo>&#169; (c) 2011-2012, DigiDNA
+</copyrightinfo>
 <timestamp>Wednesday, May 14, 2014</timestamp>
 </header>

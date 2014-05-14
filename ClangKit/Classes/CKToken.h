@@ -41,6 +41,10 @@ FOUNDATION_EXPORT CKTokenKind CKTokenKindComment;
 @class CKCursor;
 @class CKSourceLocation;
 
+/*!
+ * @class           CKToken
+ * @abstract        Token class
+ */
 @interface CKToken: NSObject
 {
 @protected

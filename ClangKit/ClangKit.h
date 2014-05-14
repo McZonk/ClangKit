@@ -34,7 +34,7 @@
  * @author          Jean-David Gadina <macmade@digidna.net>
  * @copyright       (c) 2011-2012, DigiDNA
  * @abstract        ClangKit main header file
- * @description     Please only use this header file when working with ClangKit.
+ * @discussion      Please only use this header file when working with ClangKit.
  *                  It contains all the public interfaces for the ClangKlit
  *                  classes. No other header file should be directly included.
  */

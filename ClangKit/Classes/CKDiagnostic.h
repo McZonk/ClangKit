@@ -41,37 +41,36 @@
 /*!
  * @typedef         CKDiagnosticSeverity
  * @abstract        Diagnostic severity
- * @description     Possible values are defined below.
  */
 typedef NSInteger CKDiagnosticSeverity;
 
 /*!
  * @var             CKDiagnosticSeverityIgnored
- * @abstract        Ignored
+ * @abstract        Diagnostic severity - Ignored
  */
 FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityIgnored;
 
 /*!
  * @var             CKDiagnosticSeverityNote
- * @abstract        Notice
+ * @abstract        Diagnostic severity - Notice
  */
 FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityNote;
 
 /*!
  * @var             CKDiagnosticSeverityWarning
- * @abstract        Warning
+ * @abstract        Diagnostic severity - Warning
  */
 FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityWarning;
 
 /*!
  * @var             CKDiagnosticSeverityError
- * @abstract        Error
+ * @abstract        Diagnostic severity - Error
  */
 FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityError;
 
 /*!
  * @var             CKDiagnosticSeverityFatal
- * @abstract        Fatal error
+ * @abstract        Diagnostic severity - Fatal error
  */
 FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
 
@@ -134,7 +133,7 @@ FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
 
 /*!
  * @property        spelling
- * @abstract        Diagnostic's  spelling
+ * @abstract        Diagnostic's spelling
  */
 @property( atomic, readonly ) NSString * spelling;
 
@@ -168,7 +167,7 @@ FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
  */
 @property( atomic, readonly ) NSRange range;
 
-/*
+/*!
  * @method          diagnosticsForTranslationUnit:
  * @abstract        Get diagnostics for a translation unit
  * @param           translationUnit     The translation unit from which to get the diagnostics
@@ -176,7 +175,7 @@ FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
  */
 + ( NSArray * )diagnosticsForTranslationUnit: ( CKTranslationUnit * )translationUnit;
 
-/*
+/*!
  * @method          diagnosticWithTranslationUnit:index:
  * @abstract        Get a specific diagnostic from a translation unit
  * @param           translationUnit     The translation unit from which to get the diagnostic
@@ -186,7 +185,7 @@ FOUNDATION_EXPORT CKDiagnosticSeverity CKDiagnosticSeverityFatal;
  */
 + ( id )diagnosticWithTranslationUnit: ( CKTranslationUnit * )translationUnit index: ( NSUInteger )index;
 
-/*
+/*!
  * @method          initWithTranslationUnit:
  * @abstract        Get a specific diagnostic from a translation unit
  * @param           translationUnit     The translation unit from which to get the diagnostic

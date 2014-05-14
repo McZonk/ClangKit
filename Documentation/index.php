@@ -10,7 +10,7 @@ $DOC->setCopyright( 'XS-Labs &copy; %Y - All Rights Reserved' );
 $DOC->setTimezone( 'Europe/Zurich' );
 $DOC->setCompanyName( 'XS-Labs' );
 $DOC->setCompanyURL( 'http://www.xs-labs.com/' );
-$DOC->setSourceRootPrefix( '../ClangKit' );
+$DOC->setSourceRootPrefix( '/ClangKit/' );
 $DOC->setClassesPrefix( '' );
 $DOC->setFunctionsPrefix( '' );
 $DOC->setTypesPrefix( '' );
@@ -21,6 +21,16 @@ $DOC->setHomeFile( 'Pages/Home.inc.php' );
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//ENhttp://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
+    <!--
+    
+    ##################################################
+    #                                                #
+    #       Generated with XSDocgen by XS-Labs       #
+    #                 www.xs-labs.com                #
+    #                                                #
+    ##################################################
+    
+    -->
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title><?php print $DOC->getTitle(); ?></title>
     <link rel="schema.dc" href="http://purl.org/metadata/dublin_core_elements" />

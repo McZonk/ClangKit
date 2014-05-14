@@ -51,7 +51,6 @@ ifeq ($(_HAS_XSDOCGEN),true)
 	@echo $(call _PRINT,XSDoc,universal,Generating the documentation)
 	@/usr/local/bin/XSDocgen \
 	@    --clear \
-	@    --undocumented \
 	@    --source ../ClangKit \
 	@    --output . \
 	@    --exclude-file HeaderDoc-Exclude.txt \
@@ -62,20 +61,19 @@ ifeq ($(_HAS_XSDOCGEN),true)
 	@    --company-name "XS-Labs" \
 	@    --company-url "http://www.xs-labs.com/" \
 	@    --page-home "Pages/Home.inc.php" \
-	@    --source-root-prefix "../ClangKit" \
+	@    --source-root-prefix "/ClangKit/" \
 else
 	@echo $(call _PRINT,XSDoc,universal,Skipping documentation generation - XSDocgen is not installed)
 endif
 	
 # Documentation (verbose mode)
-doc-verbose:
+verbose:
 	
 ifeq ($(_HAS_XSDOCGEN),true)
 	@echo $(call _PRINT,XSDoc,universal,Generating the documentation)
 	@/usr/local/bin/XSDocgen \
 	@    --verbose \
 	@    --clear \
-	@    --undocumented \
 	@    --source ../ClangKit \
 	@    --output . \
 	@    --exclude-file HeaderDoc-Exclude.txt \
@@ -86,7 +84,7 @@ ifeq ($(_HAS_XSDOCGEN),true)
 	@    --company-name "XS-Labs" \
 	@    --company-url "http://www.xs-labs.com/" \
 	@    --page-home "Pages/Home.inc.php" \
-	@    --source-root-prefix "../ClangKit" \
+	@    --source-root-prefix "/ClangKit/" \
 else
 	@echo $(call _PRINT,XSDoc,universal,Skipping documentation generation - XSDocgen is not installed)
 endif

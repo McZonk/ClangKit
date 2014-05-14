@@ -33,7 +33,7 @@
  * @header          ClangKit-Prefix.pch
  * @author          Jean-David Gadina <macmade@digidna.net>
  * @copyright       (c) 2011-2012, DigiDNA
- * @abstract        Project's precompiled header
+ * @abstract        Precompiled header for the ClangKit project
  */
 
 #ifdef __OBJC__
@@ -41,7 +41,6 @@
     #import <Foundation/Foundation.h>
     #import <clang-c/Index.h>
     #import "CKWarnings.h"
-    #import "CKMacros.h"
     #import "CKTypes.h"
     
 #endif

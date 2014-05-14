@@ -31,6 +31,10 @@
 
 @class CKDiagnostic;
 
+/*!
+ * @class           CKFixIt
+ * @abstract        Fix-it class
+ */
 @interface CKFixIt: NSObject
 {
 @protected

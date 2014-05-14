@@ -29,6 +29,10 @@
  
 /* $Id$ */
 
+/*!
+ * @class           CKSourceLocation
+ * @abstract        Source location class
+ */
 @interface CKSourceLocation: NSObject
 {
 @protected

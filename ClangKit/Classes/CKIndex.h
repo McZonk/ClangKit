@@ -29,6 +29,10 @@
  
 /* $Id$ */
 
+/*!
+ * @class           CKIndex
+ * @abstract        Index class
+ */
 @interface CKIndex: NSObject
 {
 @protected
