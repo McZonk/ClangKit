@@ -62,7 +62,8 @@ ifeq ($(_HAS_XSDOCGEN),true)
 	@    --company-url "http://www.xs-labs.com/" \
 	@    --page-home "Pages/Home.inc.php" \
 	@    --source-root-prefix "/ClangKit/" \
-	@    --page-add "Tutorial" "Pages/Tutorial.inc.php"
+	@    --page-add "Tutorial" "Pages/Tutorial.inc.php" \
+	@    --google-analytics "UA-51035898-4" "xs-labs.com"
 else
 	@echo $(call _PRINT,XSDoc,universal,Skipping documentation generation - XSDocgen is not installed)
 endif
@@ -86,7 +87,8 @@ ifeq ($(_HAS_XSDOCGEN),true)
 	@    --company-url "http://www.xs-labs.com/" \
 	@    --page-home "Pages/Home.inc.php" \
 	@    --source-root-prefix "/ClangKit/"
-	@    --page-add "Tutorial" "Pages/Tutorial.inc.php"
+	@    --page-add "Tutorial" "Pages/Tutorial.inc.php" \
+	@    --google-analytics "UA-51035898-4" "xs-labs.com"
 else
 	@echo $(call _PRINT,XSDoc,universal,Skipping documentation generation - XSDocgen is not installed)
 endif
