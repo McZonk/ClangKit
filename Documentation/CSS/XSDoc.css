@@ -403,6 +403,7 @@ code {
     float:                  right;
     font-size:              10px;
     margin-top:             10px;
+    margin-left:            10px;
 }
 
 .xsdoc-search .xsdoc-search-form {

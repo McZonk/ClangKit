@@ -4,7 +4,993 @@
 <includes>
 </includes>
 <desc><p/></desc>
-<classes><class id="//xsdoc_ref/occ/cl/CKCursor" lang="occ"><name>CKCursor</name>
+<globals><variable id="//xsdoc_ref/c/data/CKCursorKindAddrLabelExpr" lang="c"><name>CKCursorKindAddrLabelExpr</name>
+<abstract><p>Cursor kind - Address label expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindAddrLabelExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindAnnotateAttr" lang="c"><name>CKCursorKindAnnotateAttr</name>
+<abstract><p>Cursor kind - Annotate attribute
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindAnnotateAttr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindArraySubscriptExpr" lang="c"><name>CKCursorKindArraySubscriptExpr</name>
+<abstract><p>Cursor kind - Subscript expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindArraySubscriptExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindAsmLabelAttr" lang="c"><name>CKCursorKindAsmLabelAttr</name>
+<abstract><p>Cursor kind - Assembly label attribute
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindAsmLabelAttr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindAsmStmt" lang="c"><name>CKCursorKindAsmStmt</name>
+<abstract><p>Cursor kind - Assembly statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindAsmStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindBinaryOperator" lang="c"><name>CKCursorKindBinaryOperator</name>
+<abstract><p>Cursor kind - Binary operator
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindBinaryOperator</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindBlockExpr" lang="c"><name>CKCursorKindBlockExpr</name>
+<abstract><p>Cursor kind - Block expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindBlockExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindBreakStmt" lang="c"><name>CKCursorKindBreakStmt</name>
+<abstract><p>Cursor kind - Break statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindBreakStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCallExpr" lang="c"><name>CKCursorKindCallExpr</name>
+<abstract><p>Cursor kind - Call expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCallExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCaseStmt" lang="c"><name>CKCursorKindCaseStmt</name>
+<abstract><p>Cursor kind - Case statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCaseStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCharacterLiteral" lang="c"><name>CKCursorKindCharacterLiteral</name>
+<abstract><p>Cursor kind - Character literal
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCharacterLiteral</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindClassDecl" lang="c"><name>CKCursorKindClassDecl</name>
+<abstract><p>Cursor kind - Class declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindClassDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindClassTemplate" lang="c"><name>CKCursorKindClassTemplate</name>
+<abstract><p>Cursor kind - Class template
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindClassTemplate</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindClassTemplatePartialSpecialization" lang="c"><name>CKCursorKindClassTemplatePartialSpecialization</name>
+<abstract><p>Cursor kind - Template partial specialization
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindClassTemplatePartialSpecialization</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCompoundAssignOperator" lang="c"><name>CKCursorKindCompoundAssignOperator</name>
+<abstract><p>Cursor kind - Coumpound assignment operator
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCompoundAssignOperator</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCompoundLiteralExpr" lang="c"><name>CKCursorKindCompoundLiteralExpr</name>
+<abstract><p>Cursor kind - Coumpound literal expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCompoundLiteralExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCompoundStmt" lang="c"><name>CKCursorKindCompoundStmt</name>
+<abstract><p>Cursor kind - Coumpound statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCompoundStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindConditionalOperator" lang="c"><name>CKCursorKindConditionalOperator</name>
+<abstract><p>Cursor kind - Conditional operator
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindConditionalOperator</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindConstructor" lang="c"><name>CKCursorKindConstructor</name>
+<abstract><p>Cursor kind - Constructor
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindConstructor</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindContinueStmt" lang="c"><name>CKCursorKindContinueStmt</name>
+<abstract><p>Cursor kind - Continue statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindContinueStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindConversionFunction" lang="c"><name>CKCursorKindConversionFunction</name>
+<abstract><p>Cursor kind - Conversion function
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindConversionFunction</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCStyleCastExpr" lang="c"><name>CKCursorKindCStyleCastExpr</name>
+<abstract><p>Cursor kind - C-style cast expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCStyleCastExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXAccessSpecifier" lang="c"><name>CKCursorKindCXXAccessSpecifier</name>
+<abstract><p>Cursor kind - C++ access specifier
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXAccessSpecifier</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXBaseSpecifier" lang="c"><name>CKCursorKindCXXBaseSpecifier</name>
+<abstract><p>Cursor kind - C++ base specifier
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXBaseSpecifier</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXBoolLiteralExpr" lang="c"><name>CKCursorKindCXXBoolLiteralExpr</name>
+<abstract><p>Cursor kind - C++ bool literal expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXBoolLiteralExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXCatchStmt" lang="c"><name>CKCursorKindCXXCatchStmt</name>
+<abstract><p>Cursor kind - C++ catch statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXCatchStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXConstCastExpr" lang="c"><name>CKCursorKindCXXConstCastExpr</name>
+<abstract><p>Cursor kind - C++ const cast expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXConstCastExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXDeleteExpr" lang="c"><name>CKCursorKindCXXDeleteExpr</name>
+<abstract><p>Cursor kind - C++ delete expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXDeleteExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXDynamicCastExpr" lang="c"><name>CKCursorKindCXXDynamicCastExpr</name>
+<abstract><p>Cursor kind - C++ dynamic cast expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXDynamicCastExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXFinalAttr" lang="c"><name>CKCursorKindCXXFinalAttr</name>
+<abstract><p>Cursor kind - C++ final attribute
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXFinalAttr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXForRangeStmt" lang="c"><name>CKCursorKindCXXForRangeStmt</name>
+<abstract><p>Cursor kind - C++ for range statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXForRangeStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXFunctionalCastExpr" lang="c"><name>CKCursorKindCXXFunctionalCastExpr</name>
+<abstract><p>Cursor kind - C++ functional cast expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXFunctionalCastExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXMethod" lang="c"><name>CKCursorKindCXXMethod</name>
+<abstract><p>Cursor kind - C++ method
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXMethod</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXNewExpr" lang="c"><name>CKCursorKindCXXNewExpr</name>
+<abstract><p>Cursor kind - C++ new expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXNewExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXNullPtrLiteralExpr" lang="c"><name>CKCursorKindCXXNullPtrLiteralExpr</name>
+<abstract><p>Cursor kind - C++ nullptr literal  expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXNullPtrLiteralExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXOverrideAttr" lang="c"><name>CKCursorKindCXXOverrideAttr</name>
+<abstract><p>Cursor kind - C++ override attribute
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXOverrideAttr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXReinterpretCastExpr" lang="c"><name>CKCursorKindCXXReinterpretCastExpr</name>
+<abstract><p>Cursor kind - C++ reinterpret cast expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXReinterpretCastExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXStaticCastExpr" lang="c"><name>CKCursorKindCXXStaticCastExpr</name>
+<abstract><p>Cursor kind - C++ static cast expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXStaticCastExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXThisExpr" lang="c"><name>CKCursorKindCXXThisExpr</name>
+<abstract><p>Cursor kind - C++ this expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXThisExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXThrowExpr" lang="c"><name>CKCursorKindCXXThrowExpr</name>
+<abstract><p>Cursor kind - C++ throw expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXThrowExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXTryStmt" lang="c"><name>CKCursorKindCXXTryStmt</name>
+<abstract><p>Cursor kind - C++ try statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXTryStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindCXXTypeidExpr" lang="c"><name>CKCursorKindCXXTypeidExpr</name>
+<abstract><p>Cursor kind - C++ typeid expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindCXXTypeidExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindDeclRefExpr" lang="c"><name>CKCursorKindDeclRefExpr</name>
+<abstract><p>Cursor kind - Declaration reference expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindDeclRefExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindDeclStmt" lang="c"><name>CKCursorKindDeclStmt</name>
+<abstract><p>Cursor kind - Declaration statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindDeclStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindDefaultStmt" lang="c"><name>CKCursorKindDefaultStmt</name>
+<abstract><p>Cursor kind - Default statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindDefaultStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindDestructor" lang="c"><name>CKCursorKindDestructor</name>
+<abstract><p>Cursor kind - Destructor
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindDestructor</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindDoStmt" lang="c"><name>CKCursorKindDoStmt</name>
+<abstract><p>Cursor kind - Do statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindDoStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindEnumConstantDecl" lang="c"><name>CKCursorKindEnumConstantDecl</name>
+<abstract><p>Cursor kind - Enumeration constant declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindEnumConstantDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindEnumDecl" lang="c"><name>CKCursorKindEnumDecl</name>
+<abstract><p>Cursor kind - Enumeration declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindEnumDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindFieldDecl" lang="c"><name>CKCursorKindFieldDecl</name>
+<abstract><p>Cursor kind - Field declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindFieldDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindFirstAttr" lang="c"><name>CKCursorKindFirstAttr</name>
+<abstract><p>Cursor kind - First attribute
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindFirstAttr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindFirstDecl" lang="c"><name>CKCursorKindFirstDecl</name>
+<abstract><p>Cursor kind - First declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindFirstDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindFirstExpr" lang="c"><name>CKCursorKindFirstExpr</name>
+<abstract><p>Cursor kind - First expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindFirstExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindFirstInvalid" lang="c"><name>CKCursorKindFirstInvalid</name>
+<abstract><p>Cursor kind - First invalid
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindFirstInvalid</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindFirstPreprocessing" lang="c"><name>CKCursorKindFirstPreprocessing</name>
+<abstract><p>Cursor kind - First preprocessing
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindFirstPreprocessing</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindFirstRef" lang="c"><name>CKCursorKindFirstRef</name>
+<abstract><p>Cursor kind - First reference
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindFirstRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindFirstStmt" lang="c"><name>CKCursorKindFirstStmt</name>
+<abstract><p>Cursor kind - First statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindFirstStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindFloatingLiteral" lang="c"><name>CKCursorKindFloatingLiteral</name>
+<abstract><p>Cursor kind - Floating point literal
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindFloatingLiteral</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindForStmt" lang="c"><name>CKCursorKindForStmt</name>
+<abstract><p>Cursor kind - For statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindForStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindFunctionDecl" lang="c"><name>CKCursorKindFunctionDecl</name>
+<abstract><p>Cursor kind - Function declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindFunctionDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindFunctionTemplate" lang="c"><name>CKCursorKindFunctionTemplate</name>
+<abstract><p>Cursor kind - Function template
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindFunctionTemplate</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindGenericSelectionExpr" lang="c"><name>CKCursorKindGenericSelectionExpr</name>
+<abstract><p>Cursor kind - Generic selection expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindGenericSelectionExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindGNUNullExpr" lang="c"><name>CKCursorKindGNUNullExpr</name>
+<abstract><p>Cursor kind - GNU NULL expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindGNUNullExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindGotoStmt" lang="c"><name>CKCursorKindGotoStmt</name>
+<abstract><p>Cursor kind - Goto statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindGotoStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindIBActionAttr" lang="c"><name>CKCursorKindIBActionAttr</name>
+<abstract><p>Cursor kind - IBAction attribute
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindIBActionAttr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/doc/title:data/CKCursorKindIBActionAttr" lang="c"><name>CKCursorKindIBActionAttr</name>
+<abstract><p>Cursor kind - IBOutlet attribute
+</p></abstract>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>CKCursorKindIBOutletAttr</name><value><hd_link logicalPath="//xsdoc_ref/c/data/CKCursorKindIBOutletAttr" isseealso="yes">CKCursorKindIBOutletAttr</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindIBOutletAttr</declaration_var>;  </declaration>
+<desc><p/></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/c/data/CKCursorKindIBOutletAttr</relateduid>
+</autorelated>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindIBOutletAttr" lang="c"><name>CKCursorKindIBOutletAttr</name>
+<abstract><p>Cursor kind - IBOutlet attribute
+</p></abstract>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>CKCursorKindIBActionAttr</name><value><hd_link logicalPath="//xsdoc_ref/doc/title:data/CKCursorKindIBActionAttr" isseealso="yes">CKCursorKindIBActionAttr</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindIBOutletAttr</declaration_var>;  </declaration>
+<desc><p/></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/doc/title:data/CKCursorKindIBActionAttr</relateduid>
+</autorelated>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindIBOutletCollectionAttr" lang="c"><name>CKCursorKindIBOutletCollectionAttr</name>
+<abstract><p>Cursor kind - IBOutlet collection attribute
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindIBOutletCollectionAttr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindIfStmt" lang="c"><name>CKCursorKindIfStmt</name>
+<abstract><p>Cursor kind - If statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindIfStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindImaginaryLiteral" lang="c"><name>CKCursorKindImaginaryLiteral</name>
+<abstract><p>Cursor kind - Imaginary number literal
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindImaginaryLiteral</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindInclusionDirective" lang="c"><name>CKCursorKindInclusionDirective</name>
+<abstract><p>Cursor kind - Includion directive
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindInclusionDirective</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindIndirectGotoStmt" lang="c"><name>CKCursorKindIndirectGotoStmt</name>
+<abstract><p>Cursor kind - Indirect goto statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindIndirectGotoStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindInitListExpr" lang="c"><name>CKCursorKindInitListExpr</name>
+<abstract><p>Cursor kind - List initializer expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindInitListExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindIntegerLiteral" lang="c"><name>CKCursorKindIntegerLiteral</name>
+<abstract><p>Cursor kind - Integer literal
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindIntegerLiteral</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindInvalidCode" lang="c"><name>CKCursorKindInvalidCode</name>
+<abstract><p>Cursor kind - Invalid code
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindInvalidCode</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindInvalidFile" lang="c"><name>CKCursorKindInvalidFile</name>
+<abstract><p>Cursor kind - Invalid file
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindInvalidFile</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindLabelRef" lang="c"><name>CKCursorKindLabelRef</name>
+<abstract><p>Cursor kind - Label reference
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindLabelRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindLabelStmt" lang="c"><name>CKCursorKindLabelStmt</name>
+<abstract><p>Cursor kind - Label statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindLabelStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindLambdaExpr" lang="c"><name>CKCursorKindLambdaExpr</name>
+<abstract><p>Cursor kind - Lambda expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindLambdaExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindLastAttr" lang="c"><name>CKCursorKindLastAttr</name>
+<abstract><p>Cursor kind - Last attribute
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindLastAttr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindLastDecl" lang="c"><name>CKCursorKindLastDecl</name>
+<abstract><p>Cursor kind - Last declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindLastDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindLastExpr" lang="c"><name>CKCursorKindLastExpr</name>
+<abstract><p>Cursor kind - Last expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindLastExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindLastInvalid" lang="c"><name>CKCursorKindLastInvalid</name>
+<abstract><p>Cursor kind - Last invalid
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindLastInvalid</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindLastPreprocessing" lang="c"><name>CKCursorKindLastPreprocessing</name>
+<abstract><p>Cursor kind - Last proprocessing
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindLastPreprocessing</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindLastRef" lang="c"><name>CKCursorKindLastRef</name>
+<abstract><p>Cursor kind - Last reference
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindLastRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindLastStmt" lang="c"><name>CKCursorKindLastStmt</name>
+<abstract><p>Cursor kind - Last statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindLastStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindLinkageSpec" lang="c"><name>CKCursorKindLinkageSpec</name>
+<abstract><p>Cursor kind - Linkage specifier
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindLinkageSpec</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindMacroDefinition" lang="c"><name>CKCursorKindMacroDefinition</name>
+<abstract><p>Cursor kind - Macro definition
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindMacroDefinition</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindMacroExpansion" lang="c"><name>CKCursorKindMacroExpansion</name>
+<abstract><p>Cursor kind - Macro expansion
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindMacroExpansion</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindMacroInstantiation" lang="c"><name>CKCursorKindMacroInstantiation</name>
+<abstract><p>Cursor kind - Macro instantiation
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindMacroInstantiation</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindMemberRef" lang="c"><name>CKCursorKindMemberRef</name>
+<abstract><p>Cursor kind - Member reference
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindMemberRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindMemberRefExpr" lang="c"><name>CKCursorKindMemberRefExpr</name>
+<abstract><p>Cursor kind - Member reference expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindMemberRefExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindMSAsmStmt" lang="c"><name>CKCursorKindMSAsmStmt</name>
+<abstract><p>Cursor kind - MS assembly statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindMSAsmStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindNamespace" lang="c"><name>CKCursorKindNamespace</name>
+<abstract><p>Cursor kind - Namespace
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindNamespace</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindNamespaceAlias" lang="c"><name>CKCursorKindNamespaceAlias</name>
+<abstract><p>Cursor kind - Namespace alias
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindNamespaceAlias</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindNamespaceRef" lang="c"><name>CKCursorKindNamespaceRef</name>
+<abstract><p>Cursor kind - Namespace reference
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindNamespaceRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindNoDeclFound" lang="c"><name>CKCursorKindNoDeclFound</name>
+<abstract><p>Cursor kind - Ne declaration found
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindNoDeclFound</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindNonTypeTemplateParameter" lang="c"><name>CKCursorKindNonTypeTemplateParameter</name>
+<abstract><p>Cursor kind - Non type template parameter
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindNonTypeTemplateParameter</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindNotImplemented" lang="c"><name>CKCursorKindNotImplemented</name>
+<abstract><p>Cursor kind - Not implemented
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindNotImplemented</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindNullStmt" lang="c"><name>CKCursorKindNullStmt</name>
+<abstract><p>Cursor kind - NULL statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindNullStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCAtCatchStmt" lang="c"><name>CKCursorKindObjCAtCatchStmt</name>
+<abstract><p>Cursor kind - Objective-C @catch statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCAtCatchStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCAtFinallyStmt" lang="c"><name>CKCursorKindObjCAtFinallyStmt</name>
+<abstract><p>Cursor kind - Objective-C @finally statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCAtFinallyStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCAtSynchronizedStmt" lang="c"><name>CKCursorKindObjCAtSynchronizedStmt</name>
+<abstract><p>Cursor kind - Objective-C @synchronized statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCAtSynchronizedStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCAtThrowStmt" lang="c"><name>CKCursorKindObjCAtThrowStmt</name>
+<abstract><p>Cursor kind - Objective-C @throw statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCAtThrowStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCAtTryStmt" lang="c"><name>CKCursorKindObjCAtTryStmt</name>
+<abstract><p>Cursor kind - Objective-C @try statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCAtTryStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCAutoreleasePoolStmt" lang="c"><name>CKCursorKindObjCAutoreleasePoolStmt</name>
+<abstract><p>Cursor kind - Objective-C @autoreleasepool statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCAutoreleasePoolStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCBoolLiteralExpr" lang="c"><name>CKCursorKindObjCBoolLiteralExpr</name>
+<abstract><p>Cursor kind - Objective-C bool literal expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCBoolLiteralExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCBridgedCastExpr" lang="c"><name>CKCursorKindObjCBridgedCastExpr</name>
+<abstract><p>Cursor kind - Objective-C bridged cast expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCBridgedCastExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCCategoryDecl" lang="c"><name>CKCursorKindObjCCategoryDecl</name>
+<abstract><p>Cursor kind - Objective-C category declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCCategoryDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCCategoryImplDecl" lang="c"><name>CKCursorKindObjCCategoryImplDecl</name>
+<abstract><p>Cursor kind - Objective-C category implementation declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCCategoryImplDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCClassMethodDecl" lang="c"><name>CKCursorKindObjCClassMethodDecl</name>
+<abstract><p>Cursor kind - Objective-C class method declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCClassMethodDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCClassRef" lang="c"><name>CKCursorKindObjCClassRef</name>
+<abstract><p>Cursor kind - Objective-C class reference
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCClassRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCDynamicDecl" lang="c"><name>CKCursorKindObjCDynamicDecl</name>
+<abstract><p>Cursor kind - Objective-C @dynamic
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCDynamicDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCEncodeExpr" lang="c"><name>CKCursorKindObjCEncodeExpr</name>
+<abstract><p>Cursor kind - Objective-C @encode expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCEncodeExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCForCollectionStmt" lang="c"><name>CKCursorKindObjCForCollectionStmt</name>
+<abstract><p>Cursor kind - Objective-C for collection statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCForCollectionStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCImplementationDecl" lang="c"><name>CKCursorKindObjCImplementationDecl</name>
+<abstract><p>Cursor kind - Objective-C implementation declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCImplementationDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCInstanceMethodDecl" lang="c"><name>CKCursorKindObjCInstanceMethodDecl</name>
+<abstract><p>Cursor kind - Objective-C instance method declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCInstanceMethodDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCInterfaceDecl" lang="c"><name>CKCursorKindObjCInterfaceDecl</name>
+<abstract><p>Cursor kind - Objective-C interface declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCInterfaceDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCIvarDecl" lang="c"><name>CKCursorKindObjCIvarDecl</name>
+<abstract><p>Cursor kind - Objective-C instance variable declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCIvarDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCMessageExpr" lang="c"><name>CKCursorKindObjCMessageExpr</name>
+<abstract><p>Cursor kind - Objective-C message expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCMessageExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCPropertyDecl" lang="c"><name>CKCursorKindObjCPropertyDecl</name>
+<abstract><p>Cursor kind - Objective-C property declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCPropertyDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCProtocolDecl" lang="c"><name>CKCursorKindObjCProtocolDecl</name>
+<abstract><p>Cursor kind - Objective-C protocol declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCProtocolDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCProtocolExpr" lang="c"><name>CKCursorKindObjCProtocolExpr</name>
+<abstract><p>Cursor kind - Objective-C </p></abstract>
+<fieldlist>
+<field><name>expression</name><desc> </desc></field>
+</fieldlist>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCProtocolExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCProtocolRef" lang="c"><name>CKCursorKindObjCProtocolRef</name>
+<abstract><p>Cursor kind - Objective-C protocol reference
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCProtocolRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCSelectorExpr" lang="c"><name>CKCursorKindObjCSelectorExpr</name>
+<abstract><p>Cursor kind - Objective-C @selector expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCSelectorExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCStringLiteral" lang="c"><name>CKCursorKindObjCStringLiteral</name>
+<abstract><p>Cursor kind - Objective-C string literal
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCStringLiteral</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCSuperClassRef" lang="c"><name>CKCursorKindObjCSuperClassRef</name>
+<abstract><p>Cursor kind - Objective-C superclass reference
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCSuperClassRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindObjCSynthesizeDecl" lang="c"><name>CKCursorKindObjCSynthesizeDecl</name>
+<abstract><p>Cursor kind - Objective-C @synthesize declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindObjCSynthesizeDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindOverloadedDeclRef" lang="c"><name>CKCursorKindOverloadedDeclRef</name>
+<abstract><p>Cursor kind - Overloaded declaration reference
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindOverloadedDeclRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindPackExpansionExpr" lang="c"><name>CKCursorKindPackExpansionExpr</name>
+<abstract><p>Cursor kind - Pack expansion expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindPackExpansionExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindParenExpr" lang="c"><name>CKCursorKindParenExpr</name>
+<abstract><p>Cursor kind - Parenthesis expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindParenExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindParmDecl" lang="c"><name>CKCursorKindParmDecl</name>
+<abstract><p>Cursor kind - Parameter declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindParmDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindPreprocessingDirective" lang="c"><name>CKCursorKindPreprocessingDirective</name>
+<abstract><p>Cursor kind - Preprocessing directive
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindPreprocessingDirective</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindReturnStmt" lang="c"><name>CKCursorKindReturnStmt</name>
+<abstract><p>Cursor kind - Return statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindReturnStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindSEHExceptStmt" lang="c"><name>CKCursorKindSEHExceptStmt</name>
+<abstract><p>Cursor kind - SEH except statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindSEHExceptStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindSEHFinallyStmt" lang="c"><name>CKCursorKindSEHFinallyStmt</name>
+<abstract><p>Cursor kind - SEH finally statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindSEHFinallyStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindSEHTryStmt" lang="c"><name>CKCursorKindSEHTryStmt</name>
+<abstract><p>Cursor kind - SEH try statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindSEHTryStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindSizeOfPackExpr" lang="c"><name>CKCursorKindSizeOfPackExpr</name>
+<abstract><p>Cursor kind - Size of pack expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindSizeOfPackExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindStmtExpr" lang="c"><name>CKCursorKindStmtExpr</name>
+<abstract><p>Cursor kind - Statement expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindStmtExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindStringLiteral" lang="c"><name>CKCursorKindStringLiteral</name>
+<abstract><p>Cursor kind - String literal
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindStringLiteral</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindStructDecl" lang="c"><name>CKCursorKindStructDecl</name>
+<abstract><p>Cursor kind - Structure declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindStructDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindSwitchStmt" lang="c"><name>CKCursorKindSwitchStmt</name>
+<abstract><p>Cursor kind - Switch statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindSwitchStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindTemplateRef" lang="c"><name>CKCursorKindTemplateRef</name>
+<abstract><p>Cursor kind - Template reference
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindTemplateRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindTemplateTemplateParameter" lang="c"><name>CKCursorKindTemplateTemplateParameter</name>
+<abstract><p>Cursor kind - Template template parameter
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindTemplateTemplateParameter</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindTemplateTypeParameter" lang="c"><name>CKCursorKindTemplateTypeParameter</name>
+<abstract><p>Cursor kind - Template type parameter
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindTemplateTypeParameter</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindTranslationUnit" lang="c"><name>CKCursorKindTranslationUnit</name>
+<abstract><p>Cursor kind - Translation unit
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindTranslationUnit</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindTypeAliasDecl" lang="c"><name>CKCursorKindTypeAliasDecl</name>
+<abstract><p>Cursor kind - Type alias declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindTypeAliasDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindTypedefDecl" lang="c"><name>CKCursorKindTypedefDecl</name>
+<abstract><p>Cursor kind - Type definition declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindTypedefDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindTypeRef" lang="c"><name>CKCursorKindTypeRef</name>
+<abstract><p>Cursor kind - Type reference
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindTypeRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindUnaryExpr" lang="c"><name>CKCursorKindUnaryExpr</name>
+<abstract><p>Cursor kind - Unary expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindUnaryExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindUnaryOperator" lang="c"><name>CKCursorKindUnaryOperator</name>
+<abstract><p>Cursor kind - Unary operator
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindUnaryOperator</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindUnexposedAttr" lang="c"><name>CKCursorKindUnexposedAttr</name>
+<abstract><p>Cursor kind - Unexposed attribute
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindUnexposedAttr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindUnexposedDecl" lang="c"><name>CKCursorKindUnexposedDecl</name>
+<abstract><p>Cursor kind - Unexposed declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindUnexposedDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindUnexposedExpr" lang="c"><name>CKCursorKindUnexposedExpr</name>
+<abstract><p>Cursor kind - Unexposed expression
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindUnexposedExpr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindUnexposedStmt" lang="c"><name>CKCursorKindUnexposedStmt</name>
+<abstract><p>Cursor kind - Unexposed statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindUnexposedStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindUnionDecl" lang="c"><name>CKCursorKindUnionDecl</name>
+<abstract><p>Cursor kind - Union declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindUnionDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindUsingDeclaration" lang="c"><name>CKCursorKindUsingDeclaration</name>
+<abstract><p>Cursor kind - Using declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindUsingDeclaration</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindUsingDirective" lang="c"><name>CKCursorKindUsingDirective</name>
+<abstract><p>Cursor kind - Using directive
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindUsingDirective</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindVarDecl" lang="c"><name>CKCursorKindVarDecl</name>
+<abstract><p>Cursor kind - Variable declaration
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindVarDecl</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindVariableRef" lang="c"><name>CKCursorKindVariableRef</name>
+<abstract><p>Cursor kind - Variable reference
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindVariableRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/CKCursorKindWhileStmt" lang="c"><name>CKCursorKindWhileStmt</name>
+<abstract><p>Cursor kind - While statement
+</p></abstract>
+<returntype>FOUNDATION_EXPORT CKCursorKind</returntype>
+<declaration><declaration_type>FOUNDATION_EXPORT</declaration_type> <declaration_type>CKCursorKind</declaration_type> <declaration_var>CKCursorKindWhileStmt</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable></globals>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/CKCursorKind" lang="c" type="simple"><name>CKCursorKind</name>
+<abstract><p>Cursor kind
+</p></abstract>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>NSInteger</declaration_type> <declaration_var>CKCursorKind</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><classes><class id="//xsdoc_ref/occ/cl/CKCursor" lang="occ"><name>CKCursor</name>
 <abstract><p>Cursor class
 </p></abstract>
 <attributes><attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/NSObject">NSObject</hd_link></value></attribute>
@@ -30,30 +1016,293 @@
         <declaration_type>BOOL</declaration_type> <declaration_var>_isTranslationUnit</declaration_var>; 
         <declaration_type>BOOL</declaration_type> <declaration_var>_isUnexposed</declaration_var>; 
         <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>_cxCursorPointer</declaration_var>; 
-        }  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursorKind</declaration_type> <declaration_var>kind</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>displayName</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>kindSpelling</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type><declaration_var>definition</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type><declaration_var>semanticParent</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type><declaration_var>lexicalParent</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type><declaration_var>canonical</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type><declaration_var>referenced</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>CKSourceLocation</declaration_type> <declaration_type>*</declaration_type><declaration_var>location</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isDefinition</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isDeclaration</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isReference</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isPreprocessing</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isExpression</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isAttribute</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isInvalid</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isStatement</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isTranslationUnit</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isUnexposed</declaration_var>;   + ( <declaration_param>id</declaration_param> )<declaration_type>cursorWithLocation</declaration_type>: ( <declaration_type>CKSourceLocation</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>location</declaration_type> <declaration_type>translationUnit</declaration_type>: ( <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>translationUnit</declaration_var>;  
+        }  <declaration_comment>/*!
+@property        kind
+@abstract        The cursor kind</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursorKind</declaration_type> <declaration_var>kind</declaration_var>;   <declaration_comment>/*!
+@property        displayName
+@abstract        The cursor's display name</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>displayName</declaration_var>;   <declaration_comment>/*!
+@property        kindSpelling
+@abstract        The cursor kind's spelling</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>kindSpelling</declaration_var>;   <declaration_comment>/*!
+@property        definition
+@abstract        The cursor containing the cursor's definition</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type><declaration_var>definition</declaration_var>;   <declaration_comment>/*!
+@property        semanticParent
+@abstract        The cursor containing the cursor's semantic parent</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type><declaration_var>semanticParent</declaration_var>;   <declaration_comment>/*!
+@property        lexicalParent
+@abstract        The cursor containing the cursor's lexical parent</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type><declaration_var>lexicalParent</declaration_var>;   <declaration_comment>/*!
+@property        canonical
+@abstract        Canonical cursor</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type><declaration_var>canonical</declaration_var>;   <declaration_comment>/*!
+@property        referenced
+@abstract        Referenced cursor</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type><declaration_var>referenced</declaration_var>;   <declaration_comment>/*!
+@property        location
+@abstract        The cursor's source location</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CKSourceLocation</declaration_type> <declaration_type>*</declaration_type><declaration_var>location</declaration_var>;   <declaration_comment>/*!
+@property        isDefinition
+@abstract        Whether the cursor is a definition of rot</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isDefinition</declaration_var>;   <declaration_comment>/*!
+@property        isDeclaration
+@abstract        Whether the cursor is a declaration of rot</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isDeclaration</declaration_var>;   <declaration_comment>/*!
+@property        isReference
+@abstract        Whether the cursor is a reference of rot</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isReference</declaration_var>;   <declaration_comment>/*!
+@property        isPreprocessing
+@abstract        Whether the cursor is preprocessing of rot</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isPreprocessing</declaration_var>;   <declaration_comment>/*!
+@property        isExpression
+@abstract        Whether the cursor is an expression of rot</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isExpression</declaration_var>;   <declaration_comment>/*!
+@property        isAttribute
+@abstract        Whether the cursor is an attribute of rot</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isAttribute</declaration_var>;   <declaration_comment>/*!
+@property        isInvalid
+@abstract        Whether the cursor is invalid of rot</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isInvalid</declaration_var>;   <declaration_comment>/*!
+@property        isStatement
+@abstract        Whether the cursor is a statement of rot</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isStatement</declaration_var>;   <declaration_comment>/*!
+@property        isTranslationUnit
+@abstract        Whether the cursor is a translation unit of rot</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isTranslationUnit</declaration_var>;   <declaration_comment>/*!
+@property        isUnexposed
+@abstract        Whether the cursor is unexposed of rot</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isUnexposed</declaration_var>;   <declaration_comment>/*!
+@method          cursorWithLocation:translationUnit:
+@abstract        Gets a cursor from a location and a translation unit
+@param           location        The source location
+@param           translationUnit The translation unit
+@return          The cursor object
+@discussion      The returned object is autoreleased.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>id</declaration_param> )<declaration_type>cursorWithLocation</declaration_type>: ( <declaration_type>CKSourceLocation</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>location</declaration_type> <declaration_type>translationUnit</declaration_type>: ( <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>translationUnit</declaration_var>;   
+    <declaration_comment>/*!
+@method          initWithLocation:translationUnit:
+@abstract        Initializes a cursor with a location and a translation unit
+@param           location        The source location
+@param           translationUnit The translation unit
+@return          The cursor object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
     - ( <declaration_param>id</declaration_param> )<declaration_type>initWithLocation</declaration_type>: ( <declaration_type>CKSourceLocation</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>location</declaration_type> <declaration_type>translationUnit</declaration_type>: ( <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>translationUnit</declaration_var>;   
     @@end </declaration>
 <desc><p/></desc>
-<timestamp>Wednesday, May 14, 2014</timestamp>
+<methods><method id="//xsdoc_ref/occ/clm/CKCursor/cursorWithLocation:translationUnit:" lang="occ" type="clm" accessControl="protected"><name>cursorWithLocation:translationUnit:</name>
+<abstract><p>Gets a cursor from a location and a translation unit
+</p></abstract>
+<parameterlist>
+<parameter><name>location</name><desc><p>The source location</p></desc></parameter>
+<parameter><name>translationUnit</name><desc><p>The translation unit</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( CKSourceLocation * )</type><name>location</name></parsedparameter>
+<parsedparameter><type>( CKTranslationUnit * )</type><name>translationUnit</name></parsedparameter>
+<parsedparameter><type>( CKSourceLocation * )</type><name>location</name></parsedparameter>
+<parsedparameter><type>( CKTranslationUnit * )</type><name>translationUnit</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The cursor object
+</p></result>
+<declaration>+ ( <declaration_type>id</declaration_type> )<declaration_function>cursorWithLocation</declaration_function>: ( <declaration_type>CKSourceLocation</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>location</declaration_param> 
+        <declaration_function>translationUnit</declaration_function>: ( <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>translationUnit</declaration_var>; </declaration>
+<desc><p>The returned object is autoreleased.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/instm/CKCursor/initWithLocation:translationUnit:" lang="occ" type="instm" accessControl="protected"><name>initWithLocation:translationUnit:</name>
+<abstract><p>Initializes a cursor with a location and a translation unit
+</p></abstract>
+<parameterlist>
+<parameter><name>location</name><desc><p>The source location</p></desc></parameter>
+<parameter><name>translationUnit</name><desc><p>The translation unit</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( CKSourceLocation * )</type><name>location</name></parsedparameter>
+<parsedparameter><type>( CKTranslationUnit * )</type><name>translationUnit</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The cursor object
+</p></result>
+<declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithLocation</declaration_function>: ( <declaration_type>CKSourceLocation</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>location</declaration_param> 
+        <declaration_function>translationUnit</declaration_function>: ( <declaration_type>CKTranslationUnit</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>translationUnit</declaration_var>; </declaration>
+<desc><p/></desc>
+</method></methods>
+<properties><property id="//xsdoc_ref/occ/instp/CKCursor/canonical" lang="occ" accessControl="protected"><name>canonical</name>
+<abstract><p>Canonical cursor
+</p></abstract>
+<returntype>CKCursor *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type> <declaration_var>canonical</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/definition" lang="occ" accessControl="protected"><name>definition</name>
+<abstract><p>The cursor containing the cursor's definition
+</p></abstract>
+<returntype>CKCursor *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type> <declaration_var>definition</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/displayName" lang="occ" accessControl="protected"><name>displayName</name>
+<abstract><p>The cursor's display name
+</p></abstract>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>displayName</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/isAttribute" lang="occ" accessControl="protected"><name>isAttribute</name>
+<abstract><p>Whether the cursor is an attribute of rot
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isAttribute</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/isDeclaration" lang="occ" accessControl="protected"><name>isDeclaration</name>
+<abstract><p>Whether the cursor is a declaration of rot
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isDeclaration</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/isDefinition" lang="occ" accessControl="protected"><name>isDefinition</name>
+<abstract><p>Whether the cursor is a definition of rot
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isDefinition</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/isExpression" lang="occ" accessControl="protected"><name>isExpression</name>
+<abstract><p>Whether the cursor is an expression of rot
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isExpression</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/isInvalid" lang="occ" accessControl="protected"><name>isInvalid</name>
+<abstract><p>Whether the cursor is invalid of rot
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isInvalid</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/isPreprocessing" lang="occ" accessControl="protected"><name>isPreprocessing</name>
+<abstract><p>Whether the cursor is preprocessing of rot
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isPreprocessing</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/isReference" lang="occ" accessControl="protected"><name>isReference</name>
+<abstract><p>Whether the cursor is a reference of rot
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isReference</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/isStatement" lang="occ" accessControl="protected"><name>isStatement</name>
+<abstract><p>Whether the cursor is a statement of rot
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isStatement</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/isTranslationUnit" lang="occ" accessControl="protected"><name>isTranslationUnit</name>
+<abstract><p>Whether the cursor is a translation unit of rot
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isTranslationUnit</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/isUnexposed" lang="occ" accessControl="protected"><name>isUnexposed</name>
+<abstract><p>Whether the cursor is unexposed of rot
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isUnexposed</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/kind" lang="occ" accessControl="protected"><name>kind</name>
+<abstract><p>The cursor kind
+</p></abstract>
+<returntype>CKCursorKind</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursorKind</declaration_type> <declaration_var>kind</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/kindSpelling" lang="occ" accessControl="protected"><name>kindSpelling</name>
+<abstract><p>The cursor kind's spelling
+</p></abstract>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>kindSpelling</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/lexicalParent" lang="occ" accessControl="protected"><name>lexicalParent</name>
+<abstract><p>The cursor containing the cursor's lexical parent
+</p></abstract>
+<returntype>CKCursor *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type> <declaration_var>lexicalParent</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/location" lang="occ" accessControl="protected"><name>location</name>
+<abstract><p>The cursor's source location
+</p></abstract>
+<returntype>CKSourceLocation *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CKSourceLocation</declaration_type> <declaration_type>*</declaration_type> <declaration_var>location</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/referenced" lang="occ" accessControl="protected"><name>referenced</name>
+<abstract><p>Referenced cursor
+</p></abstract>
+<returntype>CKCursor *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type> <declaration_var>referenced</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKCursor/semanticParent" lang="occ" accessControl="protected"><name>semanticParent</name>
+<abstract><p>The cursor containing the cursor's semantic parent
+</p></abstract>
+<returntype>CKCursor *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>CKCursor</declaration_type> <declaration_type>*</declaration_type> <declaration_var>semanticParent</declaration_var>; </declaration>
+<desc><p/></desc>
+</property></properties>
+<timestamp>Thursday, May 15, 2014</timestamp>
 </class></classes>
-<timestamp>Wednesday, May 14, 2014</timestamp>
+<timestamp>Thursday, May 15, 2014</timestamp>
 </header>

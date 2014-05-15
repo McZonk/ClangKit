@@ -57,24 +57,838 @@
 @abstract        Internal libclang file object</declaration_comment>
         <declaration_comment>*/</declaration_comment>
     @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>CXFile</declaration_type> <declaration_var>cxFile</declaration_var>;   + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>path</declaration_var>;  
-    + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>path</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>index</declaration_var>;  
-    + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>path</declaration_type> <declaration_type>args</declaration_type>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>;  
-    + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>path</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>index</declaration_type> <declaration_type>args</declaration_type>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>;  
-    + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithText</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>text</declaration_type> <declaration_type>language</declaration_type>: ( <declaration_param>CKLanguage</declaration_param> )<declaration_var>language</declaration_var>;  
-    + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithText</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>text</declaration_type> <declaration_type>language</declaration_type>: ( <declaration_param>CKLanguage</declaration_param> )<declaration_type>language</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>index</declaration_var>;  
-    + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithText</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>text</declaration_type> <declaration_type>language</declaration_type>: ( <declaration_param>CKLanguage</declaration_param> )<declaration_type>language</declaration_type> <declaration_type>args</declaration_type>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>;  
-    + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithText</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>text</declaration_type> <declaration_type>language</declaration_type>: ( <declaration_param>CKLanguage</declaration_param> )<declaration_type>language</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>index</declaration_type> <declaration_type>args</declaration_type>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>;  
-    - ( <declaration_param>id</declaration_param> )<declaration_type>initWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>path</declaration_var>;  - ( <declaration_param>id</declaration_param> )<declaration_type>initWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>path</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>index</declaration_var>;  
-    - ( <declaration_param>id</declaration_param> )<declaration_type>initWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>path</declaration_type> <declaration_type>args</declaration_type>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>;  
-    - ( <declaration_param>id</declaration_param> )<declaration_type>initWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>path</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>index</declaration_type> <declaration_type>args</declaration_type>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>;  
-    - ( <declaration_param>id</declaration_param> )<declaration_type>initWithText</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>text</declaration_type> <declaration_type>language</declaration_type>: ( <declaration_param>CKLanguage</declaration_param> )<declaration_var>language</declaration_var>;  
-    - ( <declaration_param>id</declaration_param> )<declaration_type>initWithText</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>text</declaration_type> <declaration_type>language</declaration_type>: ( <declaration_param>CKLanguage</declaration_param> )<declaration_type>language</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>index</declaration_var>;  
-    - ( <declaration_param>id</declaration_param> )<declaration_type>initWithText</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>text</declaration_type> <declaration_type>language</declaration_type>: ( <declaration_param>CKLanguage</declaration_param> )<declaration_type>language</declaration_type> <declaration_type>args</declaration_type>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>;  
-    - ( <declaration_param>id</declaration_param> )<declaration_type>initWithText</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>text</declaration_type> <declaration_type>language</declaration_type>: ( <declaration_param>CKLanguage</declaration_param> )<declaration_type>language</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>index</declaration_type> <declaration_type>args</declaration_type>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>;  
-    - ( <declaration_param>void</declaration_param> )<declaration_var>reparse</declaration_var>;  - ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>completionResultsForLine</declaration_type>: ( <declaration_param>NSUInteger</declaration_param> )<declaration_type>line</declaration_type> <declaration_type>column</declaration_type>: ( <declaration_param>NSUInteger</declaration_param> )<declaration_var>column</declaration_var>;   
+        <declaration_param>readonly</declaration_param> ) <declaration_type>CXFile</declaration_type> <declaration_var>cxFile</declaration_var>;   <declaration_comment>/*!
+@method          translationUnitWithPath:
+@abstract        Gets a translation unit from a path
+@param           path        The path
+@return          The translation unit object
+@discussion      The returned object is autoreleased.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>path</declaration_var>;   <declaration_comment>/*!
+@method          translationUnitWithPath:index:
+@abstract        Gets a translation unit from a path and an index
+@param           path        The path
+@param           index       The index
+@return          The translation unit object
+@discussion      The returned object is autoreleased.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>path</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>index</declaration_var>;   
+    <declaration_comment>/*!
+@method          translationUnitWithPath:args:
+@abstract        Gets a translation unit from a path and arguments
+@param           path        The path
+@param           args        The arguments
+@return          The translation unit object
+@discussion      The returned object is autoreleased.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>path</declaration_type> <declaration_type>args</declaration_type>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>;   
+    <declaration_comment>/*!
+@method          translationUnitWithPath:index:args:
+@abstract        Gets a translation unit from a path, index and arguments
+@param           path        The path
+@param           index       The index
+@param           args        The arguments
+@return          The translation unit object
+@discussion      The returned object is autoreleased.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>path</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>index</declaration_type> <declaration_type>args</declaration_type>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>;   
+    <declaration_comment>/*!
+@method          translationUnitWithText:language:
+@abstract        Gets a translation unit from a text
+@param           text        The text
+@param           language    The language to use
+@return          The translation unit object
+@discussion      The returned object is autoreleased.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithText</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>text</declaration_type> <declaration_type>language</declaration_type>: ( <declaration_param>CKLanguage</declaration_param> )<declaration_var>language</declaration_var>;   
+    <declaration_comment>/*!
+@method          translationUnitWithText:language:index:
+@abstract        Gets a translation unit from a text and an index
+@param           text        The text
+@param           language    The language to use
+@param           index       The index
+@return          The translation unit object
+@discussion      The returned object is autoreleased.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithText</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>text</declaration_type> <declaration_type>language</declaration_type>: ( <declaration_param>CKLanguage</declaration_param> )<declaration_type>language</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>index</declaration_var>;   
+    <declaration_comment>/*!
+@method          translationUnitWithText:language:args:
+@abstract        Gets a translation unit from a text and arguments
+@param           text        The text
+@param           language    The language to use
+@param           args        The arguments
+@return          The translation unit object
+@discussion      The returned object is autoreleased.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithText</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>text</declaration_type> <declaration_type>language</declaration_type>: ( <declaration_param>CKLanguage</declaration_param> )<declaration_type>language</declaration_type> <declaration_type>args</declaration_type>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>;   
+    <declaration_comment>/*!
+@method          translationUnitWithText:language:index:args:
+@abstract        Gets a translation unit from a text, index and arguments
+@param           text        The text
+@param           language    The language to use
+@param           index       The index
+@param           args        The arguments
+@return          The translation unit object
+@discussion      The returned object is autoreleased.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>id</declaration_param> )<declaration_type>translationUnitWithText</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>text</declaration_type> <declaration_type>language</declaration_type>: ( <declaration_param>CKLanguage</declaration_param> )<declaration_type>language</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>index</declaration_type> <declaration_type>args</declaration_type>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>;   
+    <declaration_comment>/*!
+@method          initWithPath:
+@abstract        Initializes a translation unit with a path
+@param           path        The path
+@return          The translation unit objectb                                                                                                                                             </declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>id</declaration_param> )<declaration_type>initWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>path</declaration_var>;   <declaration_comment>/*!
+@method          initWithPath:index:
+@abstract        Initializes a translation unit from a path and an index
+@param           path        The path
+@param           index       The index
+@return          The translation unit object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>id</declaration_param> )<declaration_type>initWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>path</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>index</declaration_var>;   
+    <declaration_comment>/*!
+@method          initWithPath:args:
+@abstract        Initializes a translation unit from a path and arguments
+@param           path        The path
+@param           args        The arguments
+@return          The translation unit object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>id</declaration_param> )<declaration_type>initWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>path</declaration_type> <declaration_type>args</declaration_type>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>;   
+    <declaration_comment>/*!
+@method          initWithPath:index:args:
+@abstract        Initializes a translation unit from a path, index and arguments
+@param           path        The path
+@param           index       The index
+@param           args        The arguments
+@return          The translation unit object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>id</declaration_param> )<declaration_type>initWithPath</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>path</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>index</declaration_type> <declaration_type>args</declaration_type>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>;   
+    <declaration_comment>/*!
+@method          initWithText:language:
+@abstract        Initializes a translation unit from a text
+@param           text        The text
+@param           language    The language to use
+@return          The translation unit object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>id</declaration_param> )<declaration_type>initWithText</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>text</declaration_type> <declaration_type>language</declaration_type>: ( <declaration_param>CKLanguage</declaration_param> )<declaration_var>language</declaration_var>;   
+    <declaration_comment>/*!
+@method          initWithText:language:index:
+@abstract        Initializes a translation unit from a text and an index
+@param           text        The text
+@param           language    The language to use
+@param           index       The index
+@return          The translation unit object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>id</declaration_param> )<declaration_type>initWithText</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>text</declaration_type> <declaration_type>language</declaration_type>: ( <declaration_param>CKLanguage</declaration_param> )<declaration_type>language</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>index</declaration_var>;   
+    <declaration_comment>/*!
+@method          initWithText:language:args:
+@abstract        Initializes a translation unit from a text and arguments
+@param           text        The text
+@param           language    The language to use
+@param           args        The arguments
+@return          The translation unit object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>id</declaration_param> )<declaration_type>initWithText</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>text</declaration_type> <declaration_type>language</declaration_type>: ( <declaration_param>CKLanguage</declaration_param> )<declaration_type>language</declaration_type> <declaration_type>args</declaration_type>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>;   
+    <declaration_comment>/*!
+@method          initWithText:language:index:args:
+@abstract        Initializes a translation unit from a text, index and arguments
+@param           text        The text
+@param           language    The language to use
+@param           index       The index
+@param           args        The arguments
+@return          The translation unit object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>id</declaration_param> )<declaration_type>initWithText</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>text</declaration_type> <declaration_type>language</declaration_type>: ( <declaration_param>CKLanguage</declaration_param> )<declaration_type>language</declaration_type> <declaration_type>index</declaration_type>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>index</declaration_type> <declaration_type>args</declaration_type>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>;   
+    <declaration_comment>/*!
+@method          reparse
+@abstract        Reparses the translation unit</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>void</declaration_param> )<declaration_var>reparse</declaration_var>;   <declaration_comment>/*!
+@method          completionResultsForLine:column:
+@abstract        Gets completion results for a specific line and column
+@param           line        The line number
+@param           column      The column number
+@return          An array of completion results</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>completionResultsForLine</declaration_type>: ( <declaration_param>NSUInteger</declaration_param> )<declaration_type>line</declaration_type> <declaration_type>column</declaration_type>: ( <declaration_param>NSUInteger</declaration_param> )<declaration_var>column</declaration_var>;   
     @@end </declaration>
 <desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/instm/CKTranslationUnit/completionResultsForLine:column:" lang="occ" type="instm" accessControl="protected"><name>completionResultsForLine:column:</name>
+<abstract><p>Gets completion results for a specific line and column
+</p></abstract>
+<parameterlist>
+<parameter><name>line</name><desc><p>The line number</p></desc></parameter>
+<parameter><name>column</name><desc><p>The column number</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> NSArray * </returntype>
+<result><p>An array of completion results
+</p></result>
+<declaration>- ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_function>completionResultsForLine</declaration_function>: ( <declaration_type>NSUInteger</declaration_type> )<declaration_param>line</declaration_param> 
+        <declaration_function>column</declaration_function>: ( <declaration_type>NSUInteger</declaration_type> )<declaration_var>column</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/instm/CKTranslationUnit/initWithPath:" lang="occ" type="instm" accessControl="protected"><name>initWithPath:</name>
+<abstract><p>Initializes a translation unit with a path
+</p></abstract>
+<parameterlist>
+<parameter><name>path</name><desc><p>The path</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The translation unit objectb                                                                                                                                             
+</p></result>
+<declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithPath</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>path</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/instm/CKTranslationUnit/initWithPath:args:" lang="occ" type="instm" accessControl="protected"><name>initWithPath:args:</name>
+<abstract><p>Initializes a translation unit from a path and arguments
+</p></abstract>
+<parameterlist>
+<parameter><name>path</name><desc><p>The path</p></desc></parameter>
+<parameter><name>args</name><desc><p>The arguments</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The translation unit object
+</p></result>
+<declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithPath</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>path</declaration_param> <declaration_function>args</declaration_function>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/instm/CKTranslationUnit/initWithPath:index:" lang="occ" type="instm" accessControl="protected"><name>initWithPath:index:</name>
+<abstract><p>Initializes a translation unit from a path and an index
+</p></abstract>
+<parameterlist>
+<parameter><name>path</name><desc><p>The path</p></desc></parameter>
+<parameter><name>index</name><desc><p>The index</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The translation unit object
+</p></result>
+<declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithPath</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>path</declaration_param> <declaration_function>index</declaration_function>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>index</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/instm/CKTranslationUnit/initWithPath:index:args:" lang="occ" type="instm" accessControl="protected"><name>initWithPath:index:args:</name>
+<abstract><p>Initializes a translation unit from a path, index and arguments
+</p></abstract>
+<parameterlist>
+<parameter><name>path</name><desc><p>The path</p></desc></parameter>
+<parameter><name>index</name><desc><p>The index</p></desc></parameter>
+<parameter><name>args</name><desc><p>The arguments</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The translation unit object
+</p></result>
+<declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithPath</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>path</declaration_param> <declaration_function>index</declaration_function>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>index</declaration_param> 
+        <declaration_function>args</declaration_function>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/instm/CKTranslationUnit/initWithText:language:" lang="occ" type="instm" accessControl="protected"><name>initWithText:language:</name>
+<abstract><p>Initializes a translation unit from a text
+</p></abstract>
+<parameterlist>
+<parameter><name>text</name><desc><p>The text</p></desc></parameter>
+<parameter><name>language</name><desc><p>The language to use</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The translation unit object
+</p></result>
+<declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithText</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>text</declaration_param> <declaration_function>language</declaration_function>: ( <declaration_type>CKLanguage</declaration_type> )<declaration_var>language</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/instm/CKTranslationUnit/initWithText:language:args:" lang="occ" type="instm" accessControl="protected"><name>initWithText:language:args:</name>
+<abstract><p>Initializes a translation unit from a text and arguments
+</p></abstract>
+<parameterlist>
+<parameter><name>text</name><desc><p>The text</p></desc></parameter>
+<parameter><name>language</name><desc><p>The language to use</p></desc></parameter>
+<parameter><name>args</name><desc><p>The arguments</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The translation unit object
+</p></result>
+<declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithText</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>text</declaration_param> <declaration_function>language</declaration_function>: ( <declaration_type>CKLanguage</declaration_type> )<declaration_param>language</declaration_param> 
+        <declaration_function>args</declaration_function>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/instm/CKTranslationUnit/initWithText:language:index:" lang="occ" type="instm" accessControl="protected"><name>initWithText:language:index:</name>
+<abstract><p>Initializes a translation unit from a text and an index
+</p></abstract>
+<parameterlist>
+<parameter><name>text</name><desc><p>The text</p></desc></parameter>
+<parameter><name>language</name><desc><p>The language to use</p></desc></parameter>
+<parameter><name>index</name><desc><p>The index</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The translation unit object
+</p></result>
+<declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithText</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>text</declaration_param> <declaration_function>language</declaration_function>: ( <declaration_type>CKLanguage</declaration_type> )<declaration_param>language</declaration_param> 
+        <declaration_function>index</declaration_function>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>index</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/instm/CKTranslationUnit/initWithText:language:index:args:" lang="occ" type="instm" accessControl="protected"><name>initWithText:language:index:args:</name>
+<abstract><p>Initializes a translation unit from a text, index and arguments
+</p></abstract>
+<parameterlist>
+<parameter><name>text</name><desc><p>The text</p></desc></parameter>
+<parameter><name>language</name><desc><p>The language to use</p></desc></parameter>
+<parameter><name>index</name><desc><p>The index</p></desc></parameter>
+<parameter><name>args</name><desc><p>The arguments</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The translation unit object
+</p></result>
+<declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithText</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>text</declaration_param> <declaration_function>language</declaration_function>: ( <declaration_type>CKLanguage</declaration_type> )<declaration_param>language</declaration_param> 
+        <declaration_function>index</declaration_function>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>index</declaration_param> <declaration_function>args</declaration_function>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/instm/CKTranslationUnit/reparse" lang="occ" type="instm" accessControl="protected"><name>reparse</name>
+<abstract><p>Reparses the translation unit
+</p></abstract>
+<parsedparameterlist>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_var>reparse</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/clm/CKTranslationUnit/translationUnitWithPath:" lang="occ" type="clm" accessControl="protected"><name>translationUnitWithPath:</name>
+<abstract><p>Gets a translation unit from a path
+</p></abstract>
+<parameterlist>
+<parameter><name>path</name><desc><p>The path</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The translation unit object
+</p></result>
+<declaration>+ ( <declaration_type>id</declaration_type> )<declaration_function>translationUnitWithPath</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>path</declaration_var>; </declaration>
+<desc><p>The returned object is autoreleased.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/clm/CKTranslationUnit/translationUnitWithPath:args:" lang="occ" type="clm" accessControl="protected"><name>translationUnitWithPath:args:</name>
+<abstract><p>Gets a translation unit from a path and arguments
+</p></abstract>
+<parameterlist>
+<parameter><name>path</name><desc><p>The path</p></desc></parameter>
+<parameter><name>args</name><desc><p>The arguments</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The translation unit object
+</p></result>
+<declaration>+ ( <declaration_type>id</declaration_type> )<declaration_function>translationUnitWithPath</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>path</declaration_param> <declaration_function>args</declaration_function>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>; </declaration>
+<desc><p>The returned object is autoreleased.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/clm/CKTranslationUnit/translationUnitWithPath:index:" lang="occ" type="clm" accessControl="protected"><name>translationUnitWithPath:index:</name>
+<abstract><p>Gets a translation unit from a path and an index
+</p></abstract>
+<parameterlist>
+<parameter><name>path</name><desc><p>The path</p></desc></parameter>
+<parameter><name>index</name><desc><p>The index</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The translation unit object
+</p></result>
+<declaration>+ ( <declaration_type>id</declaration_type> )<declaration_function>translationUnitWithPath</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>path</declaration_param> <declaration_function>index</declaration_function>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>index</declaration_var>; </declaration>
+<desc><p>The returned object is autoreleased.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/clm/CKTranslationUnit/translationUnitWithPath:index:args:" lang="occ" type="clm" accessControl="protected"><name>translationUnitWithPath:index:args:</name>
+<abstract><p>Gets a translation unit from a path, index and arguments
+</p></abstract>
+<parameterlist>
+<parameter><name>path</name><desc><p>The path</p></desc></parameter>
+<parameter><name>index</name><desc><p>The index</p></desc></parameter>
+<parameter><name>args</name><desc><p>The arguments</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The translation unit object
+</p></result>
+<declaration>+ ( <declaration_type>id</declaration_type> )<declaration_function>translationUnitWithPath</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>path</declaration_param> <declaration_function>index</declaration_function>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>index</declaration_param> 
+        <declaration_function>args</declaration_function>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>; </declaration>
+<desc><p>The returned object is autoreleased.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/clm/CKTranslationUnit/translationUnitWithText:language:" lang="occ" type="clm" accessControl="protected"><name>translationUnitWithText:language:</name>
+<abstract><p>Gets a translation unit from a text
+</p></abstract>
+<parameterlist>
+<parameter><name>text</name><desc><p>The text</p></desc></parameter>
+<parameter><name>language</name><desc><p>The language to use</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The translation unit object
+</p></result>
+<declaration>+ ( <declaration_type>id</declaration_type> )<declaration_function>translationUnitWithText</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>text</declaration_param> <declaration_function>language</declaration_function>: ( <declaration_type>CKLanguage</declaration_type> )<declaration_var>language</declaration_var>; </declaration>
+<desc><p>The returned object is autoreleased.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/clm/CKTranslationUnit/translationUnitWithText:language:args:" lang="occ" type="clm" accessControl="protected"><name>translationUnitWithText:language:args:</name>
+<abstract><p>Gets a translation unit from a text and arguments
+</p></abstract>
+<parameterlist>
+<parameter><name>text</name><desc><p>The text</p></desc></parameter>
+<parameter><name>language</name><desc><p>The language to use</p></desc></parameter>
+<parameter><name>args</name><desc><p>The arguments</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The translation unit object
+</p></result>
+<declaration>+ ( <declaration_type>id</declaration_type> )<declaration_function>translationUnitWithText</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>text</declaration_param> <declaration_function>language</declaration_function>: ( <declaration_type>CKLanguage</declaration_type> )<declaration_param>language</declaration_param> 
+        <declaration_function>args</declaration_function>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>; </declaration>
+<desc><p>The returned object is autoreleased.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/clm/CKTranslationUnit/translationUnitWithText:language:index:" lang="occ" type="clm" accessControl="protected"><name>translationUnitWithText:language:index:</name>
+<abstract><p>Gets a translation unit from a text and an index
+</p></abstract>
+<parameterlist>
+<parameter><name>text</name><desc><p>The text</p></desc></parameter>
+<parameter><name>language</name><desc><p>The language to use</p></desc></parameter>
+<parameter><name>index</name><desc><p>The index</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The translation unit object
+</p></result>
+<declaration>+ ( <declaration_type>id</declaration_type> )<declaration_function>translationUnitWithText</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>text</declaration_param> <declaration_function>language</declaration_function>: ( <declaration_type>CKLanguage</declaration_type> )<declaration_param>language</declaration_param> 
+        <declaration_function>index</declaration_function>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>index</declaration_var>; </declaration>
+<desc><p>The returned object is autoreleased.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/clm/CKTranslationUnit/translationUnitWithText:language:index:args:" lang="occ" type="clm" accessControl="protected"><name>translationUnitWithText:language:index:args:</name>
+<abstract><p>Gets a translation unit from a text, index and arguments
+</p></abstract>
+<parameterlist>
+<parameter><name>text</name><desc><p>The text</p></desc></parameter>
+<parameter><name>language</name><desc><p>The language to use</p></desc></parameter>
+<parameter><name>index</name><desc><p>The index</p></desc></parameter>
+<parameter><name>args</name><desc><p>The arguments</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>path</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>text</name></parsedparameter>
+<parsedparameter><type>( CKLanguage )</type><name>language</name></parsedparameter>
+<parsedparameter><type>( CKIndex * )</type><name>index</name></parsedparameter>
+<parsedparameter><type>( NSArray * )</type><name>args</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>line</name></parsedparameter>
+<parsedparameter><type>( NSUInteger )</type><name>column</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The translation unit object
+</p></result>
+<declaration>+ ( <declaration_type>id</declaration_type> )<declaration_function>translationUnitWithText</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>text</declaration_param> <declaration_function>language</declaration_function>: ( <declaration_type>CKLanguage</declaration_type> )<declaration_param>language</declaration_param> 
+        <declaration_function>index</declaration_function>: ( <declaration_type>CKIndex</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>index</declaration_param> <declaration_function>args</declaration_function>: ( <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>args</declaration_var>; </declaration>
+<desc><p>The returned object is autoreleased.
+</p></desc>
+</method></methods>
 <properties><property id="//xsdoc_ref/occ/instp/CKTranslationUnit/cxFile" lang="occ" accessControl="protected"><name>cxFile</name>
 <abstract><p>Internal libclang file object
 </p></abstract>
@@ -126,7 +940,7 @@
     <declaration_param>readonly</declaration_param> ) <declaration_type>NSArray</declaration_type> <declaration_type>*</declaration_type> <declaration_var>tokens</declaration_var>; </declaration>
 <desc><p/></desc>
 </property></properties>
-<timestamp>Wednesday, May 14, 2014</timestamp>
+<timestamp>Thursday, May 15, 2014</timestamp>
 </class></classes>
-<timestamp>Wednesday, May 14, 2014</timestamp>
+<timestamp>Thursday, May 15, 2014</timestamp>
 </header>

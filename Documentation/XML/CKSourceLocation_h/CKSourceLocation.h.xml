@@ -14,15 +14,120 @@
         <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>_ptrData2</declaration_var>; 
         <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_var>_intData</declaration_var>; 
         <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>_fileName</declaration_var>; 
-        }  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_var>ptrData1</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_var>ptrData2</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_var>intData</declaration_var>;  @property( <declaration_param>atomic</declaration_param>,
-        <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>fileName</declaration_var>;   + ( <declaration_param>id</declaration_param> )<declaration_type>sourceLocationWithPointerData1</declaration_type>: ( <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>ptrData1</declaration_type> <declaration_type>pointerData2</declaration_type>: ( <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>ptrData2</declaration_type> <declaration_type>intData</declaration_type>: ( <declaration_keyword>unsigned</declaration_keyword> <declaration_param>int</declaration_param> )<declaration_var>intData</declaration_var>;  
+        }  <declaration_comment>/*!
+@property        ptrData1
+@abstract        Internal pointer data 1</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_var>ptrData1</declaration_var>;   <declaration_comment>/*!
+@property        ptrData2
+@abstract        Internal pointer data 1</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_var>ptrData2</declaration_var>;   <declaration_comment>/*!
+@property        intData
+@abstract        Internal integer data</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_var>intData</declaration_var>;   <declaration_comment>/*!
+@property        fileName
+@abstract        The source location's filename</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>fileName</declaration_var>;   <declaration_comment>/*!
+@method          sourceLocationWithPointerData1:pointerData2:intData:
+@abstract        Gets a source location object
+@param           ptrData1    Pointer data 1
+@param           ptrData2    Pointer data 2
+@param           intData     Integer data
+@return          The source location object
+@discussion      The returned object is autoreleased.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>id</declaration_param> )<declaration_type>sourceLocationWithPointerData1</declaration_type>: ( <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>ptrData1</declaration_type> <declaration_type>pointerData2</declaration_type>: ( <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>ptrData2</declaration_type> <declaration_type>intData</declaration_type>: ( <declaration_keyword>unsigned</declaration_keyword> <declaration_param>int</declaration_param> )<declaration_var>intData</declaration_var>;   
+    <declaration_comment>/*!
+@method          initWithPointerData1:pointerData2:intData:
+@abstract        Initializes a source location object
+@param           ptrData1    Pointer data 1
+@param           ptrData2    Pointer data 2
+@param           intData     Integer data
+@return          The source location object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
     - ( <declaration_param>id</declaration_param> )<declaration_type>initWithPointerData1</declaration_type>: ( <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>ptrData1</declaration_type> <declaration_type>pointerData2</declaration_type>: ( <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>ptrData2</declaration_type> <declaration_type>intData</declaration_type>: ( <declaration_keyword>unsigned</declaration_keyword> <declaration_param>int</declaration_param> )<declaration_var>intData</declaration_var>;   
     @@end </declaration>
 <desc><p/></desc>
-<timestamp>Wednesday, May 14, 2014</timestamp>
+<methods><method id="//xsdoc_ref/occ/instm/CKSourceLocation/initWithPointerData1:pointerData2:intData:" lang="occ" type="instm" accessControl="protected"><name>initWithPointerData1:pointerData2:intData:</name>
+<abstract><p>Initializes a source location object
+</p></abstract>
+<parameterlist>
+<parameter><name>ptrData1</name><desc><p>Pointer data 1</p></desc></parameter>
+<parameter><name>ptrData2</name><desc><p>Pointer data 2</p></desc></parameter>
+<parameter><name>intData</name><desc><p>Integer data</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( void * )</type><name>ptrData1</name></parsedparameter>
+<parsedparameter><type>( void * )</type><name>ptrData2</name></parsedparameter>
+<parsedparameter><type>( unsigned int )</type><name>intData</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The source location object
+</p></result>
+<declaration>- ( <declaration_type>id</declaration_type> )<declaration_function>initWithPointerData1</declaration_function>: ( <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>ptrData1</declaration_param> 
+        <declaration_function>pointerData2</declaration_function>: ( <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>ptrData2</declaration_param> <declaration_function>intData</declaration_function>: ( <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> )<declaration_var>intData</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/clm/CKSourceLocation/sourceLocationWithPointerData1:pointerData2:intData:" lang="occ" type="clm" accessControl="protected"><name>sourceLocationWithPointerData1:pointerData2:intData:</name>
+<abstract><p>Gets a source location object
+</p></abstract>
+<parameterlist>
+<parameter><name>ptrData1</name><desc><p>Pointer data 1</p></desc></parameter>
+<parameter><name>ptrData2</name><desc><p>Pointer data 2</p></desc></parameter>
+<parameter><name>intData</name><desc><p>Integer data</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( void * )</type><name>ptrData1</name></parsedparameter>
+<parsedparameter><type>( void * )</type><name>ptrData2</name></parsedparameter>
+<parsedparameter><type>( unsigned int )</type><name>intData</name></parsedparameter>
+<parsedparameter><type>( void * )</type><name>ptrData1</name></parsedparameter>
+<parsedparameter><type>( void * )</type><name>ptrData2</name></parsedparameter>
+<parsedparameter><type>( unsigned int )</type><name>intData</name></parsedparameter>
+</parsedparameterlist>
+<returntype> id </returntype>
+<result><p>The source location object
+</p></result>
+<declaration>+ ( <declaration_type>id</declaration_type> )<declaration_function>sourceLocationWithPointerData1</declaration_function>: ( <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>ptrData1</declaration_param> 
+        <declaration_function>pointerData2</declaration_function>: ( <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>ptrData2</declaration_param> <declaration_function>intData</declaration_function>: ( <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> )<declaration_var>intData</declaration_var>; </declaration>
+<desc><p>The returned object is autoreleased.
+</p></desc>
+</method></methods>
+<properties><property id="//xsdoc_ref/occ/instp/CKSourceLocation/fileName" lang="occ" accessControl="protected"><name>fileName</name>
+<abstract><p>The source location's filename
+</p></abstract>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>fileName</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKSourceLocation/intData" lang="occ" accessControl="protected"><name>intData</name>
+<abstract><p>Internal integer data
+</p></abstract>
+<returntype>unsigned int</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_var>intData</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKSourceLocation/ptrData1" lang="occ" accessControl="protected"><name>ptrData1</name>
+<abstract><p>Internal pointer data 1
+</p></abstract>
+<returntype>void *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>ptrData1</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/CKSourceLocation/ptrData2" lang="occ" accessControl="protected"><name>ptrData2</name>
+<abstract><p>Internal pointer data 1
+</p></abstract>
+<returntype>void *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>ptrData2</declaration_var>; </declaration>
+<desc><p/></desc>
+</property></properties>
+<timestamp>Thursday, May 15, 2014</timestamp>
 </class></classes>
-<timestamp>Wednesday, May 14, 2014</timestamp>
+<timestamp>Thursday, May 15, 2014</timestamp>
 </header>

@@ -15,6 +15,7 @@ $DOC->setClassesPrefix( '' );
 $DOC->setFunctionsPrefix( '' );
 $DOC->setTypesPrefix( '' );
 $DOC->setHomeFile( 'Pages/Home.inc.php' );
+$DOC->addPage( 'Pages/Tutorial.inc.php', 'Tutorial' );
 
 ?>
 <?xml version="1.0" encoding="utf-8"?>
