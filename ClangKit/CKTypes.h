@@ -31,8 +31,8 @@
 
 /*!
  * @header          CKTypes.h
- * @author          Jean-David Gadina <macmade@digidna.net>
- * @copyright       (c) 2011-2012, DigiDNA
+ * @copyright       (c) 2010-2014 - Jean-David Gadina - www.xs-labs.com
+ * @author          Jean-David Gadina - www.xs-labs.com
  * @abstract        Project public types
  * @discussion      The project obviously uses libclang headers, but there is
  *                  no reason for a project using ClangKit to include them.

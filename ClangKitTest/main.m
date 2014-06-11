@@ -31,8 +31,8 @@
 
 /*!
  * @file            main.m
- * @author          Jean-David Gadina <macmade@digidna.net>
- * @copyright       (c) 2011-2012, DigiDNA
+ * @copyright       (c) 2010-2014 - Jean-David Gadina - www.xs-labs.com
+ * @author          Jean-David Gadina - www.xs-labs.com
  * @abstract        ClangKit test / demo project
  */
 
