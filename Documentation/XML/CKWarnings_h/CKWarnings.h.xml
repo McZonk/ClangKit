@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.2//EN" "/System/Library/DTDs/HeaderDoc-1.2.dtd">
-<header id="//xsdoc_ref/doc/header/CKWarnings.h" lang="c" filename="CKWarnings.h" headerpath="/Volumes/Brain/Documents/Development/GitHub/ClangKit/Documentation/../ClangKit/CKWarnings.h"><name>CKWarnings.h</name>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/CKWarnings.h" lang="c" filename="CKWarnings.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/ClangKit/Documentation/../ClangKit/CKWarnings.h"><name>CKWarnings.h</name>
 <abstract><p>Enforcement of compiler warning flags
 </p></abstract>
-<attributes><attribute><name>Author</name><value>Jean-David Gadina <macmade/></value></attribute>
+<attributes><attribute><name>Author</name><value>Jean-David Gadina - www.xs-labs.com</value></attribute>
 </attributes>
 <includes>
 </includes>
 <desc><p/></desc>
-<copyrightinfo>&#169; (c) 2011-2012, DigiDNA
+<copyrightinfo>&#169; (c) 2010-2014 - Jean-David Gadina - www.xs-labs.com
 </copyrightinfo>
-<timestamp>Friday, May 16, 2014</timestamp>
+<timestamp>Wednesday, June 25, 2014</timestamp>
 </header>

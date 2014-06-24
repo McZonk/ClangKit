@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.2//EN" "/System/Library/DTDs/HeaderDoc-1.2.dtd">
-<header id="//xsdoc_ref/doc/header/CKIndex.h" lang="c" filename="CKIndex.h" headerpath="/Volumes/Brain/Documents/Development/GitHub/ClangKit/Documentation/../ClangKit/Classes/CKIndex.h"><name>CKIndex.h</name>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/CKIndex.h" lang="c" filename="CKIndex.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/ClangKit/Documentation/../ClangKit/Classes/CKIndex.h"><name>CKIndex.h</name>
+<abstract><p>ClangKit index class
+</p></abstract>
+<attributes><attribute><name>Author</name><value>Jean-David Gadina - www.xs-labs.com</value></attribute>
+</attributes>
 <includes>
 </includes>
 <desc><p/></desc>
@@ -72,7 +76,9 @@
     <declaration_param>assign</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>excludeDeclarationsFromPCH</declaration_var>; </declaration>
 <desc><p/></desc>
 </property></properties>
-<timestamp>Friday, May 16, 2014</timestamp>
+<timestamp>Wednesday, June 25, 2014</timestamp>
 </class></classes>
-<timestamp>Friday, May 16, 2014</timestamp>
+<copyrightinfo>&#169; (c) 2010-2014 - Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Wednesday, June 25, 2014</timestamp>
 </header>

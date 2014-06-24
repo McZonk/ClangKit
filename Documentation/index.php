@@ -35,12 +35,12 @@ $DOC->addPage( 'Pages/Tutorial.inc.php', 'Tutorial' );
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title><?php print $DOC->getTitle(); ?></title>
     <link rel="schema.dc" href="http://purl.org/metadata/dublin_core_elements" />
-    <link href="CSS/XSDoc.css" type="text/css" rel="stylesheet" media="all" charset="utf-8" />
     <meta http-equiv="content-language" content="en" />
     <meta name="DC.Language" scheme="NISOZ39.50" content="en" />
     <meta name="rating" content="General" />
     <meta name="robots" content="all" />
     <meta name="generator" content="XSDocgen" />
+    <link href="CSS/XSDoc.css" type="text/css" rel="stylesheet" media="all" charset="utf-8" />
     <script type="text/javascript">
         // <![CDATA[
         
